@@ -55,9 +55,10 @@ const Navbar = () => {
           
           <div className="hidden md:flex items-center space-x-2">
             <NavLink href="/">Home</NavLink>
-            <NavLink href="/about">About</NavLink>
-            <NavLink href="/courses">Courses</NavLink>
-            <NavLink href="/resources">Resources</NavLink>
+            <NavLink href="/about">About Us</NavLink>
+            <NavLink href="/academics">Academics</NavLink>
+            <NavLink href="/after-school-care">After School Care</NavLink>
+            <NavLink href="/admissions">Admissions</NavLink>
             <NavLink href="/contact" isButton>Contact Us</NavLink>
           </div>
           
@@ -88,10 +89,11 @@ const Navbar = () => {
       >
         <div className="flex flex-col items-center justify-center h-full space-y-6 py-8">
           <MobileNavLink href="/" onClick={() => setMobileMenuOpen(false)}>Home</MobileNavLink>
-          <MobileNavLink href="/about" onClick={() => setMobileMenuOpen(false)}>About</MobileNavLink>
-          <MobileNavLink href="/courses" onClick={() => setMobileMenuOpen(false)}>Courses</MobileNavLink>
-          <MobileNavLink href="/resources" onClick={() => setMobileMenuOpen(false)}>Resources</MobileNavLink>
-          <MobileNavLink href="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</MobileNavLink>
+          <MobileNavLink href="/about" onClick={() => setMobileMenuOpen(false)}>About Us</MobileNavLink>
+          <MobileNavLink href="/academics" onClick={() => setMobileMenuOpen(false)}>Academics</MobileNavLink>
+          <MobileNavLink href="/after-school-care" onClick={() => setMobileMenuOpen(false)}>After School Care</MobileNavLink>
+          <MobileNavLink href="/admissions" onClick={() => setMobileMenuOpen(false)}>Admissions</MobileNavLink>
+          <MobileNavLink href="/contact" onClick={() => setMobileMenuOpen(false)}>Contact Us</MobileNavLink>
         </div>
       </div>
     </>

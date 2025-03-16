@@ -7,25 +7,29 @@ const AcademicProgram = () => {
       id: 1,
       title: "PreK Offering",
       description: "Our PreK program for ages 3-5 provides a nurturing environment where children develop foundational skills through play-based learning and exploration.",
-      size: "col-span-12 md:col-span-6 lg:col-span-3"
+      size: "col-span-12 md:col-span-6 lg:col-span-3",
+      image: "/PreK_Offering.jpg"
     },
     {
       id: 2,
       title: "IB Program",
       description: "Our curriculum follows the inquiry-based IB framework, encouraging students to take ownership of their learning through exploration and discovery.",
-      size: "col-span-12 md:col-span-6 lg:col-span-3"
+      size: "col-span-12 md:col-span-6 lg:col-span-3",
+      image: "/IB_Program.jpg"
     },
     {
       id: 3,
       title: "Spanish Immersion",
       description: "Students are immersed in Spanish language environment, developing fluency naturally while learning academic content in both languages.",
-      size: "col-span-12 md:col-span-6 lg:col-span-3"
+      size: "col-span-12 md:col-span-6 lg:col-span-3",
+      image: "/Spanish_Immersion.jpg"
     },
     {
       id: 4,
       title: "International Teachers",
       description: "Our diverse faculty brings authentic cultural experiences and global perspectives to the classroom, enriching the educational journey.",
-      size: "col-span-12 md:col-span-6 lg:col-span-3"
+      size: "col-span-12 md:col-span-6 lg:col-span-3",
+      image: "/International_Teacher.jpg"
     }
   ];
 
@@ -48,7 +52,7 @@ const AcademicProgram = () => {
                 {/* Image */}
                 <div className="relative h-48 md:h-56 w-full overflow-hidden group">
                   <Image
-                    src="/placeholder.jpg"
+                    src={program.image}
                     alt={program.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
