@@ -28,7 +28,7 @@ const Copy = () => {
       <span className="w-fit rounded-full bg-amber-500 px-4 py-2 text-sm uppercase text-white font-semibold">
         Excellence in Early Education
       </span>
-      <h2 className="mb-4 mt-2 text-3xl md:text-4xl font-bold text-indigo-900">
+      <h2 className="mb-4 mt-2 text-3xl md:text-4xl font-bold text-[#4081DE]">
         Why Choose Stellaris
       </h2>
       <motion.div 
@@ -54,32 +54,32 @@ const Carousel = () => {
 
   const features = [
     {
-      icon: <FaGlobeAmericas className="text-4xl text-[#3967a9]" />,
+      icon: <FaGlobeAmericas className="text-4xl text-[#4081DE]" />,
       title: "IB Excellence",
       description: "Our IB curriculum fosters international-mindedness and academic excellence through inquiry-based learning, developing globally aware and culturally competent students."
     },
     {
-      icon: <FaLanguage className="text-4xl text-[#3967a9]" />,
+      icon: <FaLanguage className="text-4xl text-[#4081DE]" />,
       title: "Language Immersion",
       description: "Our Spanish immersion program helps children develop bilingual fluency naturally while building cognitive advantages that last a lifetime."
     },
     {
-      icon: <FaUsers className="text-4xl text-[#3967a9]" />,
+      icon: <FaUsers className="text-4xl text-[#4081DE]" />,
       title: "Small Class Sizes",
       description: "Our low student-to-teacher ratio ensures personalized attention and support for each child's unique learning journey."
     },
     {
-      icon: <FaClock className="text-4xl text-[#3967a9]" />,
+      icon: <FaClock className="text-4xl text-[#4081DE]" />,
       title: "Extended Day Programs",
       description: "Our flexible before and after school care options support working families with enriching activities that extend the learning day."
     },
     {
-      icon: <FaApple className="text-4xl text-[#3967a9]" />,
+      icon: <FaApple className="text-4xl text-[#4081DE]" />,
       title: "Clean Healthy Lifestyle",
       description: "We promote healthy eating habits with nutritious meals and snacks, teaching children about food choices that support their growth and development."
     },
     {
-      icon: <FaChild className="text-4xl text-[#3967a9]" />,
+      icon: <FaChild className="text-4xl text-[#4081DE]" />,
       title: "Holistic Development",
       description: "We nurture the whole child—intellectual, physical, emotional, and social aspects of development—preparing them for lifelong success."
     }
@@ -123,7 +123,7 @@ const CarouselItem = ({ scrollYProgress, position, numItems, feature }) => {
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-4">
           {feature.icon}
-          <h3 className="text-2xl font-semibold text-indigo-900">{feature.title}</h3>
+          <h3 className="text-2xl font-semibold text-[#4081DE]">{feature.title}</h3>
         </div>
         <p className="text-lg text-gray-600">{feature.description}</p>
       </div>

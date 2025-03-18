@@ -40,7 +40,7 @@ const PYPFeature = () => {
     <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto relative">
       {/* Section Header */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-indigo-900">PYP Framework</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#4081DE]">PYP Framework</h2>
         <motion.div 
           className="h-1 w-24 bg-amber-400 mx-auto rounded-full"
           initial={{ width: 0 }}
@@ -56,8 +56,8 @@ const PYPFeature = () => {
       {/* Bento Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Feature 1 - Large Card */}
-        <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 md:col-span-2 row-span-1 shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-[#3967a9]/20">
-          <div className="text-[#3967a9] mb-4 group-hover:scale-110 transition-transform duration-300">
+        <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 md:col-span-2 row-span-1 shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-[#4081DE]/20">
+          <div className="text-[#4081DE] mb-4 group-hover:scale-110 transition-transform duration-300">
             {React.createElement(features[0].icon, { size: 40 })}
           </div>
           <h3 className="text-2xl font-bold mb-3 text-[#303444]">{features[0].title}</h3>
@@ -66,7 +66,7 @@ const PYPFeature = () => {
 
         {/* Feature 2 - Tall Card */}
         <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 md:row-span-2 shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-[#3967a9]/20">
-          <div className="text-[#3967a9] mb-4 group-hover:scale-110 transition-transform duration-300">
+          <div className="text-[#4081DE] mb-4 group-hover:scale-110 transition-transform duration-300">
             {React.createElement(features[1].icon, { size: 40 })}
           </div>
           <h3 className="text-2xl font-bold mb-3 text-[#303444]">{features[1].title}</h3>
@@ -75,7 +75,7 @@ const PYPFeature = () => {
 
         {/* Feature 3 - Medium Card */}
         <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-[#3967a9]/20">
-          <div className="text-[#3967a9] mb-4 group-hover:scale-110 transition-transform duration-300">
+          <div className="text-[#4081DE] mb-4 group-hover:scale-110 transition-transform duration-300">
             {React.createElement(features[2].icon, { size: 40 })}
           </div>
           <h3 className="text-2xl font-bold mb-3 text-[#303444]">{features[2].title}</h3>
@@ -84,7 +84,7 @@ const PYPFeature = () => {
 
         {/* Feature 4 - Medium Card */}
         <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-[#3967a9]/20">
-          <div className="text-[#3967a9] mb-4 group-hover:scale-110 transition-transform duration-300">
+          <div className="text-[#4081DE] mb-4 group-hover:scale-110 transition-transform duration-300">
             {React.createElement(features[3].icon, { size: 40 })}
           </div>
           <h3 className="text-2xl font-bold mb-3 text-[#303444]">{features[3].title}</h3>
@@ -93,7 +93,7 @@ const PYPFeature = () => {
 
         {/* Feature 5 - Wide Card */}
         <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 md:col-span-3 shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-[#3967a9]/20">
-          <div className="text-[#3967a9] mb-4 group-hover:scale-110 transition-transform duration-300">
+          <div className="text-[#4081DE] mb-4 group-hover:scale-110 transition-transform duration-300">
             {React.createElement(features[4].icon, { size: 40 })}
           </div>
           <h3 className="text-2xl font-bold mb-3 text-[#303444]">{features[4].title}</h3>
