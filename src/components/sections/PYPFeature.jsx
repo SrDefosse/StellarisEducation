@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaBookReader, FaGlobeAmericas, FaSearch, FaPuzzlePiece, FaSeedling } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const PYPFeature = () => {
   const features = [
@@ -36,11 +37,18 @@ const PYPFeature = () => {
   ];
 
   return (
-    <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto">
+    <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto relative">
       {/* Section Header */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#303444]">PYP Framework</h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-indigo-900">PYP Framework</h2>
+        <motion.div 
+          className="h-1 w-24 bg-amber-400 mx-auto rounded-full"
+          initial={{ width: 0 }}
+          whileInView={{ width: 96 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        />
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-4">
         The International Baccalaureate Primary Years Programme (PYP) is a curriculum framework designed for students aged 3-12. At Stellaris, we implement this framework for our Pre-K students ages 3-5, focusing on:
         </p>
       </div>

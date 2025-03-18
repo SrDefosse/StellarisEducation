@@ -1,7 +1,12 @@
+'use client';
 import Image from 'next/image';
 import { PrimaryButton, SecondaryButton } from '../ui/Button';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const AcademicProgram = () => {
+  const [activeProgram, setActiveProgram] = useState(0);
+
   const programs = [
     {
       id: 1,
@@ -34,43 +39,81 @@ const AcademicProgram = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-16 md:py-24">
+    <div className="py-16 md:py-24 relative">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#303444] mb-4">Our Academic Program</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">Discover the pillars of our curriculum designed to nurture global citizens with a love for learning.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">Our Academic Program</h2>
+          <motion.div 
+            className="h-1 w-24 bg-amber-400 mx-auto rounded-full"
+            initial={{ width: 0 }}
+            whileInView={{ width: 96 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          />
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">Discover the pillars of our curriculum designed to nurture global citizens with a love for learning.</p>
         </div>
         
-        {/* Grid layout */}
-        <div className="grid grid-cols-12 gap-6 md:gap-8 mb-12">
-          {programs.map((program) => (
-            <div 
+        {/* Vertical Accordion Slider */}
+        <div className="max-w-4xl mx-auto mb-16 flex flex-col gap-3">
+          {programs.map((program, index) => (
+            <motion.div 
               key={program.id}
-              className={`${program.size} bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl`}
+              className={`bg-white rounded-xl overflow-hidden shadow-md cursor-pointer
+                ${activeProgram === index ? 'border-l-4 border-amber-400' : 'border-l-4 border-transparent'}`}
+              initial={{ borderColor: 'transparent' }}
+              animate={{ 
+                borderColor: activeProgram === index ? '#f59e0b' : 'transparent',
+                boxShadow: activeProgram === index ? '0 4px 20px rgba(0, 0, 0, 0.1)' : '0 2px 8px rgba(0, 0, 0, 0.05)'
+              }}
+              transition={{ duration: 0.3 }}
+              onClick={() => setActiveProgram(index)}
             >
-              <div className="h-full flex flex-col">
-                {/* Image */}
-                <div className="relative h-48 md:h-56 w-full overflow-hidden group">
-                  <Image
-                    src={program.image}
-                    alt={program.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="font-semibold text-xl mb-3">{program.title}</h3>
-                  <p className="text-gray-700 mb-6">{program.description}</p>
-                  
-                  <div className="mt-auto">
-                    <SecondaryButton>Learn More</SecondaryButton>
-                  </div>
-                </div>
+              {/* Title Bar - Always Visible */}
+              <div className="flex items-center justify-between p-5">
+                <h3 className={`font-semibold text-xl ${activeProgram === index ? 'text-amber-500' : 'text-indigo-900'}`}>
+                  {program.title}
+                </h3>
+                <motion.div
+                  animate={{ rotate: activeProgram === index ? 90 : 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 ${activeProgram === index ? 'text-amber-500' : 'text-gray-500'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </motion.div>
               </div>
-            </div>
+
+              {/* Expanded Content */}
+              <AnimatePresence>
+                {activeProgram === index && (
+                  <motion.div 
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] }}
+                    className="overflow-hidden"
+                  >
+                    <div className="flex flex-col md:flex-row p-4">
+                      {/* Image - More square and rounded */}
+                      <div className="relative aspect-square w-full md:w-2/5 rounded-xl overflow-hidden mx-auto md:mx-0">
+                        <Image
+                          src={program.image}
+                          alt={program.title}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      
+                      {/* Description */}
+                      <div className="p-6 w-full md:w-3/5 flex flex-col justify-between">
+                        <p className="text-gray-700 mb-6">{program.description}</p>
+                        <SecondaryButton>Learn More</SecondaryButton>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           ))}
         </div>
         
@@ -83,6 +126,22 @@ const AcademicProgram = () => {
             </svg>
           </PrimaryButton>
         </div>
+      </div>
+
+      {/* Floating decorative elements */}
+      <div className="absolute -z-10 top-1/2 -left-8 w-24 h-24 md:w-32 md:h-32 opacity-10">
+        <motion.div 
+          className="w-full h-full bg-amber-400 rounded-full"
+          animate={{ 
+            scale: [1, 1.1, 1],
+            rotate: [0, 5, 0, -5, 0],
+          }}
+          transition={{ 
+            duration: 8, 
+            repeat: Infinity,
+            repeatType: "reverse" 
+          }}
+        />
       </div>
     </div>
   );

@@ -1,10 +1,15 @@
-const PrimaryButton = ({ children, className = '', ...props }) => {
+const PrimaryButton = ({ children, className = '', variant = 'default', ...props }) => {
+  const variants = {
+    default: 'bg-[#303444] hover:bg-[#3967a9] text-white focus:ring-[#3967a9]',
+    white: 'bg-white text-[#3B6FB5] hover:bg-white/90 focus:ring-white'
+  };
+
   return (
     <button 
-      className={`inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white 
-        bg-[#303444] rounded-xl hover:bg-[#3967a9] transition-all duration-300 
+      className={`inline-flex items-center justify-center px-8 py-4 text-lg font-medium 
+        ${variants[variant]} rounded-xl transition-all duration-300 
         transform hover:-translate-y-1 hover:shadow-lg 
-        focus:outline-none focus:ring-2 focus:ring-[#3967a9] focus:ring-offset-2 ${className}`}
+        focus:outline-none focus:ring-2 focus:ring-offset-2 ${className}`}
       {...props}
     >
       {children}

@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaGlobe } from "react-icons/fa";
 
@@ -25,35 +25,33 @@ export default function Locations() {
   const titleRef = useRef(null);
   const contentRef = useRef(null);
   
-  const isInView = useInView(titleRef, { once: false, amount: 0.3 });
-  const isContentInView = useInView(contentRef, { once: false, amount: 0.3 });
-  
   // Default to first location
   const location = locations[0];
   
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 relative">
       <div className="container mx-auto px-4">
-        <motion.div 
+        <div 
           ref={titleRef}
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Locations</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-indigo-900 mb-4">Locations</h2>
+          <motion.div 
+            className="h-1 w-24 bg-amber-400 mx-auto rounded-full"
+            initial={{ width: 0 }}
+            whileInView={{ width: 96 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          />
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-4">
             Our Global Presence
           </p>
-        </motion.div>
+        </div>
         
         <div className="max-w-4xl mx-auto">
           {/* Location Details */}
-          <motion.div 
+          <div 
             ref={contentRef}
-            initial={{ opacity: 0, y: 30 }}
-            animate={isContentInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6 }}
             className="bg-white rounded-xl shadow-lg overflow-hidden"
           >
             <div className="relative h-64 w-full">
@@ -71,7 +69,7 @@ export default function Locations() {
             </div>
             
             <div className="p-6">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">{location.name}</h3>
+              <h3 className="text-2xl font-bold text-indigo-900 mb-4 border-l-4 border-amber-400 pl-3">{location.name}</h3>
               
               <div className="space-y-3 mb-6">
                 <div className="flex items-start gap-3">
@@ -95,17 +93,16 @@ export default function Locations() {
                 </div>
               </div>
               
-              <h4 className="text-lg font-semibold text-gray-800 mb-3">Campus Images</h4>
+              <h4 className="text-lg font-semibold text-indigo-900 mb-3 border-l-4 border-amber-400 pl-3">Campus Images</h4>
               <div className="grid grid-cols-3 gap-2">
                 {location.images.map((image, index) => (
                   <div key={index} className="relative aspect-square rounded-lg overflow-hidden">
-                    <div className="absolute inset-0 bg-[#e0e8f5] animate-pulse"></div>
-                    {/* <Image src={image} alt={`${location.name} campus ${index+1}`} fill className="object-cover" /> */}
+                    <div className="absolute inset-0 bg-amber-100 animate-pulse"></div>
                   </div>
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

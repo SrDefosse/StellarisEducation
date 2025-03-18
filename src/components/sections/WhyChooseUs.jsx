@@ -6,10 +6,9 @@ import { IoPeople } from 'react-icons/io5';
 const WhyChooseUs = () => {
   return (
     <>
-      <div className="relative h-fit bg-gray-50">
+      <div className="relative h-fit">
         <Features />
       </div>
-      <div className="h-[50vh] bg-white" />
     </>
   );
 };
@@ -26,12 +25,19 @@ const Features = () => {
 const Copy = () => {
   return (
     <div className="flex h-fit w-full flex-col justify-center py-16 md:py-24 md:sticky md:top-0 md:h-screen">
-      <span className="w-fit rounded-full bg-[#3967a9] px-4 py-2 text-sm uppercase text-white font-semibold">
+      <span className="w-fit rounded-full bg-amber-500 px-4 py-2 text-sm uppercase text-white font-semibold">
         Excellence in Early Education
       </span>
-      <h2 className="mb-4 mt-2 text-3xl md:text-4xl font-bold text-[#303444]">
+      <h2 className="mb-4 mt-2 text-3xl md:text-4xl font-bold text-indigo-900">
         Why Choose Stellaris
       </h2>
+      <motion.div 
+        className="h-1 w-24 bg-amber-400 rounded-full mb-6"
+        initial={{ width: 0 }}
+        whileInView={{ width: 96 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      />
       <p className="text-lg text-gray-600">
         Our unique approach to Pre-K education for ages 3-5 sets us apart and prepares students for success in a global world.
       </p>
@@ -49,8 +55,8 @@ const Carousel = () => {
   const features = [
     {
       icon: <FaGlobeAmericas className="text-4xl text-[#3967a9]" />,
-      title: "IB & Global Perspectives",
-      description: "Our IB curriculum develops international-mindedness and cultural awareness through inquiry-based learning and a global approach to education."
+      title: "IB Excellence",
+      description: "Our IB curriculum fosters international-mindedness and academic excellence through inquiry-based learning, developing globally aware and culturally competent students."
     },
     {
       icon: <FaLanguage className="text-4xl text-[#3967a9]" />,
@@ -69,7 +75,7 @@ const Carousel = () => {
     },
     {
       icon: <FaApple className="text-4xl text-[#3967a9]" />,
-      title: "Clean Healthy Eating",
+      title: "Clean Healthy Lifestyle",
       description: "We promote healthy eating habits with nutritious meals and snacks, teaching children about food choices that support their growth and development."
     },
     {
@@ -117,7 +123,7 @@ const CarouselItem = ({ scrollYProgress, position, numItems, feature }) => {
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-4">
           {feature.icon}
-          <h3 className="text-2xl font-semibold text-[#303444]">{feature.title}</h3>
+          <h3 className="text-2xl font-semibold text-indigo-900">{feature.title}</h3>
         </div>
         <p className="text-lg text-gray-600">{feature.description}</p>
       </div>
@@ -126,7 +132,7 @@ const CarouselItem = ({ scrollYProgress, position, numItems, feature }) => {
 };
 
 const Gradient = () => (
-  <div className="sticky top-0 z-10 hidden h-24 w-full bg-gradient-to-b from-gray-50 to-gray-50/0 md:block" />
+  <div className="sticky top-0 z-10 hidden h-24 w-full bg-gradient-to-b from-transparent to-transparent/0 md:block" />
 );
 
 const Buffer = () => <div className="h-24 w-full md:h-48" />;

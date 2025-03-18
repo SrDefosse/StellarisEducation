@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import Journey from "@/components/sections/Journey";
 import Team from "@/components/sections/Team";
 import Faculty from "@/components/sections/Faculty";
+import Locations from "@/components/sections/Locations";
 
 export default function About() {
   return (
@@ -13,11 +15,13 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Navbar />
-      <main className="min-h-screen">
+      <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
         <Journey />
         <Team />
         <Faculty />
+        <Locations />
       </main>
+      <Footer />
     </>
   );
 } 
