@@ -122,7 +122,7 @@ const Journey = () => {
     <section className="py-16 mt-20 md:py-24" ref={containerRef}>
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-indigo-900 mb-4">Our Journey</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#4081DE] mb-4">Our Journey</h2>
           <motion.div 
             className="h-1 w-24 bg-amber-400 mx-auto rounded-full"
             initial={{ width: 0 }}

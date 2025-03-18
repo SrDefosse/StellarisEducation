@@ -68,7 +68,7 @@ export function ImmersionMethodologySection() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-4xl font-bold mb-4 text-indigo-900">
+        <h2 className="text-4xl font-bold mb-4 text-[#4081DE]">
           How We Implement Immersion
         </h2>
         <div className="h-1 w-24 bg-amber-400 mx-auto rounded-full mb-6" />
@@ -89,7 +89,7 @@ export function ImmersionMethodologySection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-2xl font-bold text-indigo-900 mb-6">Our Methodologies</h3>
+          <h3 className="text-2xl font-bold text-[#4081DE] mb-6">Our Methodologies</h3>
           
           <div className="space-y-4">
             {methodologies.map((method, index) => (
@@ -98,7 +98,7 @@ export function ImmersionMethodologySection() {
                 className={`p-4 rounded-xl cursor-pointer transition-all duration-300 ${
                   activeFeature === index 
                     ? 'bg-amber-100 text-amber-900 shadow-md border border-amber-200' 
-                    : 'bg-white text-indigo-900 hover:bg-amber-50 border border-gray-100'
+                    : 'bg-white text-[#4081DE] hover:bg-amber-50 border border-gray-100'
                 }`}
                 initial={isInView ? { opacity: 0, x: -20 } : false}
                 animate={isInView ? { opacity: 1, x: 0 } : false}
@@ -106,7 +106,7 @@ export function ImmersionMethodologySection() {
                 onClick={() => setActiveFeature(index)}
               >
                 <div className="flex items-center gap-4">
-                  <span className={`${activeFeature === index ? 'text-amber-600' : 'text-indigo-700'} text-2xl`}>{method.icon}</span>
+                  <span className={`${activeFeature === index ? 'text-amber-600' : 'text-[#4081DE]'} text-2xl`}>{method.icon}</span>
                   <div>
                     <h4 className="font-bold text-lg">{method.title}</h4>
                     {activeFeature === index && (
@@ -141,11 +141,11 @@ export function ImmersionMethodologySection() {
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/30 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#4081DE]/30 to-transparent"></div>
           </div>
           <div className="absolute bottom-0 left-0 w-full p-6">
             <div className="bg-white/90 backdrop-blur-sm p-4 rounded-xl">
-              <h3 className="text-2xl font-bold mb-2 text-indigo-900">{methodologies[activeFeature].title}</h3>
+              <h3 className="text-2xl font-bold mb-2 text-[#4081DE]">{methodologies[activeFeature].title}</h3>
               <p className="text-sm text-gray-700">{methodologies[activeFeature].description}</p>
             </div>
           </div>
@@ -190,7 +190,7 @@ export function ImmersionMethodologySection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <h3 className="text-3xl font-bold text-indigo-900 mb-6">Expert Bilingual Educators</h3>
+                <h3 className="text-3xl font-bold text-[#4081DE] mb-6">Expert Bilingual Educators</h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   At the heart of our Spanish immersion program are our talented bilingual teachers who bring language and culture to life in our classrooms. Our educators are not only fluent in Spanish but also specifically trained in immersion teaching techniques.
                 </p>

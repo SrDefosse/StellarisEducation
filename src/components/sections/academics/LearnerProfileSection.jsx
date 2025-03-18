@@ -61,7 +61,7 @@ export function LearnerProfileSection() {
       <div className="absolute -top-24" id="learner-profile"></div>
 
       {/* Background pattern */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-50 via-white to-amber-50 opacity-70" />
+      <div className="absolute inset-0 -z-10" />
 
       {/* Heading */}
       <motion.div
@@ -71,7 +71,7 @@ export function LearnerProfileSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-4xl font-bold text-center mb-2 text-indigo-800">
+        <h2 className="text-4xl font-bold text-center mb-2 text-[#4081DE]">
           The IB Learner Profile
         </h2>
         <motion.div 
@@ -112,7 +112,7 @@ export function LearnerProfileSection() {
           <motion.div
             key={index}
             className="rounded-xl overflow-hidden shadow-lg h-full transition-all duration-300 
-                       hover:shadow-2xl hover:scale-[1.02] bg-white transform-gpu"
+                       hover:shadow-2xl hover:scale-[1.02] bg-blue-50 transform-gpu"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -123,14 +123,14 @@ export function LearnerProfileSection() {
           >
             <div className="h-full flex flex-col">
               <div 
-                className="bg-indigo-600 p-4 text-white flex items-center justify-between group-hover:bg-indigo-700 transition-colors duration-300"
+                className="bg-[#4081DE] p-4 text-white flex items-center justify-between transition-colors duration-300"
               >
                 <h3 className="text-xl font-bold">{profile.title}</h3>
                 <span className="text-white">{profile.icon}</span>
               </div>
 
               <div 
-                className="p-4 flex-grow flex items-center bg-white"
+                className="p-4 flex-grow flex items-center bg-blue-50"
               >
                 <p className="text-gray-700 leading-relaxed">
                   {profile.description}

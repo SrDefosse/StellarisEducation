@@ -24,7 +24,7 @@ export default function LanguageImmersionPage() {
           transition={{ duration: 0.5 }}
           className="container mx-auto px-4 py-16"
         >
-          <h1 className="text-5xl font-bold text-center mb-4 text-indigo-900">
+          <h1 className="text-5xl font-bold text-center mb-4 text-[#4081DE]">
             Spanish Immersion
           </h1>
           <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">

@@ -28,7 +28,7 @@ export function WhatIsLanguageImmersionSection() {
         transition={{ duration: 0.6 }}
       >
         <div className="relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-indigo-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#4081DE] mb-4">
             What is Language Immersion?
           </h2>
           <div className="h-1 w-32 bg-amber-400 rounded-full mb-4" />
@@ -102,7 +102,7 @@ export function WhatIsLanguageImmersionSection() {
               className="flex flex-col gap-6"
             >
               <div>
-                <h3 className="text-2xl font-bold text-indigo-900 mb-4">The Immersion Approach</h3>
+                <h3 className="text-2xl font-bold text-[#4081DE] mb-4">The Immersion Approach</h3>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Language immersion is an educational approach where students learn subject content through a second language. 
                   At Stellaris, our Spanish immersion program surrounds children with Spanish language throughout the day, 
@@ -113,14 +113,6 @@ export function WhatIsLanguageImmersionSection() {
                   social interactions in Spanish, allowing them to absorb the language organically—similar to how they 
                   learned their first language.
                 </p>
-              </div>
-              <div className="relative h-[200px] rounded-xl overflow-hidden mt-4">
-                <Image
-                  src="/images/immersion-classroom.jpg"
-                  alt="Language immersion classroom"
-                  fill
-                  className="object-cover"
-                />
               </div>
             </motion.div>
           )}
@@ -134,7 +126,7 @@ export function WhatIsLanguageImmersionSection() {
               className="flex flex-col gap-6"
             >
               <div>
-                <h3 className="text-2xl font-bold text-indigo-900 mb-4">Natural Language Acquisition</h3>
+                <h3 className="text-2xl font-bold text-[#4081DE] mb-4">Natural Language Acquisition</h3>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   In our immersion program, children learn Spanish through context, repetition, and meaningful interactions. 
                   Teachers use visual cues, body language, and consistent routines to help children understand and 
@@ -145,15 +137,7 @@ export function WhatIsLanguageImmersionSection() {
                   exposure, trial and error, and the natural human drive to communicate. Children develop language 
                   fluency in a stress-free environment where making mistakes is part of the learning journey.
                 </p>
-              </div>
-              <div className="relative h-[200px] rounded-xl overflow-hidden mt-4">
-                <Image
-                  src="/images/language-acquisition.jpg"
-                  alt="Natural language acquisition"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              </div>              
             </motion.div>
           )}
           
@@ -166,7 +150,7 @@ export function WhatIsLanguageImmersionSection() {
               className="flex flex-col gap-6"
             >
               <div>
-                <h3 className="text-2xl font-bold text-indigo-900 mb-4">A Rich Language Environment</h3>
+                <h3 className="text-2xl font-bold text-[#4081DE] mb-4">A Rich Language Environment</h3>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Our classrooms are designed as language-rich environments where Spanish is used for instruction, 
                   daily routines, play, and social interaction. Teachers are native or fluent Spanish speakers who 
@@ -178,14 +162,6 @@ export function WhatIsLanguageImmersionSection() {
                   acquisition. The classroom becomes a microcosm of a Spanish-speaking world, giving children authentic 
                   opportunities to use and experience the language.
                 </p>
-              </div>
-              <div className="relative h-[200px] rounded-xl overflow-hidden mt-4">
-                <Image
-                  src="/images/spanish-classroom.jpg"
-                  alt="Spanish language classroom environment"
-                  fill
-                  className="object-cover"
-                />
               </div>
             </motion.div>
           )}

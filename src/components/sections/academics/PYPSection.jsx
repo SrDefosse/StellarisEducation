@@ -13,7 +13,7 @@ export function PYPSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-4xl font-bold text-center mb-2 text-indigo-800">
+        <h2 className="text-4xl font-bold text-center mb-2 text-[#4081DE]">
           What is the IB Primary Years Programme?
         </h2>
         <motion.div 

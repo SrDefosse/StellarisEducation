@@ -109,7 +109,7 @@ export default function Faculty() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-indigo-900 mb-4">Benefits</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#4081DE] mb-4">Benefits</h2>
           <motion.div 
             className="h-1 w-24 bg-amber-400 mx-auto rounded-full"
             initial={{ width: 0 }}
@@ -137,7 +137,7 @@ export default function Faculty() {
           viewport={{ once: true }}
           className="mb-10"
         >
-          <h3 className="text-2xl font-bold text-indigo-900 mb-6 text-center">Our Diverse Faculty</h3>
+          <h3 className="text-2xl font-bold text-[#4081DE] mb-6 text-center">Our Diverse Faculty</h3>
           <motion.div 
             className="h-1 w-16 bg-amber-400 mx-auto rounded-full mb-8"
             initial={{ width: 0 }}

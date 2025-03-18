@@ -61,7 +61,7 @@ export function ImmersionBenefitsSection() {
           transition={{ duration: 0.6 }}
         >
           <motion.h2 
-            className="text-4xl font-bold mb-6 text-indigo-900"
+            className="text-4xl font-bold mb-6 text-[#4081DE]"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -103,8 +103,8 @@ export function ImmersionBenefitsSection() {
             whileHover={{ scale: 1.01 }}
           >
             <div className="flex justify-between items-start">
-              <h3 className="text-2xl font-bold text-indigo-900 mb-3">{benefits[0].title}</h3>
-              <span className="text-indigo-700 text-3xl">{benefits[0].icon}</span>
+              <h3 className="text-2xl font-bold text-[#4081DE] mb-3">{benefits[0].title}</h3>
+              <span className="text-[#4081DE] text-3xl">{benefits[0].icon}</span>
             </div>
             <p className="text-gray-700 mt-2">{benefits[0].description}</p>
           </motion.div>
@@ -116,8 +116,8 @@ export function ImmersionBenefitsSection() {
             whileHover={{ scale: 1.01 }}
           >
             <div className="flex justify-between items-start">
-              <h3 className="text-xl font-bold text-indigo-900 mb-2">{benefits[1].title}</h3>
-              <span className="text-indigo-700 text-2xl">{benefits[1].icon}</span>
+              <h3 className="text-xl font-bold text-[#4081DE] mb-2">{benefits[1].title}</h3>
+              <span className="text-[#4081DE] text-2xl">{benefits[1].icon}</span>
             </div>
             <p className="text-gray-700 mt-2">{benefits[1].description}</p>
           </motion.div>
@@ -129,8 +129,8 @@ export function ImmersionBenefitsSection() {
             whileHover={{ scale: 1.01 }}
           >
             <div className="flex justify-between items-start">
-              <h3 className="text-xl font-bold text-indigo-900 mb-2">{benefits[2].title}</h3>
-              <span className="text-indigo-700 text-2xl">{benefits[2].icon}</span>
+              <h3 className="text-xl font-bold text-[#4081DE] mb-2">{benefits[2].title}</h3>
+              <span className="text-[#4081DE] text-2xl">{benefits[2].icon}</span>
             </div>
             <p className="text-gray-700 mt-2">{benefits[2].description}</p>
           </motion.div>
@@ -142,8 +142,8 @@ export function ImmersionBenefitsSection() {
             whileHover={{ scale: 1.01 }}
           >
             <div className="flex justify-between items-start">
-              <h3 className="text-xl font-bold text-indigo-900 mb-2">{benefits[3].title}</h3>
-              <span className="text-indigo-700 text-2xl">{benefits[3].icon}</span>
+              <h3 className="text-xl font-bold text-[#4081DE] mb-2">{benefits[3].title}</h3>
+              <span className="text-[#4081DE] text-2xl">{benefits[3].icon}</span>
             </div>
             <p className="text-gray-700 mt-2">{benefits[3].description}</p>
           </motion.div>
@@ -155,8 +155,8 @@ export function ImmersionBenefitsSection() {
             whileHover={{ scale: 1.01 }}
           >
             <div className="flex justify-between items-start">
-              <h3 className="text-xl font-bold text-indigo-900 mb-2">{benefits[4].title}</h3>
-              <span className="text-indigo-700 text-2xl">{benefits[4].icon}</span>
+              <h3 className="text-xl font-bold text-[#4081DE] mb-2">{benefits[4].title}</h3>
+              <span className="text-[#4081DE] text-2xl">{benefits[4].icon}</span>
             </div>
             <p className="text-gray-700 mt-2">{benefits[4].description}</p>
           </motion.div>
@@ -175,7 +175,7 @@ export function ImmersionBenefitsSection() {
               <FaLightbulb />
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-indigo-900 mb-2">A Gift for Life</h3>
+              <h3 className="text-2xl font-bold text-[#4081DE] mb-2">A Gift for Life</h3>
               <p className="text-gray-700 leading-relaxed">
                 The cognitive and cultural benefits of early language immersion extend far beyond childhood, 
                 providing advantages throughout education and into adulthood. By giving your child the gift of 

@@ -39,7 +39,7 @@ export function InquiryBasedLearningSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-4xl font-bold text-center mb-2 text-indigo-800">
+        <h2 className="text-4xl font-bold text-center mb-2 text-[#4081DE]">
           Inquiry Based Learning
         </h2>
         <motion.div 
@@ -103,7 +103,7 @@ export function InquiryBasedLearningSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.6 }}
       >
-        <h3 className="text-2xl font-semibold text-center mb-8 text-indigo-700">
+        <h3 className="text-2xl font-semibold text-center mb-8 text-[#4081DE]">
           The Inquiry Process
         </h3>
         
@@ -131,7 +131,7 @@ export function InquiryBasedLearningSection() {
                   className={`absolute top-1/2 ${
                     index % 2 === 0 ? 'right-0 md:translate-x-1/2' : 'left-0 md:-translate-x-1/2'
                   } transform -translate-y-1/2 w-6 h-6 rounded-full z-20 ${
-                    selectedIndex === index ? 'bg-amber-400' : 'bg-indigo-500'
+                    selectedIndex === index ? 'bg-amber-400' : 'bg-[#4081DE]'
                   }`}
                   animate={{ 
                     scale: selectedIndex === index ? [1, 1.2, 1] : 1
@@ -148,7 +148,7 @@ export function InquiryBasedLearningSection() {
                     selectedIndex === index ? 'ring-2 ring-amber-400' : ''
                   }`}
                 >
-                  <h4 className="font-semibold text-lg text-indigo-600 mb-2">
+                  <h4 className="font-semibold text-lg text-[#4081DE] mb-2">
                     {step.title}
                   </h4>
                   <p className="text-gray-600">{step.content}</p>
