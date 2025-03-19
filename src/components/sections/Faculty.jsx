@@ -45,12 +45,12 @@ const benefits = [
 
 // Sample faculty images (replace with actual images)
 const facultyImages = [
-  { id: 1, src: "/faculty/teacher1.jpg", alt: "Faculty member teaching" },
-  { id: 2, src: "/faculty/teacher2.jpg", alt: "Professor in discussion with students" },
-  { id: 3, src: "/faculty/teacher3.jpg", alt: "Science teacher in laboratory" },
-  { id: 4, src: "/faculty/teacher4.jpg", alt: "Music instructor with students" },
-  { id: 5, src: "/faculty/teacher5.jpg", alt: "Art teacher in creative session" },
-  { id: 6, src: "/faculty/teacher6.jpg", alt: "Literature professor in library" },
+  { id: 1, src: "/teacher1.jpg", alt: "Faculty member teaching" },
+  { id: 2, src: "/teacher2.jpg", alt: "Professor in discussion with students" },
+  { id: 3, src: "/students4.jpg", alt: "Science teacher in laboratory" },
+  { id: 4, src: "/students1.jpg", alt: "Students drawing a plan" },
+  { id: 5, src: "/students2.jpg", alt: "Students in a classroom" },
+  { id: 6, src: "/students3.jpg", alt: "Pre K students" },
 ];
 
 // Benefit card component

@@ -6,37 +6,31 @@ const timelineData = [
     year: "2019",
     title: "Foundation",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "/path-to-your-image-1.jpg"
+    image: "/foundation.jpg"
   },
   {
     year: "2020",
     title: "First Classes",
     description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: "/path-to-your-image-2.jpg"
+    image: "/first_classes.jpg"
   },
   {
     year: "2021",
     title: "Campus Expansion",
     description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    image: "/path-to-your-image-3.jpg"
+    image: "/campus_expansion.jpg"
   },
   {
     year: "2022",
     title: "New Programs",
     description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    image: "/path-to-your-image-4.jpg"
-  },
-  {
-    year: "2023",
-    title: "Research Center",
-    description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni.",
-    image: "/path-to-your-image-5.jpg"
+    image: "/new_programs.jpg"
   },
   {
     year: "2024",
     title: "Future Vision",
     description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
-    image: "/path-to-your-image-6.jpg"
+    image: "/future_vision.jpg"
   }
 ];
 

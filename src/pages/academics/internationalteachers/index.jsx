@@ -2,6 +2,9 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { MulticulturalBenefitsSection } from '@/components/sections/academics/MulticulturalBenefitsSection';
+import { TalentedTeachersSection } from '@/components/sections/academics/TalentedTeachersSection';
+import { RecruitmentProcessSection } from '@/components/sections/academics/RecruitmentProcessSection';
 
 export default function InternationalTeachersPage() {
   return (
@@ -14,29 +17,25 @@ export default function InternationalTeachersPage() {
         />
       </Head>
       <Navbar />
-      <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white mt-20">
+      <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white mt-20">
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           className="container mx-auto px-4 py-16"
         >
-          <h1 className="text-5xl font-bold text-center mb-4 text-emerald-900">
+          <h1 className="text-5xl font-bold text-center mb-4 text-[#4081DE]">
             International Teachers
           </h1>
           <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
-            Coming soon! This page is under development.
+            Our diverse team of international educators create a multicultural learning environment
+            that broadens perspectives and enhances language acquisition
           </p>
 
-          <div className="flex items-center justify-center">
-            <div className="bg-white p-8 rounded-2xl shadow-lg max-w-2xl">
-              <p className="text-gray-700 mb-4">
-                Our team of international teachers brings diverse cultural perspectives and teaching experiences to our classrooms, enriching our students' educational journey.
-              </p>
-              <p className="text-gray-700">
-                Please check back soon to learn more about our talented educators and how we recruit them from around the world.
-              </p>
-            </div>
+          <div className="space-y-32">
+            <MulticulturalBenefitsSection />
+            <TalentedTeachersSection />
+            <RecruitmentProcessSection />
           </div>
         </motion.div>
       </div>

@@ -60,9 +60,6 @@ export function LearnerProfileSection() {
     <section id="learner-profile" className="relative">
       <div className="absolute -top-24" id="learner-profile"></div>
 
-      {/* Background pattern */}
-      <div className="absolute inset-0 -z-10" />
-
       {/* Heading */}
       <motion.div
         className="mb-12"
@@ -84,26 +81,6 @@ export function LearnerProfileSection() {
         <p className="text-center text-gray-600 max-w-3xl mx-auto mt-4">
           The IB Learner Profile describes a broad range of human capacities and responsibilities that go beyond academic success. These qualities prepare students to make thoughtful, appropriate choices and to become globally engaged citizens.
         </p>
-      </motion.div>
-
-      {/* Video */}
-      <motion.div
-        className="rounded-2xl overflow-hidden shadow-lg max-w-4xl mx-auto mb-16"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
-        <div className="w-full relative" style={{ paddingBottom: "56.25%" }}> {/* 16:9 Aspect Ratio */}
-          <iframe 
-            src="https://www.youtube.com/embed/nPUMwr4-y6o" 
-            title="IB Learner Profile"
-            frameBorder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowFullScreen
-            className="absolute inset-0 w-full h-full"
-          />
-        </div>
       </motion.div>
 
       {/* Learner Profile Cards */}
@@ -140,6 +117,26 @@ export function LearnerProfileSection() {
           </motion.div>
         ))}
       </div>
+
+      {/* Video */}
+      <motion.div
+        className="rounded-2xl overflow-hidden shadow-lg max-w-4xl mx-auto mb-16"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        <div className="w-full relative" style={{ paddingBottom: "56.25%" }}> {/* 16:9 Aspect Ratio */}
+          <iframe 
+            src="https://www.youtube.com/embed/nPUMwr4-y6o" 
+            title="IB Learner Profile"
+            frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen
+            className="absolute inset-0 w-full h-full"
+          />
+        </div>
+      </motion.div>
     </section>
   );
 } 

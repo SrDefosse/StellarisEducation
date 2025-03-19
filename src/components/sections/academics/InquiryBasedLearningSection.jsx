@@ -23,14 +23,6 @@ export function InquiryBasedLearningSection() {
     <section id="inquiry-based-learning" className="relative">
       <div className="absolute -top-24" id="inquiry-based"></div>
 
-      {/* Hexagon background pattern */}
-      <div className="absolute inset-0 -z-10 opacity-5">
-        <div className="w-full h-full" style={{ 
-          backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M30 0l30 17.32v34.64L30 60 0 51.96V17.32L30 0zm0 12l-18 10.392v20.785L30 48l18-10.392V27.608L30 12z\' fill=\'%236366F1\' fill-opacity=\'1\' fill-rule=\'evenodd\'/%3E%3C/svg%3E")',
-          backgroundSize: '60px 60px'
-        }}/>
-      </div>
-
       {/* Heading */}
       <motion.div
         className="mb-12"
