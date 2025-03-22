@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import Journey from "@/components/sections/Journey";
-import Team from "@/components/sections/Team";
-import Faculty from "@/components/sections/Faculty";
-import Locations from "@/components/sections/Locations";
+import Journey from "@/components/sections/aboutUs/Journey";
+import Team from "@/components/sections/aboutUs/Team";
+import Faculty from "@/components/sections/aboutUs/Faculty";
+import Locations from "@/components/sections/aboutUs/Locations";
 
 export default function About() {
   return (

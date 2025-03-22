@@ -1,6 +1,9 @@
 import { PrimaryButton } from './Button';
+import { useRouter } from 'next/router';
 
 const CardCTA = () => {
+  const router = useRouter();
+
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
       <div className="bg-[#3B6FB5] rounded-3xl shadow-xl overflow-hidden">
@@ -13,8 +16,11 @@ const CardCTA = () => {
               Schedule a tour, learn about our admissions process, or sign up for more information about our Pre-K programs for ages 3-5.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <PrimaryButton variant="white">
-                Request Information
+              <PrimaryButton 
+                variant="white"
+                onClick={() => router.push('/admissions')}
+              >
+                Admissions
               </PrimaryButton>
               <button
                 className="px-6 py-3 text-white border-2 border-white rounded-xl hover:bg-white/10 transition-colors duration-300"

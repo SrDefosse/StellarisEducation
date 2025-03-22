@@ -12,6 +12,9 @@ const Navbar = () => {
   const router = useRouter();
   const isAboutPage = router.pathname === '/about' || router.pathname === '/about/';
   const isAcademicsPage = router.pathname.startsWith('/academics');
+  const isContactPage = router.pathname === '/contact' || router.pathname === '/contact/';
+  const isAfterSchoolPage = router.pathname === '/afterSchool' || router.pathname === '/afterSchool/';
+  const shouldHaveBackground = scrolled || isAboutPage || isAcademicsPage || isContactPage || isAfterSchoolPage;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,13 +56,13 @@ const Navbar = () => {
     <>
       <nav 
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          scrolled || isAboutPage || isAcademicsPage
+          shouldHaveBackground
             ? 'py-2 md:py-3 backdrop-blur-md backdrop-saturate-150 shadow-lg shadow-[#3967a9]/10' 
             : 'py-2 md:py-3'
         }`}
         style={{
-          backgroundColor: scrolled || isAboutPage || isAcademicsPage ? 'rgba(45, 53, 64, 0.85)' : 'transparent',
-          borderBottom: scrolled || isAboutPage || isAcademicsPage ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
+          backgroundColor: shouldHaveBackground ? 'rgba(45, 53, 64, 0.85)' : 'transparent',
+          borderBottom: shouldHaveBackground ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
         }}
       >
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
@@ -106,6 +109,13 @@ const Navbar = () => {
               {academicsDropdownOpen && (
                 <div className="absolute mt-2 w-48 bg-[#303444]/95 backdrop-blur-sm rounded-md shadow-lg overflow-hidden z-20 transform origin-top-right transition-all duration-200 ease-out py-1">
                   <Link 
+                    href="/academics/prek" 
+                    className="block px-4 py-2 text-sm text-white hover:bg-[#3967a9]/40 transition-colors"
+                    onClick={() => setAcademicsDropdownOpen(false)}
+                  >
+                    Pre-K
+                  </Link>
+                  <Link 
                     href="/academics/ib" 
                     className="block px-4 py-2 text-sm text-white hover:bg-[#3967a9]/40 transition-colors"
                     onClick={() => setAcademicsDropdownOpen(false)}
@@ -130,7 +140,7 @@ const Navbar = () => {
               )}
             </div>
             
-            <NavLink href="/after-school-care">After School Care</NavLink>
+            <NavLink href="/afterSchool">After School Enrichment</NavLink>
             <NavLink href="/admissions">Admissions</NavLink>
             <NavLink href="/contact" isButton>Contact Us</NavLink>
           </div>
@@ -188,6 +198,13 @@ const Navbar = () => {
             {mobileAcademicsOpen && (
               <div className="w-full flex flex-col items-center mt-2 space-y-2 py-2 px-4 bg-white/5 rounded-lg">
                 <Link 
+                  href="/academics/prek" 
+                  className="text-white text-lg w-full text-center py-2 rounded-lg hover:bg-white/10 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Pre-K Program
+                </Link>
+                <Link 
                   href="/academics/ib" 
                   className="text-white text-lg w-full text-center py-2 rounded-lg hover:bg-white/10 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
@@ -212,7 +229,7 @@ const Navbar = () => {
             )}
           </div>
           
-          <MobileNavLink href="/after-school-care" onClick={() => setMobileMenuOpen(false)}>After School Care</MobileNavLink>
+          <MobileNavLink href="/afterSchool" onClick={() => setMobileMenuOpen(false)}>After School Enrichment</MobileNavLink>
           <MobileNavLink href="/admissions" onClick={() => setMobileMenuOpen(false)}>Admissions</MobileNavLink>
           <MobileNavLink href="/contact" onClick={() => setMobileMenuOpen(false)}>Contact Us</MobileNavLink>
         </div>

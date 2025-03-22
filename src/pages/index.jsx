@@ -4,9 +4,10 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Head from "next/head";
 import AcademicProgram from "@/components/sections/AcademicProgram";
-import PYPFeature from "@/components/sections/PYPFeature";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import CardCTA from "@/components/ui/CardCTA";
+import ExperienceStellaris from "@/components/sections/ExperienceStellaris";
+
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
         <Hero />
         <Welcome />
         <AcademicProgram />
-        <PYPFeature/>
+        <ExperienceStellaris />
         <WhyChooseUs />
         <CardCTA />
       </main>

@@ -3,9 +3,11 @@ import Image from 'next/image';
 import { PrimaryButton, SecondaryButton } from '../ui/Button';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 const AcademicProgram = () => {
   const [activeProgram, setActiveProgram] = useState(0);
+  const router = useRouter();
 
   const programs = [
     {
@@ -13,28 +15,32 @@ const AcademicProgram = () => {
       title: "PreK Offering",
       description: "Our PreK program for ages 3-5 provides a nurturing environment where children develop foundational skills through play-based learning and exploration.",
       size: "col-span-12 md:col-span-6 lg:col-span-3",
-      image: "/PreK_Offering.jpg"
+      image: "/PreK_Offering.jpg",
+      path: "/academics/pre-k"
     },
     {
       id: 2,
       title: "IB Program",
       description: "Our curriculum follows the inquiry-based IB framework, encouraging students to take ownership of their learning through exploration and discovery.",
       size: "col-span-12 md:col-span-6 lg:col-span-3",
-      image: "/IB_Program.jpg"
+      image: "/IB_Program.jpg",
+      path: "/academics/ib"
     },
     {
       id: 3,
       title: "Spanish Immersion",
       description: "Students are immersed in Spanish language environment, developing fluency naturally while learning academic content in both languages.",
       size: "col-span-12 md:col-span-6 lg:col-span-3",
-      image: "/Spanish_Immersion.jpg"
+      image: "/Spanish_Immersion.jpg",
+      path: "/academics/languageimmersion"
     },
     {
       id: 4,
       title: "International Teachers",
       description: "Our diverse faculty brings authentic cultural experiences and global perspectives to the classroom, enriching the educational journey.",
       size: "col-span-12 md:col-span-6 lg:col-span-3",
-      image: "/International_Teacher.jpg"
+      image: "/International_Teacher.jpg",
+      path: "/academics/internationalteachers"
     }
   ];
 
@@ -107,7 +113,7 @@ const AcademicProgram = () => {
                       {/* Description */}
                       <div className="p-6 w-full md:w-3/5 flex flex-col justify-between">
                         <p className="text-gray-700 mb-6">{program.description}</p>
-                        <SecondaryButton>Learn More</SecondaryButton>
+                        <SecondaryButton onClick={() => router.push(program.path)}>Learn More</SecondaryButton>
                       </div>
                     </div>
                   </motion.div>

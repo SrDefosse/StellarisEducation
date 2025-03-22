@@ -33,8 +33,11 @@ export function PYPSection() {
               What is the IB Primary Years Programme?
             </h2>
             <div className="h-1 w-32 bg-amber-400 rounded-full mb-4" />
-            <p className="text-indigo-800/80 text-lg max-w-3xl">
-              A transdisciplinary, inquiry-based curriculum framework designed for students aged 3 to 12
+            <p className="text-gray-700 text-lg max-w-3xl">
+            The International Baccalaureate Primary Years Programme (PYP) is a globally recognized, inquiry-based curriculum designed for students aged 3 to 12. It fosters curiosity, 
+            creativity, and critical thinking through a transdisciplinary framework. Students explore traditional subjects like language, math, science, and arts while connecting learning 
+            to real-world issues. Emphasizing student agency, the PYP nurtures lifelong learners who are internationally minded, compassionate, and equipped with skills for a changing world. 
+            The programme culminates in the PYP Exhibition, a collaborative project showcasing students’ growth.
             </p>
           </div>
           
