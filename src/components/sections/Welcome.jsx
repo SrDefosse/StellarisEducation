@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import { PrimaryButton, SecondaryButton } from '../ui/Button';
 import { motion } from 'framer-motion';
+import MaxWidthWrapper from '../ui/MaxWidthWrapper';
 
 const Welcome = () => {
   return (
     <div className="relative py-16 md:py-24 overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+      <MaxWidthWrapper>
         {/* Content grid layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 relative z-10 items-stretch">
           {/* Content Card - spans 6 columns on desktop */}
@@ -101,7 +102,7 @@ const Welcome = () => {
             </div>
           </div>
         </div>
-      </div>
+      </MaxWidthWrapper>
     </div>
   );
 };

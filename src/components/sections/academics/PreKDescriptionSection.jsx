@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 export const PreKDescriptionSection = () => {
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4">
+      <MaxWidthWrapper>
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
@@ -18,7 +19,7 @@ export const PreKDescriptionSection = () => {
             </h2>
             <div className="prose max-w-none text-gray-700">
               <p className="text-lg">
-                At Stellaris Education, our Pre-K program provides a foundation for lifelong learning through a playful, inquiry-based approach. Our classrooms offer a nurturing environment where children develop socially, emotionally, and academically.
+                At Stellaris, our Pre-K program provides a foundation for lifelong learning through a playful, inquiry-based approach. Our classrooms offer a nurturing environment where children develop socially, emotionally, and academically.
               </p>
               <p className="text-lg">
                 Using the International Baccalaureate framework along with language immersion, our youngest learners begin their educational journey by exploring concepts through guided play, stimulating activities, and meaningful interactions with our international faculty.
@@ -44,7 +45,7 @@ export const PreKDescriptionSection = () => {
             />
           </motion.div>
         </div>
-      </div>
+      </MaxWidthWrapper>
     </section>
   );
 }; 

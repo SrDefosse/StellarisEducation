@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaGlobe } from "react-icons/fa";
+import MaxWidthWrapper from "../../ui/MaxWidthWrapper";
 
 // Locations data
 const campusData = {
@@ -46,7 +47,7 @@ export default function Locations() {
   
   return (
     <section className="py-20 relative overflow-hidden">
-      <div className="container mx-auto px-4">
+      <MaxWidthWrapper>
         <div 
           ref={titleRef}
           className="text-center mb-16"
@@ -200,7 +201,7 @@ export default function Locations() {
             ></iframe>
           </div>
         </motion.div>
-      </div>
+      </MaxWidthWrapper>
       
       {/* Decorative elements */}
       <div className="absolute -z-10 top-40 -right-20 w-72 h-72 bg-amber-50 rounded-full opacity-60"></div>

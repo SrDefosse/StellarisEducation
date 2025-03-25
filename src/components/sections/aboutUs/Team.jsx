@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
+import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 // Team member data
 const teamMembers = [
@@ -98,7 +99,7 @@ export default function Team() {
   
   return (
     <section className="py-20 relative overflow-hidden">
-      <div className="container mx-auto px-4">
+      <MaxWidthWrapper>
         <div 
           ref={titleRef}
           className="text-center mb-16"
@@ -131,7 +132,7 @@ export default function Team() {
             </motion.div>
           ))}
         </div>
-      </div>
+      </MaxWidthWrapper>
       
       {/* Decorative elements */}
       <div className="absolute -z-10 top-1/4 -right-16 w-32 h-32 bg-blue-100 rounded-full opacity-50"></div>

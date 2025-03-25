@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaCalendarAlt, FaUsers, FaGraduationCap, FaGlobeAmericas, FaClock, FaLaptop } from 'react-icons/fa';
+import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 export const PreKQuickFactsSection = () => {
   const facts = [
@@ -49,7 +50,7 @@ export const PreKQuickFactsSection = () => {
 
   return (
     <section className="py-16 bg-blue-50">
-      <div className="container mx-auto px-4">
+      <MaxWidthWrapper>
         <motion.h2 
           className="text-3xl md:text-4xl font-bold mb-12 text-center text-[#3967a9]"
           initial={{ opacity: 0, y: -20 }}
@@ -77,7 +78,7 @@ export const PreKQuickFactsSection = () => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </MaxWidthWrapper>
     </section>
   );
 }; 

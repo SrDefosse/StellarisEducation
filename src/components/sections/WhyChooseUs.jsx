@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { FaGlobeAmericas, FaLanguage, FaUsers, FaClock, FaApple, FaChild } from 'react-icons/fa';
 import { IoPeople } from 'react-icons/io5';
+import MaxWidthWrapper from '../ui/MaxWidthWrapper';
 
 const WhyChooseUs = () => {
   return (
@@ -15,10 +16,10 @@ const WhyChooseUs = () => {
 
 const Features = () => {
   return (
-    <div className="relative mx-auto grid h-full w-full max-w-7xl grid-cols-1 gap-8 px-4 md:px-6 md:grid-cols-2">
+    <MaxWidthWrapper className="grid h-full w-full grid-cols-1 gap-8 md:grid-cols-2">
       <Copy />
       <Carousel />
-    </div>
+    </MaxWidthWrapper>
   );
 };
 

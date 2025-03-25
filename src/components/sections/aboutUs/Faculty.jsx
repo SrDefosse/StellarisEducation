@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { SecondaryButton } from "@/components/ui/Button";
+import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 // Faculty data
 const facultyImages = [
@@ -93,7 +94,7 @@ export default function Faculty() {
   
   return (
     <section ref={sectionRef} className="py-20 overflow-hidden relative">
-      <div className="container mx-auto px-4">
+      <MaxWidthWrapper>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -283,7 +284,7 @@ export default function Faculty() {
             </div>
           </div>
         </div>
-      </div>
+      </MaxWidthWrapper>
       
       {/* Decorative elements */}
       <div className="absolute -z-10 top-20 -right-20 w-60 h-60 bg-blue-50 rounded-full opacity-60"></div>

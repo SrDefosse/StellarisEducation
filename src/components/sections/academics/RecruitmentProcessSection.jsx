@@ -8,38 +8,24 @@ export function RecruitmentProcessSection() {
   const recruitmentSteps = [
     {
       id: 1,
-      title: "Global Talent Search",
+      title: "Reach Out",
       description: "We actively recruit from top education programs worldwide, seeking multilingual educators with experience in international curriculum frameworks.",
       icon: <FaSearch className="text-white text-xl" />,
       details: "Our talent acquisition team builds relationships with leading education programs across the globe, participating in international education job fairs and maintaining a network of school partnerships. We specifically look for educators with experience in multilingual environments who share our passion for innovative early childhood education."
     },
     {
       id: 2,
-      title: "Comprehensive Screening",
-      description: "Candidates undergo a rigorous selection process including teaching demonstrations, language proficiency assessments, and background checks.",
+      title: "Screen, Hire, and Relocate",
+      description: "Candidates undergo a rigorous selection process, followed by comprehensive relocation support including visa assistance and housing guidance.",
       icon: <FaVideo className="text-white text-xl" />,
-      details: "Our selection process includes multiple interviews with leadership team members, virtual classroom observations, and thorough background checks. We evaluate candidates not only for their teaching skills and language proficiency but also for their cultural fit with our school's values and commitment to student-centered learning environments."
+      details: "Our selection process includes multiple interviews, teaching demonstrations, and thorough background checks. Once selected, our dedicated HR team assists with visa applications, travel arrangements, housing search, and provides cultural orientation sessions to ensure a smooth transition to their new home."
     },
     {
       id: 3,
-      title: "Professional Development",
-      description: "Selected educators receive specialized training in our dual-language immersion approach and International Baccalaureate methodologies.",
+      title: "Grow through professional development",
+      description: "Selected educators receive specialized training in our dual-language immersion approach and are paired with experienced mentors for continuous growth.",
       icon: <FaGraduationCap className="text-white text-xl" />,
-      details: "Before beginning in the classroom, our teachers participate in a comprehensive onboarding program that includes training in our dual-language immersion model, the IB Primary Years Programme framework, and culturally responsive teaching practices. This professional development continues throughout their time at Stellaris with regular workshops and collaboration opportunities."
-    },
-    {
-      id: 4,
-      title: "Relocation Support",
-      description: "We provide comprehensive support for international educators including visa assistance, housing guidance, and cultural adaptation resources.",
-      icon: <FaPlane className="text-white text-xl" />,
-      details: "Our dedicated HR team assists international teachers with visa applications, travel arrangements, and finding suitable housing. We also provide cultural orientation sessions, community introductions, and ongoing support to ensure a smooth transition to their new home."
-    },
-    {
-      id: 5,
-      title: "Continuous Mentorship",
-      description: "New teachers are paired with experienced mentors who provide guidance, classroom support, and help integrating into our school community.",
-      icon: <FaCheckCircle className="text-white text-xl" />,
-      details: "Our mentorship program pairs new international teachers with experienced staff members who provide regular classroom support, professional guidance, and help with cultural integration. This relationship continues throughout their first year, with structured check-ins and collaborative planning sessions to ensure their success."
+      details: "Our teachers participate in comprehensive training in our dual-language immersion model and IB framework. They are paired with experienced mentors who provide regular support and guidance. This professional development continues throughout their time at Stellaris with regular workshops and collaboration opportunities."
     }
   ];
 

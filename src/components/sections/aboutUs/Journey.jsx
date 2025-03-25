@@ -1,5 +1,6 @@
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
+import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 const timelineData = [
   {
@@ -114,7 +115,7 @@ const Journey = () => {
 
   return (
     <section className="py-16 mt-20 md:py-24" ref={containerRef}>
-      <div className="container mx-auto">
+      <MaxWidthWrapper>
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#4081DE] mb-4">Our Journey</h2>
           <motion.div 
@@ -157,7 +158,7 @@ const Journey = () => {
             ))}
           </div>
         </div>
-      </div>
+      </MaxWidthWrapper>
     </section>
   );
 };

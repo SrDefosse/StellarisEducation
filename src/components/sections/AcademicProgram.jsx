@@ -4,6 +4,7 @@ import { PrimaryButton, SecondaryButton } from '../ui/Button';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
+import MaxWidthWrapper from '../ui/MaxWidthWrapper';
 
 const AcademicProgram = () => {
   const [activeProgram, setActiveProgram] = useState(0);
@@ -46,7 +47,7 @@ const AcademicProgram = () => {
 
   return (
     <div className="py-16 md:py-24 relative">
-      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+      <MaxWidthWrapper>
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#4081DE] mb-4">Our Academic Program</h2>
           <motion.div 
@@ -60,7 +61,7 @@ const AcademicProgram = () => {
         </div>
         
         {/* Vertical Accordion Slider */}
-        <div className="max-w-4xl mx-auto mb-16 flex flex-col gap-3">
+        <div className="mx-auto mb-16 flex flex-col gap-3">
           {programs.map((program, index) => (
             <motion.div 
               key={program.id}
@@ -132,7 +133,7 @@ const AcademicProgram = () => {
             </svg>
           </PrimaryButton>
         </div>
-      </div>
+      </MaxWidthWrapper>
 
       {/* Floating decorative elements */}
       <div className="absolute -z-10 top-1/2 -left-8 w-24 h-24 md:w-32 md:h-32 opacity-10">
