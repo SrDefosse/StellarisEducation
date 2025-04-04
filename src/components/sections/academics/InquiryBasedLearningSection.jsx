@@ -78,7 +78,7 @@ export function InquiryBasedLearningSection() {
           >
             <div className="w-full relative" style={{ paddingBottom: "56.25%" }}> {/* 16:9 Aspect Ratio */}
               <iframe 
-                src="https://player.vimeo.com/video/358043187?h=ff4db7533d" 
+                src="https://player.vimeo.com/video/142390886" 
                 title="Inquiry Based Learning"
                 frameBorder="0" 
                 allow="autoplay; fullscreen; picture-in-picture" 

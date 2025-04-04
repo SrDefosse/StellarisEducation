@@ -17,7 +17,7 @@ const AcademicProgram = () => {
       description: "Our PreK program for ages 3-5 provides a nurturing environment where children develop foundational skills through play-based learning and exploration.",
       size: "col-span-12 md:col-span-6 lg:col-span-3",
       image: "/PreK_Offering.jpg",
-      path: "/academics/pre-k"
+      path: "/academics/prek"
     },
     {
       id: 2,
@@ -100,9 +100,9 @@ const AcademicProgram = () => {
                     transition={{ duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] }}
                     className="overflow-hidden"
                   >
-                    <div className="flex flex-col md:flex-row p-4">
+                    <div className="flex flex-col md:flex-row p-4 md:p-6">
                       {/* Image - More square and rounded */}
-                      <div className="relative aspect-square w-full md:w-2/5 rounded-xl overflow-hidden mx-auto md:mx-0">
+                      <div className="relative w-full md:w-2/5 h-[300px] md:h-[400px] rounded-xl overflow-hidden mx-auto md:mx-0">
                         <Image
                           src={program.image}
                           alt={program.title}
@@ -112,8 +112,8 @@ const AcademicProgram = () => {
                       </div>
                       
                       {/* Description */}
-                      <div className="p-6 w-full md:w-3/5 flex flex-col justify-between">
-                        <p className="text-gray-700 mb-6">{program.description}</p>
+                      <div className="p-6 md:p-8 w-full md:w-3/5 flex flex-col justify-between">
+                        <p className="text-gray-700 mb-6 text-lg">{program.description}</p>
                         <SecondaryButton onClick={() => router.push(program.path)}>Learn More</SecondaryButton>
                       </div>
                     </div>

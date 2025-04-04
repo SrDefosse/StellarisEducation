@@ -17,7 +17,7 @@ export default function Home() {
         <meta name="description" content="Stellaris Education is transforming education for a brighter future. Explore our courses and resources." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Navbar />
+      <Navbar isTransparent />
       <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
         <Hero />
         <Welcome />

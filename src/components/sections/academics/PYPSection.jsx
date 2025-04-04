@@ -193,7 +193,7 @@ export function PYPSection() {
         >
           <div className="w-full relative" style={{ paddingBottom: "56.25%" }}> {/* 16:9 Aspect Ratio */}
             <iframe 
-              src="https://www.youtube.com/embed/nPUMwr4-y6o" 
+              src="https://www.youtube.com/embed/phI-H9-cDVc?si=h-xS2SqbnR1zxTeL&start=4" 
               title="What is the IB Primary Years Programme?"
               frameBorder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -202,10 +202,6 @@ export function PYPSection() {
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/40 to-transparent pointer-events-none" />
-          <div className="absolute bottom-4 left-4 right-4 text-white">
-            <h3 className="font-semibold text-xl">Explore the PYP</h3>
-            <p className="text-sm text-white/90">International Baccalaureate</p>
-          </div>
         </motion.div>
       </MaxWidthWrapper>
     </section>

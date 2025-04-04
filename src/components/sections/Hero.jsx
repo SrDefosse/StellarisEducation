@@ -1,17 +1,18 @@
-import Image from 'next/image';
 import DotExpandButton from '@/components/ui/DotExpandButton';
 import GlowExpandButton from '@/components/ui/GlowExpandButton';
 
 const Hero = () => {
   return (
     <div className="relative w-full min-h-screen">
-      <Image
-        src="/hero_Image.jpg"
-        alt="Hero Image"
-        fill
-        className="object-cover"
-        priority
-      />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/hero-video.mp4" type="video/mp4" />
+      </video>
       <div 
         className="absolute inset-0"
         style={{

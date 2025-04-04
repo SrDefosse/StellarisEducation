@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { SecondaryButton } from "@/components/ui/Button";
 import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 // Faculty data
@@ -60,7 +59,7 @@ const FacultyImage = ({ image, index }) => {
       transition={{ duration: 0.4, delay: index * 0.1 }}
       viewport={{ once: true }}
       className="overflow-hidden rounded-lg relative"
-      style={{ height: '250px' }}
+      style={{ height: '350px' }}
     >
       <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 z-10"></div>
       <div className="relative w-full h-full">
@@ -102,7 +101,7 @@ export default function Faculty() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#4081DE] mb-4">International Faculty</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#4081DE] mb-4">Our Diverse Faculty</h2>
           <motion.div 
             className="h-1 w-24 bg-amber-400 mx-auto rounded-full"
             initial={{ width: 0 }}
@@ -123,7 +122,6 @@ export default function Faculty() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-bold text-indigo-900 mb-6 text-center">Our Diverse Faculty</h3>
           <motion.div 
             className="h-1 w-16 bg-amber-400 mx-auto rounded-full mb-8"
             initial={{ width: 0 }}
@@ -132,7 +130,7 @@ export default function Faculty() {
             transition={{ duration: 0.6, delay: 0.2 }}
           />
           
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-[2100px] mx-auto">
             {facultyImages.map((image, index) => (
               <FacultyImage key={image.id} image={image} index={index} />
             ))}
@@ -140,7 +138,7 @@ export default function Faculty() {
         </motion.div>
         
         {/* Featured Teacher Case Study Slider */}
-        <div className="max-w-5xl mx-auto mb-16">
+        <div className="max-w-[2100px] mx-auto mb-16">
           <h3 className="text-2xl font-bold text-indigo-900 mb-6 text-center">Meet Our Faculty</h3>
           <motion.div 
             className="h-1 w-16 bg-amber-400 mx-auto rounded-full mb-12"
@@ -206,8 +204,8 @@ export default function Faculty() {
                 >
                   <div className="md:flex">
                     {/* Teacher Image */}
-                    <div className="md:w-2/5 relative">
-                      <div className="relative h-80 md:h-full">
+                    <div className="md:w-1/3 relative">
+                      <div className="relative h-80 md:h-full min-h-[400px]">
                         <Image 
                           src={featuredTeachers[currentTeacher].image}
                           alt={featuredTeachers[currentTeacher].name}
@@ -223,7 +221,7 @@ export default function Faculty() {
                     </div>
                     
                     {/* Teacher Info */}
-                    <div className="p-6 md:p-8 md:w-3/5">
+                    <div className="p-6 md:p-8 md:w-2/3">
                       <div className="hidden md:block">
                         <h4 className="text-2xl font-bold text-indigo-900">{featuredTeachers[currentTeacher].name}</h4>
                         <p className="text-[#3967a9] font-medium mb-4">{featuredTeachers[currentTeacher].position}</p>

@@ -130,7 +130,7 @@ export function LearnerProfileSection() {
         >
           <div className="w-full relative" style={{ paddingBottom: "56.25%" }}> {/* 16:9 Aspect Ratio */}
             <iframe 
-              src="https://www.youtube.com/embed/nPUMwr4-y6o" 
+              src="https://player.vimeo.com/video/150154406?h=26b8048737" 
               title="IB Learner Profile"
               frameBorder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

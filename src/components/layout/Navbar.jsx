@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 
-const Navbar = () => {
+const Navbar = ({ className = '', isTransparent = false }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [academicsDropdownOpen, setAcademicsDropdownOpen] = useState(false);
@@ -14,7 +14,7 @@ const Navbar = () => {
   const isAcademicsPage = router.pathname.startsWith('/academics');
   const isContactPage = router.pathname === '/contact' || router.pathname === '/contact/';
   const isAfterSchoolPage = router.pathname === '/afterSchool' || router.pathname === '/afterSchool/';
-  const shouldHaveBackground = scrolled || isAboutPage || isAcademicsPage || isContactPage || isAfterSchoolPage;
+  const shouldHaveBackground = !isTransparent || scrolled || mobileMenuOpen;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,11 +57,10 @@ const Navbar = () => {
       <nav 
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           shouldHaveBackground
-            ? 'py-2 md:py-3 backdrop-blur-md backdrop-saturate-150 shadow-lg shadow-[#3967a9]/10' 
-            : 'py-2 md:py-3'
-        }`}
+            ? 'py-2 md:py-3 backdrop-blur-md backdrop-saturate-150 bg-[#2d3540]/85 shadow-lg shadow-[#3967a9]/10' 
+            : 'py-2 md:py-3 bg-transparent'
+        } ${className}`}
         style={{
-          backgroundColor: shouldHaveBackground ? 'rgba(45, 53, 64, 0.85)' : 'transparent',
           borderBottom: shouldHaveBackground ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
         }}
       >

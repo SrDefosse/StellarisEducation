@@ -3,8 +3,9 @@ import { motion } from 'framer-motion';
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { PreKDescriptionSection } from '@/components/sections/academics/PreKDescriptionSection';
-import { PreKQuickFactsSection } from '@/components/sections/academics/PreKQuickFactsSection';
 import { PreKAdmissionsCTA } from '@/components/sections/academics/PreKAdmissionsCTA';
+import { PreKQuickFacts } from '@/components/sections/academics/PreKQuickFacts';
+import MaxWidthWrapper from '@/components/ui/MaxWidthWrapper';
 
 export default function PreKPage() {
   return (
@@ -22,20 +23,22 @@ export default function PreKPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="container mx-auto px-4 py-16"
+          className="py-16"
         >
-          <h1 className="text-5xl font-bold text-center mb-4 text-[#4081DE]">
-            Pre-K
-          </h1>
-          <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
-            Where early childhood development meets language immersion and inquiry-based learning
-          </p>
+          <MaxWidthWrapper>
+            <h1 className="text-5xl font-bold text-center mb-4 text-[#4081DE]">
+              Pre-K
+            </h1>
+            <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
+              Where early childhood development meets language immersion and inquiry-based learning
+            </p>
 
-          <div className="space-y-12">
-            <PreKDescriptionSection />
-            <PreKQuickFactsSection />
-            <PreKAdmissionsCTA />
-          </div>
+            <div className="space-y-12">
+              <PreKDescriptionSection />
+              <PreKQuickFacts />
+              <PreKAdmissionsCTA />
+            </div>
+          </MaxWidthWrapper>
         </motion.div>
       </div>
       <Footer />
