@@ -1,7 +1,8 @@
 const PrimaryButton = ({ children, className = '', variant = 'default', ...props }) => {
   const variants = {
     default: 'bg-[#303444] hover:bg-[#3967a9] text-white focus:ring-[#3967a9]',
-    white: 'bg-white text-[#3B6FB5] hover:bg-white/90 focus:ring-white'
+    white: 'bg-white text-[#3B6FB5] hover:bg-white/90 focus:ring-white',
+    amber: 'bg-amber-500 hover:bg-amber-600 text-white focus:ring-amber-500'
   };
 
   return (

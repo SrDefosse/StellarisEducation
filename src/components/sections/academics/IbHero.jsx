@@ -4,7 +4,6 @@ export default function IbHero() {
   return (
     <div className="relative h-screen">
       <div className="relative w-full h-full overflow-hidden">
-        <div className="absolute inset-0 bg-black/50 z-10" />
         <video 
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay 
@@ -14,6 +13,13 @@ export default function IbHero() {
         >
           <source src="/hero-ib.mp4" type="video/mp4" />
         </video>
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundColor: '#303444',
+            opacity: '0.7',
+          }}
+        />
         <motion.div 
           className="relative z-20 h-full flex items-center justify-center text-center px-4"
           initial={{ opacity: 0, y: 20 }}

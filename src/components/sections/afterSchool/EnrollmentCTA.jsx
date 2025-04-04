@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { PrimaryButton } from '@/components/ui/Button';
+import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 export const EnrollmentCTA = () => {
   return (
     <section className="py-20">
-      <div className="container mx-auto px-4">
+      <MaxWidthWrapper>
         <motion.div 
           className="bg-gradient-to-r from-[#3967a9] to-[#4081DE] rounded-2xl shadow-xl overflow-hidden"
           initial={{ opacity: 0, y: 50 }}
@@ -25,23 +27,24 @@ export const EnrollmentCTA = () => {
               </p>
             </div>
             
-            <div className="flex flex-col gap-4">
-              <Link 
-                href="/contact?subject=After%20School%20Enrollment" 
-                className="inline-block px-8 py-4 bg-white text-[#3967a9] font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-center text-lg"
-              >
-                Enroll Now
+            <div className="flex flex-col sm:flex-row md:flex-col gap-4 mt-6 md:mt-0">
+              <Link href="/contact">
+                <PrimaryButton variant="white" className="text-lg w-full sm:w-auto md:w-full">
+                  Enroll Now
+                </PrimaryButton>
               </Link>
-              <Link 
-                href="/admissions" 
-                className="inline-block px-8 py-4 bg-white/10 text-white border border-white/30 font-semibold rounded-full shadow-lg hover:bg-white/20 hover:shadow-xl transition-all duration-300 text-center text-lg"
-              >
-                Learn More
+              <Link href="/admissions">
+                <PrimaryButton 
+                  variant="default" 
+                  className="text-lg w-full sm:w-auto md:w-full bg-transparent border border-white/50 text-white hover:bg-white/10 focus:ring-white/50"
+                >
+                  Learn More
+                </PrimaryButton>
               </Link>
             </div>
           </div>
         </motion.div>
-      </div>
+      </MaxWidthWrapper>
     </section>
   );
 }; 

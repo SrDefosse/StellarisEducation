@@ -78,7 +78,7 @@ const Navbar = ({ className = '', isTransparent = false }) => {
             </div>
           </Link>
           
-          <div className="hidden md:flex items-center space-x-2">
+          <div className="hidden lg:flex items-center space-x-1 xl:space-x-2 overflow-visible">
             <NavLink href="/">Home</NavLink>
             <NavLink href="/about">About Us</NavLink>
             
@@ -86,7 +86,7 @@ const Navbar = ({ className = '', isTransparent = false }) => {
             <div className="relative" ref={dropdownRef}>
               <button 
                 onClick={toggleAcademicsDropdown}
-                className={`text-white font-medium px-3 py-2 transition-all relative group rounded-full hover:bg-white/10 text-sm sm:text-base flex items-center ${
+                className={`text-white font-medium px-2 xl:px-3 py-2 transition-all relative group rounded-full hover:bg-white/10 text-[13px] xl:text-[15px] flex items-center whitespace-nowrap ${
                   isAcademicsPage ? 'bg-white/10' : ''
                 }`}
               >
@@ -145,7 +145,7 @@ const Navbar = ({ className = '', isTransparent = false }) => {
           </div>
           
           <button 
-            className="md:hidden text-white focus:outline-none p-2"
+            className="lg:hidden text-white focus:outline-none p-2"
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
           >
@@ -164,10 +164,10 @@ const Navbar = ({ className = '', isTransparent = false }) => {
 
       {/* Mobile Menu */}
       <div 
-        className={`fixed inset-0 z-40 bg-gradient-to-b from-[#303444] to-[#3967a9] transform transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-0 z-40 backdrop-blur-md backdrop-saturate-150 bg-[#2d3540]/85 transform transition-transform duration-300 ease-in-out ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        } md:hidden`}
-        style={{ top: '60px' }}
+        } lg:hidden`}
+        style={{ top: '60px', borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}
       >
         <div className="flex flex-col items-center justify-center h-full space-y-6 py-8">
           <MobileNavLink href="/" onClick={() => setMobileMenuOpen(false)}>Home</MobileNavLink>
@@ -245,7 +245,7 @@ const NavLink = ({ href, children, isButton = false }) => {
     return (
       <Link 
         href={href} 
-        className="text-white font-medium px-4 py-2 ml-2 rounded-full bg-[#3967a9] hover:bg-[#3967a9]/80 transition-all shadow-md hover:shadow-lg hover:shadow-[#3967a9]/20"
+        className="text-white font-medium px-3 xl:px-4 py-2 ml-1 xl:ml-2 rounded-full bg-[#3967a9] hover:bg-[#3967a9]/80 transition-all shadow-md hover:shadow-lg hover:shadow-[#3967a9]/20 text-[13px] xl:text-[15px] whitespace-nowrap"
       >
         {children}
       </Link>
@@ -255,7 +255,7 @@ const NavLink = ({ href, children, isButton = false }) => {
   return (
     <Link 
       href={href} 
-      className={`text-white font-medium px-3 py-2 transition-all relative group rounded-full hover:bg-white/10 text-sm sm:text-base ${
+      className={`text-white font-medium px-2 xl:px-3 py-2 transition-all relative group rounded-full hover:bg-white/10 text-[13px] xl:text-[15px] whitespace-nowrap ${
         isActive ? 'bg-white/10' : ''
       }`}
     >

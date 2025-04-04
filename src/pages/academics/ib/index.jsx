@@ -6,10 +6,6 @@ import { motion } from 'framer-motion';
 import Footer from "@/components/layout/Footer";
 import IbHero from '@/components/sections/academics/IbHero';
 import Navbar from "@/components/layout/Navbar";
-import MaxWidthWrapper from '@/components/ui/MaxWidthWrapper';
-import { MulticulturalBenefitsSection } from '@/components/sections/academics/MulticulturalBenefitsSection';
-import { TalentedTeachersSection } from '@/components/sections/academics/TalentedTeachersSection';
-import { RecruitmentProcessSection } from '@/components/sections/academics/RecruitmentProcessSection';
 
 export default function IBPage() {
   return (
@@ -33,16 +29,13 @@ export default function IBPage() {
           transition={{ duration: 0.5 }}
           className="container mx-auto px-4 py-16"
         >
-          <MaxWidthWrapper>
+          
             <div className="space-y-32">
               <PYPSection />
               <InquiryBasedLearningSection />
               <LearnerProfileSection />
-              <MulticulturalBenefitsSection />
-              <TalentedTeachersSection />
-              <RecruitmentProcessSection />
+              
             </div>
-          </MaxWidthWrapper>
         </motion.div>
       </div>
       <Footer />

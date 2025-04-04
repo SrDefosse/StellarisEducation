@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
+import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 export const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -33,8 +34,8 @@ export const FAQSection = () => {
   };
 
   return (
-    <section className="py-16 bg-blue-50">
-      <div className="container mx-auto px-4">
+    <section className="py-16">
+      <MaxWidthWrapper>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,7 +51,7 @@ export const FAQSection = () => {
           </p>
         </motion.div>
 
-        <div className="max-w-3xl mx-auto space-y-4">
+        <div className="max-w-3xl mx-auto space-y-4 pb-4">
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
@@ -72,17 +73,25 @@ export const FAQSection = () => {
                 />
               </button>
               
-              <div
-                className={`px-6 transition-all duration-300 ease-in-out overflow-hidden ${
-                  openIndex === index ? 'max-h-48 pb-6' : 'max-h-0'
-                }`}
-              >
-                <p className="text-gray-600">{faq.answer}</p>
-              </div>
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-6 pb-6">
+                      <p className="text-gray-600">{faq.answer}</p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           ))}
         </div>
-      </div>
+      </MaxWidthWrapper>
     </section>
   );
 }; 

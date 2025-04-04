@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
+import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 export const ProgramsSection = () => {
   const [activeTab, setActiveTab] = useState('arts');
@@ -34,7 +35,7 @@ export const ProgramsSection = () => {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4">
+      <MaxWidthWrapper>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -103,7 +104,7 @@ export const ProgramsSection = () => {
             </div>
           </div>
         </motion.div>
-      </div>
+      </MaxWidthWrapper>
     </section>
   );
 }; 

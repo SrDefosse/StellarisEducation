@@ -34,8 +34,8 @@ export function WhatIsLanguageImmersionSection() {
               What is Language Immersion?
             </h2>
             <div className="h-1 w-32 bg-amber-400 rounded-full mb-4" />
-            <p className="text-indigo-800/80 text-lg max-w-3xl">
-              A comprehensive approach to language learning where students learn content through a second language
+            <p className="text-gray-700 text-lg max-w-3xl">
+              A comprehensive approach to language learning where students learn content through a second language, creating an environment that fosters natural acquisition, fluency, and cultural understanding. Research shows immersion students develop stronger cognitive flexibility and problem-solving skills while achieving bilingual proficiency.
             </p>
           </div>
         </motion.div>

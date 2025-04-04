@@ -16,7 +16,7 @@ export default function ContactPage() {
         />
       </Head>
       <Navbar />
-      <div className="min-h-screen mt-20 bg-gradient-to-b from-blue-50 to-white">
+      <div className="bg-gradient-to-b from-blue-50 to-white mt-20">
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -30,11 +30,10 @@ export default function ContactPage() {
             Have questions or ready to start your child's journey with Stellaris? We're here to help every step of the way.
           </p>
 
-          <div className="space-y-12">
-            <ContactFormSection />
-            <FAQSection />
-          </div>
+          <ContactFormSection />
         </motion.div>
+        
+        <FAQSection />
       </div>
       <Footer />
     </>

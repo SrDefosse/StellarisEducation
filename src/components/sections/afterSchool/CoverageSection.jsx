@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaRegClock, FaCalendarAlt, FaMoneyBillWave, FaUserFriends } from 'react-icons/fa';
+import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 export const CoverageSection = () => {
   const coverageDetails = [
@@ -26,8 +27,8 @@ export const CoverageSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-blue-50">
-      <div className="container mx-auto px-4">
+    <section className="py-16">
+      <MaxWidthWrapper>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -61,7 +62,7 @@ export const CoverageSection = () => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </MaxWidthWrapper>
     </section>
   );
 }; 

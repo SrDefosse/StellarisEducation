@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 export const DescriptionSection = () => {
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4">
+      <MaxWidthWrapper>
         <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
@@ -44,7 +45,7 @@ export const DescriptionSection = () => {
             />
           </motion.div>
         </div>
-      </div>
+      </MaxWidthWrapper>
     </section>
   );
 }; 
