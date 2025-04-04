@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import { MulticulturalBenefitsSection } from '@/components/sections/academics/MulticulturalBenefitsSection';
 import { TalentedTeachersSection } from '@/components/sections/academics/TalentedTeachersSection';
 import { RecruitmentProcessSection } from '@/components/sections/academics/RecruitmentProcessSection';
+import { VideoSection } from '@/components/sections/academics/VideoSection';
 
 export default function InternationalTeachersPage() {
   return (
@@ -34,6 +35,7 @@ export default function InternationalTeachersPage() {
 
           <div className="space-y-32">
             <MulticulturalBenefitsSection />
+            <VideoSection />
             <TalentedTeachersSection />
             <RecruitmentProcessSection />
           </div>
