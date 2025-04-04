@@ -15,7 +15,7 @@ const AboutHero = () => {
       />
       <div className="absolute inset-0 flex items-center">
         <div className="text-white max-w-3xl px-[5%]">
-          <h1 className="text-6xl md:text-7xl font-bold mb-6">About Stellaris Education</h1>
+          <h1 className="text-6xl md:text-7xl font-bold mb-6">About Stellaris</h1>
           <p className="text-xl md:text-2xl">
             Empowering minds through innovative education. We are committed to delivering excellence in learning and shaping the future of education through cutting-edge methodologies and personalized approaches.
           </p>
