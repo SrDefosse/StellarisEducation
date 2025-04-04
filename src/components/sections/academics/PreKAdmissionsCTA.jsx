@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { PrimaryButton } from '../../ui/Button';
 
 export const PreKAdmissionsCTA = () => {
   return (
@@ -19,11 +20,10 @@ export const PreKAdmissionsCTA = () => {
             <p className="text-xl text-white/90 mb-8 max-w-2xl">
               Give your child the gift of early bilingualism and a strong foundation for their educational journey. Our admissions team is ready to guide you through the process.
             </p>
-            <Link 
-              href="/admissions" 
-              className="inline-block px-8 py-4 bg-white text-[#3967a9] font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-lg"
-            >
-              Apply Now
+            <Link href="/admissions">
+              <PrimaryButton variant="white">
+                Apply Now
+              </PrimaryButton>
             </Link>
           </div>
         </motion.div>

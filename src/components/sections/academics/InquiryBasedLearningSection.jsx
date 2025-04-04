@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion';
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import useMeasure from 'react-use-measure';
 import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 export function InquiryBasedLearningSection() {
-  const [selectedIndex, setSelectedIndex] = useState(null);
   const [ref, bounds] = useMeasure();
   
   const inquirySteps = [
@@ -16,7 +15,7 @@ export function InquiryBasedLearningSection() {
     { title: "Clarifying Ideas", content: "Clarifying existing ideas and reappraising perceptions of events" },
     { title: "Deepening Understanding", content: "Deepening understanding through the application of a concept" },
     { title: "Research", content: "Researching and seeking information" },
-    { title: "Taking Position", content: "Taking and defending a position" },
+    { title: "Collaborative Work and Global Network", content: "Working collaboratively and connecting with global learning communities" },
     { title: "Problem Solving", content: "Solving problems in a variety of ways" },
   ];
 
@@ -70,26 +69,24 @@ export function InquiryBasedLearningSection() {
 
           {/* Right side - Video */}
           <motion.div
-            className="rounded-2xl overflow-hidden shadow-lg"
+            className="rounded-2xl overflow-hidden shadow-lg aspect-video"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <div className="w-full relative" style={{ paddingBottom: "56.25%" }}> {/* 16:9 Aspect Ratio */}
-              <iframe 
-                src="https://player.vimeo.com/video/142390886" 
-                title="Inquiry Based Learning"
-                frameBorder="0" 
-                allow="autoplay; fullscreen; picture-in-picture" 
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              />
-            </div>
+            <iframe 
+              src="https://player.vimeo.com/video/142390886" 
+              title="Inquiry Based Learning"
+              frameBorder="0" 
+              allow="autoplay; fullscreen; picture-in-picture" 
+              allowFullScreen
+              className="w-full h-full"
+            />
           </motion.div>
         </div>
 
-        {/* Interactive steps carousel */}
+        {/* Steps section (non-interactive) */}
         <motion.div
           className="p-4 mb-8"
           initial={{ opacity: 0, y: 20 }}
@@ -110,8 +107,7 @@ export function InquiryBasedLearningSection() {
                   key={index}
                   className={`${
                     index % 2 === 0 ? 'md:text-right md:pr-12' : 'md:pl-12 md:col-start-2'
-                  } relative cursor-pointer`}
-                  onClick={() => setSelectedIndex(selectedIndex === index ? null : index)}
+                  } relative`}
                   whileHover={{ scale: 1.02 }}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -121,27 +117,16 @@ export function InquiryBasedLearningSection() {
                     delay: 0.1 * index
                   }}
                 >
-                  <motion.div 
-                    className={`absolute top-1/2 ${
-                      index % 2 === 0 ? 'right-0 md:translate-x-1/2' : 'left-0 md:-translate-x-1/2'
-                    } transform -translate-y-1/2 w-6 h-6 rounded-full z-20 ${
-                      selectedIndex === index ? 'bg-amber-400' : 'bg-[#4081DE]'
-                    }`}
-                    animate={{ 
-                      scale: selectedIndex === index ? [1, 1.2, 1] : 1
-                    }}
-                    transition={{ 
-                      duration: 1.5,
-                      repeat: selectedIndex === index ? Infinity : 0,
-                      repeatType: "reverse"
+                  <div 
+                    className="absolute top-1/2 transform -translate-y-1/2 w-6 h-6 rounded-full z-20 bg-[#4081DE]"
+                    style={{
+                      right: index % 2 === 0 ? '0' : 'auto',
+                      left: index % 2 === 0 ? 'auto' : '0',
+                      transform: `translate(${index % 2 === 0 ? '50%' : '-50%'}, -50%)`
                     }}
                   />
                   
-                  <div 
-                    className={`bg-white p-6 rounded-xl shadow ${
-                      selectedIndex === index ? 'ring-2 ring-amber-400' : ''
-                    }`}
-                  >
+                  <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow duration-300">
                     <h4 className="font-semibold text-lg text-[#4081DE] mb-2">
                       {step.title}
                     </h4>

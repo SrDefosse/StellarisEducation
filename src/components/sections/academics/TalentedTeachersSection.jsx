@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
-import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
+import MaxWidthWrapper from '@/components/ui/MaxWidthWrapper';
 
 export function TalentedTeachersSection() {
   // Teachers data with fictional information for demo purposes

@@ -1,35 +1,51 @@
 import { motion } from 'framer-motion';
 import { FaGlobeAmericas, FaBrain, FaHandshake, FaUsers, FaBookOpen } from 'react-icons/fa';
-import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
+import MaxWidthWrapper from '@/components/ui/MaxWidthWrapper';
 
 export function MulticulturalBenefitsSection() {
   const benefits = [
     {
-      icon: <FaGlobeAmericas className="text-blue-500 text-3xl" />,
+      icon: <FaGlobeAmericas />,
       title: "Global Perspectives",
       description: "Teachers from diverse backgrounds bring authentic global viewpoints directly to the classroom."
     },
     {
-      icon: <FaBrain className="text-blue-500 text-3xl" />,
+      icon: <FaBrain />,
       title: "Cultural Intelligence",
       description: "Students develop enhanced cultural sensitivity through daily interactions with teachers from different countries."
     },
     {
-      icon: <FaHandshake className="text-blue-500 text-3xl" />,
+      icon: <FaHandshake />,
       title: "Authentic Language Learning",
       description: "Native speakers create an immersive environment for genuine language acquisition."
     },
     {
-      icon: <FaUsers className="text-blue-500 text-3xl" />,
+      icon: <FaUsers />,
       title: "Diverse Teaching Methods",
       description: "International educators introduce innovative approaches from educational systems worldwide."
     },
     {
-      icon: <FaBookOpen className="text-blue-500 text-3xl" />,
+      icon: <FaBookOpen />,
       title: "Global Citizenship",
       description: "Students become prepared for success in our interconnected, multicultural world."
     }
   ];
+
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
 
   return (
     <section id="multicultural-benefits" className="relative mb-24">
@@ -38,47 +54,115 @@ export function MulticulturalBenefitsSection() {
       <MaxWidthWrapper>
         {/* Header */}
         <motion.div 
-          className="mb-12 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          className="mb-16 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#4081DE] mb-4">
+          <motion.h2 
+            className="text-4xl font-bold mb-6 text-[#4081DE]"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             The Benefits of Multicultural Educators
-          </h2>
-          <div className="h-1 w-32 bg-amber-400 rounded-full mx-auto mb-6" />
-          <p className="text-gray-700 text-lg max-w-3xl mx-auto">
-            Our international teaching team creates a rich, diverse learning environment that prepares students 
-            to thrive in our globally connected world.
-          </p>
+          </motion.h2>
+          
+          <motion.div
+            className="max-w-3xl mx-auto text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <p className="text-gray-700 text-lg">
+              Our international teaching team creates a rich, diverse learning environment that prepares students 
+              to thrive in our globally connected world.
+            </p>
+          </motion.div>
+        </motion.div>
+
+        {/* Benefits bento grid */}
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 mb-16"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {/* Global Perspectives - Large card */}
+          <motion.div
+            className="lg:col-span-6 bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between border border-gray-100"
+            variants={cardVariants}
+            whileHover={{ scale: 1.01 }}
+          >
+            <div className="flex justify-between items-start">
+              <h3 className="text-2xl font-bold text-[#4081DE] mb-3">{benefits[0].title}</h3>
+              <span className="text-[#4081DE] text-3xl">{benefits[0].icon}</span>
+            </div>
+            <p className="text-gray-700 mt-2">{benefits[0].description}</p>
+          </motion.div>
+          
+          {/* Cultural Intelligence - Medium card */}
+          <motion.div
+            className="lg:col-span-6 bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between border border-gray-100"
+            variants={cardVariants}
+            whileHover={{ scale: 1.01 }}
+          >
+            <div className="flex justify-between items-start">
+              <h3 className="text-xl font-bold text-[#4081DE] mb-2">{benefits[1].title}</h3>
+              <span className="text-[#4081DE] text-2xl">{benefits[1].icon}</span>
+            </div>
+            <p className="text-gray-700 mt-2">{benefits[1].description}</p>
+          </motion.div>
+          
+          {/* Authentic Language Learning - Medium card */}
+          <motion.div
+            className="lg:col-span-4 bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between border border-gray-100"
+            variants={cardVariants}
+            whileHover={{ scale: 1.01 }}
+          >
+            <div className="flex justify-between items-start">
+              <h3 className="text-xl font-bold text-[#4081DE] mb-2">{benefits[2].title}</h3>
+              <span className="text-[#4081DE] text-2xl">{benefits[2].icon}</span>
+            </div>
+            <p className="text-gray-700 mt-2">{benefits[2].description}</p>
+          </motion.div>
+          
+          {/* Diverse Teaching Methods - Small card */}
+          <motion.div
+            className="lg:col-span-4 bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between border border-gray-100"
+            variants={cardVariants}
+            whileHover={{ scale: 1.01 }}
+          >
+            <div className="flex justify-between items-start">
+              <h3 className="text-xl font-bold text-[#4081DE] mb-2">{benefits[3].title}</h3>
+              <span className="text-[#4081DE] text-2xl">{benefits[3].icon}</span>
+            </div>
+            <p className="text-gray-700 mt-2">{benefits[3].description}</p>
+          </motion.div>
+          
+          {/* Global Citizenship - Wide card */}
+          <motion.div
+            className="lg:col-span-4 bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between border border-gray-100"
+            variants={cardVariants}
+            whileHover={{ scale: 1.01 }}
+          >
+            <div className="flex justify-between items-start">
+              <h3 className="text-xl font-bold text-[#4081DE] mb-2">{benefits[4].title}</h3>
+              <span className="text-[#4081DE] text-2xl">{benefits[4].icon}</span>
+            </div>
+            <p className="text-gray-700 mt-2">{benefits[4].description}</p>
+          </motion.div>
         </motion.div>
         
-        {/* Benefits Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {benefits.map((benefit, index) => (
-            <motion.div
-              key={benefit.title}
-              className="bg-white rounded-2xl shadow-md p-6 border border-blue-100 hover:shadow-lg transition-all duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
-            >
-              <div className="mb-4">
-                {benefit.icon}
-              </div>
-              <h3 className="text-xl font-bold text-blue-800 mb-2">{benefit.title}</h3>
-              <p className="text-gray-600">{benefit.description}</p>
-            </motion.div>
-          ))}
-        </div>
-        
-        {/* Quote */}
+        {/* Quote section */}
         <motion.div
-          className="bg-gradient-to-r from-blue-800 to-blue-700 rounded-3xl p-8 text-white shadow-xl relative overflow-hidden"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          className="mt-16 bg-gradient-to-r from-[#3967a9] to-[#4081DE] rounded-3xl p-8 text-white shadow-xl relative overflow-hidden"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >

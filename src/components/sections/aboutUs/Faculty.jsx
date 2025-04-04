@@ -122,15 +122,7 @@ export default function Faculty() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <motion.div 
-            className="h-1 w-16 bg-amber-400 mx-auto rounded-full mb-8"
-            initial={{ width: 0 }}
-            whileInView={{ width: 64 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          />
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-[2100px] mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-[2100px] mx-auto">
             {facultyImages.map((image, index) => (
               <FacultyImage key={image.id} image={image} index={index} />
             ))}

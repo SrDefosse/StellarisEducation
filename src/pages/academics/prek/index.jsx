@@ -6,6 +6,7 @@ import { PreKDescriptionSection } from '@/components/sections/academics/PreKDesc
 import { PreKAdmissionsCTA } from '@/components/sections/academics/PreKAdmissionsCTA';
 import { PreKQuickFacts } from '@/components/sections/academics/PreKQuickFacts';
 import MaxWidthWrapper from '@/components/ui/MaxWidthWrapper';
+import PrekHero from '@/components/sections/academics/PrekHero';
 
 export default function PreKPage() {
   return (
@@ -17,8 +18,9 @@ export default function PreKPage() {
           content="Discover our innovative Pre-K program at Stellaris Education, combining play-based learning with Spanish immersion and IB curriculum."
         />
       </Head>
-      <Navbar />
-      <div className="min-h-screen mt-20 bg-gradient-to-b from-blue-50 to-white">
+      <Navbar isTransparent />
+      <PrekHero />
+      <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -26,13 +28,6 @@ export default function PreKPage() {
           className="py-16"
         >
           <MaxWidthWrapper>
-            <h1 className="text-5xl font-bold text-center mb-4 text-[#4081DE]">
-              Pre-K
-            </h1>
-            <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
-              Where early childhood development meets language immersion and inquiry-based learning
-            </p>
-
             <div className="space-y-12">
               <PreKDescriptionSection />
               <PreKQuickFacts />

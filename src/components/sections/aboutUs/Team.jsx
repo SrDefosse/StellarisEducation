@@ -26,7 +26,7 @@ const teamMembers = [
     id: 3,
     name: "Matt Ford",
     role: "CFO",
-    shortBio: "Strategic financial leader with expertise in educational funding models.",
+    shortBio: "Former Treasurer at the Magellan International School, Senior finance executive at Yeti and Dell",
     longBio: "Matt Ford brings over 15 years of financial leadership experience to Stellaris Education, with specialized knowledge in sustainable funding models for educational institutions. His strategic vision ensures that Stellaris can deliver exceptional educational experiences while maintaining financial sustainability. Prior to joining Stellaris, Matt managed financial operations for several innovative educational organizations, implementing budget frameworks that maximized resources allocated to student learning. His background in both finance and education gives him a unique perspective on balancing educational excellence with fiscal responsibility.",
     image: "/MattFord.jpg",
   }
@@ -43,7 +43,7 @@ const ProfileCard = ({ member }) => {
       transition={{ duration: 0.3 }}
     >
       {/* Image section with gradient overlay on hover */}
-      <div className="relative w-full aspect-[4/3] overflow-hidden">
+      <div className="relative w-full aspect-[3/4] overflow-hidden">
         <Image 
           src={member.image} 
           alt={member.name} 

@@ -6,7 +6,7 @@ const CardCTA = () => {
 
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
-      <div className="bg-[#3B6FB5] rounded-3xl shadow-xl overflow-hidden">
+      <div className="bg-gradient-to-r from-[#3967a9] to-[#4081DE] rounded-3xl shadow-xl overflow-hidden">
         <div className="px-4 py-16 md:py-20">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -24,6 +24,7 @@ const CardCTA = () => {
               </PrimaryButton>
               <button
                 className="px-6 py-3 text-white border-2 border-white rounded-xl hover:bg-white/10 transition-colors duration-300"
+                onClick={() => router.push('/contact')}
               >
                 Contact Us
               </button>
