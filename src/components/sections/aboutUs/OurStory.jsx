@@ -32,7 +32,7 @@ const OurStory = () => {
             transition={{ duration: 0.6 }}
           >
             <img /* Use img tag */
-              src="/school-building.jpg"
+              src="/school_building.jpg"
               alt="Stellaris Education Building"
               className="absolute inset-0 w-full h-full object-cover" /* Updated className for img */
             />
