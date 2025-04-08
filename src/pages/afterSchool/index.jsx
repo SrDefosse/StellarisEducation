@@ -15,7 +15,7 @@ export default function AfterSchoolPage() {
       {/* Head component removed */}
       {/* Navbar removed */}
       <AfterSchoolHero /> {/* Use the new AfterSchoolHero */}
-      <div className="min-h-screen /* Removed mt-20 */ bg-gradient-to-b from-blue-50 to-white">
+      <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

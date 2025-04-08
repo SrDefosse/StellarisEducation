@@ -11,7 +11,7 @@ const ImmersionHero = () => {
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source
-          src="https://v.ftcdn.net/03/95/45/54/700_F_395455459_8lkSPVGn8MfRarO8z40ayxOZoLlTpSNo_ST.mp4"
+          src="/immersion_hero_bg.mp4"
           type="video/mp4"
         />
       </video>

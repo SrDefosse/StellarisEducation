@@ -8,31 +8,31 @@ export const ProgramsSection = () => {
   const programs = {
     arts: {
       title: "Arts & Creativity",
-      image: "/activities.jpg",
+      image: "/after_school_art_and_creativity.jpg",
       span: "col-span-2", // Simplified span
       aspect: '2 / 1' // Aspect ratio for this item
     },
     stem: {
       title: "STEM Discovery",
-      image: "/images/after-school-stem.jpg",
+      image: "/after_school_stem.jpg",
       span: "col-span-1",
       aspect: '1 / 1'
     },
     languages: {
       title: "Language & Culture",
-      image: "/images/after-school-language.jpg",
+      image: "/after_school_language_and_culture.jpg",
       span: "col-span-1",
       aspect: '1 / 1'
     },
     physical: {
       title: "Physical Activity",
-      image: "/images/after-school-sports.jpg",
+      image: "/after_school_physical_activity.jpg",
       span: "col-span-1",
       aspect: '1 / 1'
     },
     cooking: {
       title: "Cooking",
-      image: "/images/after-school-cooking.jpg",
+      image: "/after_school_cooking.jpg",
       span: "col-span-1",
       aspect: '1 / 1'
     }
@@ -84,8 +84,8 @@ export const ProgramsSection = () => {
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105" // Zoom effect
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4">
-                  <h3 className="text-white text-lg md:text-xl font-semibold">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent flex flex-col justify-end p-4">
+                  <h3 className="text-white text-lg md:text-xl font-semibold drop-shadow-lg">
                     {program.title}
                   </h3>
                 </div>

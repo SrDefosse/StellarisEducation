@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import StellarisLogo from '/StellarisLogo.png';
 
 const Footer = () => {
@@ -27,45 +27,57 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/academics" className="text-gray-300 hover:text-white transition-colors">
-                  Academics
-                </Link>
-              </li>
-              <li>
-                <Link to="/admissions" className="text-gray-300 hover:text-white transition-colors">
-                  Admissions
-                </Link>
-              </li>
-            </ul>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2">
+              <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                Home
+              </Link>
+              <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                About Us
+              </Link>
+              <Link to="/academics/prek" className="text-gray-300 hover:text-white transition-colors">
+                Pre-K Program
+              </Link>
+              <Link to="/academics/ib" className="text-gray-300 hover:text-white transition-colors">
+                IB Programme
+              </Link>
+              <Link to="/academics/languageimmersion" className="text-gray-300 hover:text-white transition-colors">
+                Spanish Immersion
+              </Link>
+              <Link to="/afterschool" className="text-gray-300 hover:text-white transition-colors">
+                After School
+              </Link>
+              <Link to="/admissions" className="text-gray-300 hover:text-white transition-colors">
+                Admissions
+              </Link>
+              <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+                Contact
+              </Link>
+            </div>
           </div>
 
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <address className="not-italic text-gray-300 space-y-2">
-              <p>123 Education Avenue</p>
-              <p>Nashville, TN 37203</p>
-              <p>Phone: (615) 555-1234</p>
-              <p>Email: info@stellariseducation.com</p>
-            </address>
+            <div className="space-y-3">
+              <a href="tel:+15129815402" className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
+                <FaPhone className="text-[#3967a9] flex-shrink-0" />
+                <span>(512) 981 5402</span>
+              </a>
+              <a href="mailto:info@stellariseducation.com" className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
+                <FaEnvelope className="text-[#3967a9] flex-shrink-0" />
+                <span>info@stellariseducation.com</span>
+              </a>
+              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
+                <FaMapMarkerAlt className="text-[#3967a9] flex-shrink-0" />
+                <span>Nashville, Tennessee</span>
+              </a>
+            </div>
           </div>
 
-          {/* Social Links */}
+          {/* Social Links & Newsletter */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mb-6">
               <a href="#" className="text-gray-300 hover:text-[#3967a9] transition-colors">
                 <FaFacebook size={24} />
               </a>
