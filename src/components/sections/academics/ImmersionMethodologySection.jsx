@@ -30,31 +30,6 @@ export function ImmersionMethodologySection() {
       icon: <FaTheaterMasks />
     }
   ];
-  
-  const teacherQualities = [
-    "Native or near-native Spanish fluency",
-    "Specialized training in language immersion pedagogy",
-    "Cultural awareness and appreciation",
-    "Understanding of language acquisition principles",
-    "Ability to make content comprehensible through context"
-  ];
-
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1,
-      transition: { 
-        staggerChildren: 0.2,
-        delayChildren: 0.3
-      }
-    }
-  };
-  
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-  };
 
   return (
     <section id="immersion-methodology" className="relative mb-24">
@@ -137,7 +112,12 @@ export function ImmersionMethodologySection() {
           >
             <div className="absolute top-0 left-0 w-full h-full">
               <img
-                src={`/images/immersion/${activeFeature + 1}.jpg`}
+                src={`/${
+                  activeFeature === 0 ? 'immersion_approach' :
+                  activeFeature === 1 ? 'learning_units' :
+                  activeFeature === 2 ? 'activities' :
+                  'cultural_experiences'
+                }.jpg`}
                 alt={methodologies[activeFeature].title}
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"

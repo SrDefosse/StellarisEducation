@@ -8,7 +8,7 @@ export const ProgramsSection = () => {
   const programs = {
     arts: {
       title: "Arts & Creativity",
-      image: "/images/after-school-arts.jpg",
+      image: "/activities.jpg",
       span: "col-span-2", // Simplified span
       aspect: '2 / 1' // Aspect ratio for this item
     },

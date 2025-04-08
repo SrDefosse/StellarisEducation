@@ -36,7 +36,7 @@ export const PreKDescriptionSection = () => {
           className="lg:w-1/2 relative h-[400px] w-full rounded-2xl overflow-hidden shadow-xl"
         >
           <img /* Use img tag */
-            src="/images/prek-classroom.jpg"
+            src="/prek_description.jpg"
             alt="Stellaris Pre-K Classroom"
             className="absolute inset-0 w-full h-full object-cover" /* Updated className */
             loading="lazy"
