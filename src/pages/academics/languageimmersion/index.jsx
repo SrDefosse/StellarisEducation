@@ -7,6 +7,7 @@ import ImmersionHero from '../../../components/sections/academics/ImmersionHero'
 import { WhatIsLanguageImmersionSection } from '../../../components/sections/academics/WhatIsLanguageImmersionSection';
 import { ImmersionBenefitsSection } from '../../../components/sections/academics/ImmersionBenefitsSection';
 import { ImmersionMethodologySection } from '../../../components/sections/academics/ImmersionMethodologySection';
+import { ImmersionCTA } from '../../../components/sections/academics/ImmersionCTA';
 
 export default function LanguageImmersionPage() {
   return (
@@ -31,6 +32,7 @@ export default function LanguageImmersionPage() {
             </div>
           </div>
         </motion.div>
+        <ImmersionCTA />
       </div>
       {/* Footer removed */}
     </>

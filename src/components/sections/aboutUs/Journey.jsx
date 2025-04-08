@@ -4,34 +4,28 @@ import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 const timelineData = [
   {
-    year: "2019",
-    title: "Foundation",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    year: "2009",
+    title: "Magellan Foundation",
+    description: "The Magellan International School was founded by Erin Defossé and his team with a vision to create a truly bilingual and multicultural learning environment. Starting with just a handful of students, the school established its foundation on the principles of inquiry-based learning and global citizenship.",
     image: "/foundation.jpg"
   },
   {
-    year: "2020",
-    title: "First Classes",
-    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: "/first_classes.jpg"
-  },
-  {
-    year: "2021",
-    title: "Campus Expansion",
-    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    image: "/campus_expansion.jpg"
-  },
-  {
-    year: "2022",
-    title: "New Programs",
-    description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    image: "/new_programs.jpg"
+    year: "2014",
+    title: "Middle Years Program",
+    description: "The Middle Years Program was inaugurated as a natural progression of our educational journey. This expansion allowed us to extend our innovative bilingual curriculum to older students, fostering critical thinking and international mindedness through the IB framework.",
+    image: "/middle_years.jpg"
   },
   {
     year: "2024",
-    title: "Future Vision",
-    description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
-    image: "/future_vision.jpg"
+    title: "Campus Extension to High School",
+    description: "A significant milestone in our growth, the campus extension project represents our commitment to providing continuous quality education. This expansion includes state-of-the-art facilities designed to support advanced learning programs and accommodate our growing community.",
+    image: "/campus_expansion.jpg"
+  },
+  {
+    year: "2025",
+    title: "Stellaris Foundation",
+    description: "Looking to expand the director's vision of accessible quality education, Stellaris Foundation emerges as a beacon of innovative early education. Building upon years of experience in bilingual education, we're creating new opportunities for young learners to thrive in a global context.",
+    image: "/stellaris_journey.jpg"
   }
 ];
 

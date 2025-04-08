@@ -2,10 +2,19 @@ import React from 'react';
 
 const AfterSchoolHero = () => {
   return (
-    <div className="relative w-full min-h-screen">
-      <div
-        className="absolute inset-0 bg-[url('/afterschool-hero-bg.jpg')] bg-cover bg-center" // Added temporary background image path
-      />
+    <div className="relative w-full min-h-screen overflow-hidden">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source
+          src="https://v.ftcdn.net/11/35/44/14/700_F_1135441464_vus7TuZNxzqk5DxDcEKXOo7clYp1ajKP_ST.mp4"
+          type="video/mp4"
+        />
+      </video>
       <div
         className="absolute inset-0"
         style={{
@@ -15,9 +24,9 @@ const AfterSchoolHero = () => {
       />
       <div className="absolute inset-0 flex items-center">
         <div className="text-white max-w-3xl px-[5%]">
-          <h1 className="text-6xl md:text-7xl font-bold mb-6">After School Enrichment</h1> {/* Updated Title */} 
+          <h1 className="text-6xl md:text-7xl font-bold mb-6">After School Enrichment</h1>
           <p className="text-xl md:text-2xl">
-            Extending the learning day with engaging activities that develop skills, inspire creativity, and foster friendships {/* Updated Description */} 
+            Extending the learning day with engaging activities that develop skills, inspire creativity, and foster friendships
           </p>
         </div>
       </div>

@@ -59,7 +59,6 @@ const Welcome = () => {
 
               <div className="space-y-4 pt-6 mt-auto">
                 <PrimaryButton className="w-full">Contact Us</PrimaryButton>
-                <SecondaryButton className="w-full">Read More</SecondaryButton>
               </div>
             </div>
           </div>

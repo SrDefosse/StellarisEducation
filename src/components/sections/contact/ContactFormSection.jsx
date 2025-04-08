@@ -29,13 +29,13 @@ export const ContactFormSection = () => {
     {
       icon: <FaEnvelope className="w-6 h-6 text-[#3967a9]" />,
       title: "Email",
-      info: "admissions@stellariseducation.com",
-      link: "mailto:admissions@stellariseducation.com"
+      info: "info@stellariseducation.com",
+      link: "mailto:info@stellariseducation.com"
     },
     {
       icon: <FaPhone className="w-6 h-6 text-[#3967a9]" />,
       title: "Phone",
-      info: "(615) 555-0123",
+      info: "(512) 981 5402",
       link: "tel:+16155550123"
     },
     {

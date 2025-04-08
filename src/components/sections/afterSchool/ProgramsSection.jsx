@@ -1,108 +1,97 @@
 import { motion } from 'framer-motion';
 // import Image from 'next/image'; // Removed next/image import
-import { useState } from 'react';
-import MaxWidthWrapper from '../../ui/MaxWidthWrapper'; // Updated import path
+import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 export const ProgramsSection = () => {
-  const [activeTab, setActiveTab] = useState('arts');
+  // const [activeTab, setActiveTab] = useState('arts'); // Removed state
   
   const programs = {
     arts: {
       title: "Arts & Creativity",
-      description: "Students explore visual arts, music, theater, and dance through hands-on projects and performances that build creativity and self-expression.",
       image: "/images/after-school-arts.jpg",
-      activities: ["Drawing & Painting", "Music Lessons", "Drama Club", "Dance Classes", "Crafting & DIY Projects"]
+      span: "col-span-2", // Simplified span
+      aspect: '2 / 1' // Aspect ratio for this item
     },
     stem: {
       title: "STEM Discovery",
-      description: "Young scientists and engineers develop critical thinking and problem-solving skills through engaging experiments, coding, and design challenges.",
       image: "/images/after-school-stem.jpg",
-      activities: ["Coding Club", "Robotics", "Science Experiments", "Math Enrichment", "Engineering Challenges"]
+      span: "col-span-1",
+      aspect: '1 / 1'
     },
     languages: {
       title: "Language & Culture",
-      description: "Building on our immersion approach, students deepen their language skills while exploring global cultures through games, stories, and traditions.",
       image: "/images/after-school-language.jpg",
-      activities: ["Spanish Conversation", "Cultural Celebrations", "Storytelling", "Global Games", "Cooking Classes"]
+      span: "col-span-1",
+      aspect: '1 / 1'
     },
     physical: {
       title: "Physical Activity",
-      description: "Active play and organized sports help students develop coordination, teamwork, and healthy habits while burning energy after the school day.",
       image: "/images/after-school-sports.jpg",
-      activities: ["Team Sports", "Yoga & Mindfulness", "Outdoor Adventures", "Dance & Movement", "Playground Games"]
+      span: "col-span-1",
+      aspect: '1 / 1'
+    },
+    cooking: {
+      title: "Cooking",
+      image: "/images/after-school-cooking.jpg",
+      span: "col-span-1",
+      aspect: '1 / 1'
     }
   };
 
+  // Define the order for the grid layout (fits 3x2)
+  const gridOrder = ['arts', 'stem', 'languages', 'physical', 'cooking'];
+
   return (
-    <section className="py-16">
+    <section className="py-16"> {/* Increased padding for visual balance */}
       <MaxWidthWrapper>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-12" // Increased margin bottom
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#3967a9]">
             Enrichment Programs
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our diverse after-school activities are designed to engage, inspire, and develop well-rounded students
-          </p>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
-          {Object.keys(programs).map((key) => (
-            <button
-              key={key}
-              onClick={() => setActiveTab(key)}
-              className={`px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-medium transition-all ${
-                activeTab === key 
-                  ? 'bg-[#3967a9] text-white shadow-md' 
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              {programs[key].title}
-            </button>
-          ))}
-        </div>
-
-        <motion.div
-          key={activeTab}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+        <motion.div 
+          className="grid grid-cols-3 grid-rows-2 gap-4" // Removed fixed height
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            visible: { transition: { staggerChildren: 0.1 } },
+            hidden: {}
+          }}
         >
-          <div className="relative h-[300px] md:h-[400px] w-full rounded-xl overflow-hidden shadow-lg">
-            <img /* Use img tag */
-              src={programs[activeTab].image}
-              alt={programs[activeTab].title}
-              className="absolute inset-0 w-full h-full object-cover" /* Updated className */
-              loading="lazy"
-            />
-          </div>
-          
-          <div>
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-[#3967a9]">
-              {programs[activeTab].title}
-            </h3>
-            <p className="text-lg text-gray-700 mb-6">
-              {programs[activeTab].description}
-            </p>
-            
-            <div>
-              <h4 className="text-xl font-semibold mb-4 text-gray-800">Activities Include:</h4>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                {programs[activeTab].activities.map((activity, index) => (
-                  <li key={index} className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-[#3967a9]"></div>
-                    <span className="text-gray-700">{activity}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          {gridOrder.map((key) => {
+            const program = programs[key];
+            return (
+              <motion.div
+                key={key}
+                className={`relative rounded-xl overflow-hidden shadow-lg group cursor-pointer ${program.span}`}
+                style={{ aspectRatio: program.aspect }} // Apply dynamic aspect ratio
+                variants={{
+                  hidden: { opacity: 0, scale: 0.95 },
+                  visible: { opacity: 1, scale: 1, transition: { duration: 0.4 } }
+                }}
+              >
+                <img
+                  src={program.image}
+                  alt={program.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105" // Zoom effect
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4">
+                  <h3 className="text-white text-lg md:text-xl font-semibold">
+                    {program.title}
+                  </h3>
+                </div>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </MaxWidthWrapper>
     </section>

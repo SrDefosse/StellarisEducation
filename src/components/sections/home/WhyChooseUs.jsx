@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { FaGlobeAmericas, FaLanguage, FaUsers, FaClock, FaApple, FaChild } from 'react-icons/fa';
-import { IoPeople } from 'react-icons/io5';
 import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 const WhyChooseUs = () => {
@@ -25,6 +24,7 @@ const Features = () => {
 
 const Copy = () => {
   return (
+    <MaxWidthWrapper>
     <div className="flex h-fit w-full flex-col justify-center py-16 md:py-24 md:sticky md:top-0 md:h-screen">
       <span className="w-fit rounded-full bg-amber-500 px-4 py-2 text-sm uppercase text-white font-semibold">
         Excellence in Early Education
@@ -43,6 +43,7 @@ const Copy = () => {
         Our unique approach to Pre-K education for ages 3-5 sets us apart and prepares students for success in a global world.
       </p>
     </div>
+    </MaxWidthWrapper>
   );
 };
 

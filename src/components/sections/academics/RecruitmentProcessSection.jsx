@@ -56,7 +56,7 @@ export function RecruitmentProcessSection() {
         
         {/* Interactive Timeline */}
         <div className="mb-16">
-          <div className="hidden md:flex justify-between items-center mb-8 relative">
+          <div className="hidden md:flex justify-between items-center mb-16 relative">
             {/* Connection Line */}
             <div className="absolute left-0 right-0 h-1 bg-blue-200 top-1/2 transform -translate-y-1/2 z-0"></div>
             
@@ -139,8 +139,13 @@ export function RecruitmentProcessSection() {
             <PrimaryButton
               variant="white"
               className="hover:bg-amber-300"
+              onClick={() => {
+                const subject = "Teaching Position Application - Stellaris Education";
+                const body = "Dear Stellaris Education Team,%0D%0A%0D%0AI am writing to express my interest in joining your teaching team.%0D%0A%0D%0APlease find below my relevant experience and qualifications:%0D%0A-%0D%0A-%0D%0A-%0D%0A%0D%0AI look forward to discussing potential opportunities with your team.%0D%0A%0D%0ABest regards,%0D%0A[Your Name]";
+                window.location.href = `mailto:info@stellariseducation.com?subject=${subject}&body=${body}`;
+              }}
             >
-              View Current Openings
+              Apply Now
             </PrimaryButton>
           </div>
         </motion.div>

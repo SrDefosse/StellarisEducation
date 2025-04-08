@@ -2,10 +2,19 @@ import React from 'react';
 
 const ImmersionHero = () => {
   return (
-    <div className="relative w-full min-h-screen">
-      <div
-        className="absolute inset-0 bg-[url('/immersion-hero-bg.jpg')] bg-cover bg-center" // Added temporary background image path
-      />
+    <div className="relative w-full min-h-screen overflow-hidden">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source
+          src="https://v.ftcdn.net/03/95/45/54/700_F_395455459_8lkSPVGn8MfRarO8z40ayxOZoLlTpSNo_ST.mp4"
+          type="video/mp4"
+        />
+      </video>
       <div
         className="absolute inset-0"
         style={{

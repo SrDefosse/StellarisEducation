@@ -18,17 +18,10 @@ const AdmissionsPage = () => {
 
   return (
     <>
-      {/* Head component removed */}
-      {/* Navbar component removed (assuming it's in App.jsx) */}
 
       {/* Hero Section */}
       <AdmissionsHero scrollToContent={scrollToContent} />
 
-      {/* Main Content */}
-      <ProcessandFees />
-
-      {/* FAQ Section */}
-      <FAQSection />
 
       {/* Footer component removed (assuming it's in App.jsx) */}
     </>
