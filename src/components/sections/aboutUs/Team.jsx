@@ -26,7 +26,7 @@ const teamMembers = [
     id: 3,
     name: "Matt Ford",
     role: "CFO",
-    shortBio: "Former Treasurer at the Magellan International School, Senior finance executive at Yeti and Dell",
+    shortBio: "Managerial Finance Consultant, Former Treasurer at the Magellan International School, Senior finance executive at Dell",
     longBio: "Matt Ford brings over 15 years of financial leadership experience to Stellaris Education, with specialized knowledge in sustainable funding models for educational institutions. His strategic vision ensures that Stellaris can deliver exceptional educational experiences while maintaining financial sustainability. Prior to joining Stellaris, Matt managed financial operations for several innovative educational organizations, implementing budget frameworks that maximized resources allocated to student learning. His background in both finance and education gives him a unique perspective on balancing educational excellence with fiscal responsibility.",
     image: "/MattFord.jpg",
   }
@@ -53,7 +53,7 @@ const ProfileCard = ({ member }) => {
       </div>
       
       {/* Content section with improved styling */}
-      <div className="p-6 flex flex-col flex-grow bg-gradient-to-b from-white to-blue-50/30">
+      <div className="p-6 flex flex-col flex-grow bg-gradient-to-b from-white to-blue-50/30 min-h-[300px]">
         <h3 className="text-2xl font-bold text-indigo-900 mb-1">{member.name}</h3>
         <p className="text-[#3967a9] font-medium mb-3">{member.role}</p>
         
@@ -117,7 +117,7 @@ export default function Team() {
         </div>
         
         {/* Improved grid with responsive layout and animations */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
           {teamMembers.map((member, index) => (
             <motion.div 
               key={member.id}
@@ -125,7 +125,6 @@ export default function Team() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="h-full"
             >
               <ProfileCard member={member} />
             </motion.div>

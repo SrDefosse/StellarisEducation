@@ -7,7 +7,7 @@ export default function ContactPage() {
   return (
     <>
       <Navbar isTransparent={false} />
-      <div className="bg-gradient-to-b from-blue-50 to-white mt-20">
+      <div className="bg-gradient-to-b from-blue-50 to-white py-20">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

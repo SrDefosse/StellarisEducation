@@ -2,6 +2,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { FaWater, FaPuzzlePiece, FaMusic, FaTheaterMasks, FaChalkboardTeacher, FaCheck } from 'react-icons/fa';
 import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
+import { PrimaryButton } from '../../ui/Button';
 
 export function ImmersionMethodologySection() {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -132,6 +133,21 @@ export function ImmersionMethodologySection() {
             </div>
           </motion.div>
         </div>
+        
+        {/* Added button */}
+        <motion.div 
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <a href="/academics/internationalteachers">
+            <PrimaryButton>
+              Learn about our International Teachers
+            </PrimaryButton>
+          </a>
+        </motion.div>
       </MaxWidthWrapper>
     </section>
   );

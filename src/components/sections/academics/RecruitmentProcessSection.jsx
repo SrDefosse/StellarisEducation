@@ -107,7 +107,7 @@ export function RecruitmentProcessSection() {
               step.id === activeStep && (
                 <div key={step.id}>
                   <div className="flex items-center mb-4">
-                    <div className={`w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center mr-4`}>
+                    <div className={`w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center mr-4 flex-shrink-0`}>
                       {step.icon}
                     </div>
                     <h3 className="text-2xl font-bold text-blue-900">{step.title}</h3>

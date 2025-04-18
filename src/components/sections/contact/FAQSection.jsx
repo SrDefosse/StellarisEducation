@@ -13,7 +13,7 @@ export const FAQSection = () => {
     },
     {
       question: "Do you offer financial aid or scholarships?",
-      answer: "Yes, we offer need-based financial aid and merit scholarships to qualified families. Our goal is to make quality education accessible to diverse families. Please contact our admissions office for detailed information about our financial assistance programs."
+      answer: "Yes, we offer need-based financial aid to qualified families. In addition, qualified families in Tennessee can apply for a variety of Federal and State funded child care financial assistance programs.  Our goal is to make quality education accessible to diverse families. Please contact us for more information."
     },
     {
       question: "What makes Stellaris different from other schools?",
@@ -25,7 +25,7 @@ export const FAQSection = () => {
     },
     {
       question: "What are your school hours and calendar?",
-      answer: "Regular school hours are 8:30 AM to 3:15 PM, with extended care available from 7:30 AM to 6:00 PM. We follow a traditional academic calendar with some additional breaks for professional development and cultural celebrations."
+      answer: "Regular school hours are 8:00 AM to 3:00 PM, with extended care available from 7:00 AM to 6:00 PM"
     }
   ];
 

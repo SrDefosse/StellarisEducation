@@ -16,10 +16,8 @@ import InternationalTeachersPage from './pages/academics/internationalteachers/i
 import AfterSchoolPage from './pages/afterSchool/index'
 import AdmissionsPage from './pages/admissions/index'
 import ContactPage from './pages/contact/index'
-// import Academics from './pages/Academics'
-// import AfterSchool from './pages/AfterSchool'
-// import Admissions from './pages/Admissions'
-// import Contact from './pages/Contact'
+import TermsOfService from './pages/legal/TermsOfService'
+import PrivacyPolicy from './pages/legal/PrivacyPolicy'
 
 function App() {
   return (
@@ -36,10 +34,8 @@ function App() {
         <Route path="/afterschool" element={<AfterSchoolPage />} />
         <Route path="/admissions" element={<AdmissionsPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        {/* <Route path="/academics" element={<Academics />} /> */}
-        {/* <Route path="/after-school" element={<AfterSchool />} /> */}
-        {/* <Route path="/admissions" element={<Admissions />} /> */}
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/terms-of-service" element={<TermsOfService />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
     </>

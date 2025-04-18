@@ -11,11 +11,49 @@ export const ContactFormSection = () => {
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
+  const [submitMessage, setSubmitMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Form submission logic will be implemented later
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    setSubmitMessage('');
+
+    try {
+      const response = await fetch('/api/contact', { // Usamos la ruta relativa gracias al proxy de Nginx
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSubmitStatus('success');
+        setSubmitMessage(result.message);
+        // Reset form after successful submission
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+        setSubmitMessage(result.message || 'An error occurred while sending the message. Please try again.');
+      }
+    } catch (error) { // Network error or other fetch issues
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+      setSubmitMessage('Connection error. Please check your internet connection.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -27,19 +65,19 @@ export const ContactFormSection = () => {
 
   const contactInfo = [
     {
-      icon: <FaEnvelope className="w-6 h-6 text-[#3967a9]" />,
+      icon: <FaEnvelope className="w-5 h-5 text-[#3967a9]" />,
       title: "Email",
       info: "info@stellariseducation.com",
       link: "mailto:info@stellariseducation.com"
     },
     {
-      icon: <FaPhone className="w-6 h-6 text-[#3967a9]" />,
+      icon: <FaPhone className="w-5 h-5 text-[#3967a9]" />,
       title: "Phone",
-      info: "(512) 981 5402",
-      link: "tel:+16155550123"
+      info: "+1 (629) 205-6525",
+      link: "tel:+16292056525"
     },
     {
-      icon: <FaMapMarkerAlt className="w-6 h-6 text-[#3967a9]" />,
+      icon: <FaMapMarkerAlt className="w-5 h-5 text-[#3967a9]" />,
       title: "Location",
       info: "Nashville, Tennessee",
       link: "https://maps.google.com"
@@ -151,14 +189,28 @@ export const ContactFormSection = () => {
                   rows={5}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3967a9] focus:border-transparent transition-all h-full min-h-[120px]"
                   placeholder="How can we help you?"
+                  disabled={isSubmitting} // Disable textarea during submission
                 />
               </div>
 
+              {/* Submit Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="p-3 bg-green-100 border border-green-400 text-green-700 rounded-lg text-center">
+                  {submitMessage}
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="p-3 bg-red-100 border border-red-400 text-red-700 rounded-lg text-center">
+                  {submitMessage}
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-gradient-to-r from-[#3967a9] to-[#4081DE] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300"
+                className={`w-full px-8 py-4 bg-gradient-to-r from-[#3967a9] to-[#4081DE] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                disabled={isSubmitting} // Disable button during submission
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </motion.div>
@@ -201,7 +253,7 @@ export const ContactFormSection = () => {
             </div>
 
             <div className="mt-8">
-              <h3 className="text-2xl font-bold mb-4 text-[#3967a9]">Visit Our Campus</h3>
+              <h3 className="text-2xl font-bold mb-4 text-[#3967a9]">Campus location to be announced</h3>
               <div className="rounded-xl overflow-hidden shadow-xl h-[250px]">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206852.721684!2d-86.9081726!3d36.208428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8864ec3213eb903d%3A0x7d3fb9d0a1e9daa0!2sNashville%2C%20TN!5e0!3m2!1sen!2sus!4v1672774744611!5m2!1sen!2sus"

@@ -51,6 +51,15 @@ const Navbar = ({ className = '', isTransparent = false }) => {
     setMobileAcademicsOpen(!mobileAcademicsOpen);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleLinkClick = () => {
+    setMobileMenuOpen(false);
+    scrollToTop();
+  };
+
   return (
     <>
       <nav 
@@ -64,7 +73,7 @@ const Navbar = ({ className = '', isTransparent = false }) => {
         }}
       >
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center" onClick={scrollToTop}>
             <div className="relative h-12 w-48 sm:h-16 sm:w-56 md:h-16 md:w-60 transition-all duration-300">
               <img 
                 src={StellarisLogo} 
@@ -75,8 +84,8 @@ const Navbar = ({ className = '', isTransparent = false }) => {
           </Link>
           
           <div className="hidden lg:flex items-center space-x-1 xl:space-x-2 overflow-visible">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/about">About Us</NavLink>
+            <NavLink to="/" onClick={scrollToTop}>Home</NavLink>
+            <NavLink to="/about" onClick={scrollToTop}>About Us</NavLink>
             
             {/* Academics Dropdown */}
             <div className="relative" ref={dropdownRef}>
@@ -106,28 +115,40 @@ const Navbar = ({ className = '', isTransparent = false }) => {
                   <Link 
                     to="/academics/prek" 
                     className="block px-4 py-2 text-sm text-white hover:bg-[#3967a9]/40 transition-colors"
-                    onClick={() => setAcademicsDropdownOpen(false)}
+                    onClick={() => {
+                      setAcademicsDropdownOpen(false);
+                      scrollToTop();
+                    }}
                   >
                     Pre-K
                   </Link>
                   <Link 
                     to="/academics/ib" 
                     className="block px-4 py-2 text-sm text-white hover:bg-[#3967a9]/40 transition-colors"
-                    onClick={() => setAcademicsDropdownOpen(false)}
+                    onClick={() => {
+                      setAcademicsDropdownOpen(false);
+                      scrollToTop();
+                    }}
                   >
                     IB Programme
                   </Link>
                   <Link 
                     to="/academics/languageimmersion" 
                     className="block px-4 py-2 text-sm text-white hover:bg-[#3967a9]/40 transition-colors"
-                    onClick={() => setAcademicsDropdownOpen(false)}
+                    onClick={() => {
+                      setAcademicsDropdownOpen(false);
+                      scrollToTop();
+                    }}
                   >
                     Spanish Immersion
                   </Link>
                   <Link 
                     to="/academics/internationalteachers" 
                     className="block px-4 py-2 text-sm text-white hover:bg-[#3967a9]/40 transition-colors"
-                    onClick={() => setAcademicsDropdownOpen(false)}
+                    onClick={() => {
+                      setAcademicsDropdownOpen(false);
+                      scrollToTop();
+                    }}
                   >
                     International Teachers
                   </Link>
@@ -135,9 +156,10 @@ const Navbar = ({ className = '', isTransparent = false }) => {
               )}
             </div>
             
-            <NavLink to="/afterSchool">After School Enrichment</NavLink>
-            <NavLink to="/admissions">Admissions</NavLink>
-            <NavLink to="/contact" isButton>Contact Us</NavLink>
+            <NavLink to="/afterSchool" onClick={scrollToTop}>After School Enrichment</NavLink>
+            <NavLink to="/admissions" onClick={scrollToTop}>Admissions</NavLink>
+            <NavLink to="https://blog.stellariseducation.com/" onClick={scrollToTop}>Blog</NavLink>
+            <NavLink to="/contact" isButton onClick={scrollToTop}>Contact Us</NavLink>
           </div>
           
           <button 
@@ -166,8 +188,8 @@ const Navbar = ({ className = '', isTransparent = false }) => {
         style={{ top: '60px', borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}
       >
         <div className="flex flex-col items-center justify-center h-full space-y-6 py-8">
-          <MobileNavLink to="/" onClick={() => setMobileMenuOpen(false)}>Home</MobileNavLink>
-          <MobileNavLink to="/about" onClick={() => setMobileMenuOpen(false)}>About Us</MobileNavLink>
+          <MobileNavLink to="/" onClick={handleLinkClick}>Home</MobileNavLink>
+          <MobileNavLink to="/about" onClick={handleLinkClick}>About Us</MobileNavLink>
           
           {/* Mobile Academics Dropdown */}
           <div className="w-full flex flex-col items-center">
@@ -195,28 +217,40 @@ const Navbar = ({ className = '', isTransparent = false }) => {
                 <Link 
                   to="/academics/prek" 
                   className="text-white text-lg w-full text-center py-2 rounded-lg hover:bg-white/10 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    scrollToTop();
+                  }}
                 >
                   Pre-K Program
                 </Link>
                 <Link 
                   to="/academics/ib" 
                   className="text-white text-lg w-full text-center py-2 rounded-lg hover:bg-white/10 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    scrollToTop();
+                  }}
                 >
                   IB Programme
                 </Link>
                 <Link 
                   to="/academics/languageimmersion" 
                   className="text-white text-lg w-full text-center py-2 rounded-lg hover:bg-white/10 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    scrollToTop();
+                  }}
                 >
                   Spanish Immersion
                 </Link>
                 <Link 
                   to="/academics/internationalteachers" 
                   className="text-white text-lg w-full text-center py-2 rounded-lg hover:bg-white/10 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    scrollToTop();
+                  }}
                 >
                   International Teachers
                 </Link>
@@ -226,6 +260,14 @@ const Navbar = ({ className = '', isTransparent = false }) => {
           
           <MobileNavLink to="/afterSchool" onClick={() => setMobileMenuOpen(false)}>After School Enrichment</MobileNavLink>
           <MobileNavLink to="/admissions" onClick={() => setMobileMenuOpen(false)}>Admissions</MobileNavLink>
+          <a 
+            href="https://blog.stellariseducation.com/"
+            className="text-white text-xl font-medium transition-all flex items-center gap-2 px-4 py-2 rounded-lg"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <span className="w-2 h-2 rounded-full bg-white transition-all"></span>
+            Blog
+          </a>
           <MobileNavLink to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact Us</MobileNavLink>
         </div>
       </div>
@@ -233,7 +275,7 @@ const Navbar = ({ className = '', isTransparent = false }) => {
   );
 };
 
-const NavLink = ({ to, children, isButton = false }) => {
+const NavLink = ({ to, children, isButton = false, onClick }) => {
   const location = useLocation();
   const isActive = location.pathname === to;
   
@@ -241,6 +283,7 @@ const NavLink = ({ to, children, isButton = false }) => {
     return (
       <Link
         to={to}
+        onClick={onClick}
         className="text-white font-medium px-3 xl:px-4 py-2 ml-1 xl:ml-2 rounded-full bg-[#3967a9] hover:bg-[#3967a9]/80 transition-all shadow-md hover:shadow-lg hover:shadow-[#3967a9]/20 text-[13px] xl:text-[15px] whitespace-nowrap"
       >
         {children}
@@ -251,6 +294,7 @@ const NavLink = ({ to, children, isButton = false }) => {
   return (
     <Link
       to={to}
+      onClick={onClick}
       className={`text-white font-medium px-2 xl:px-3 py-2 transition-all relative group rounded-full hover:bg-white/10 text-[13px] xl:text-[15px] whitespace-nowrap ${
         isActive ? 'bg-white/10' : ''
       }`}

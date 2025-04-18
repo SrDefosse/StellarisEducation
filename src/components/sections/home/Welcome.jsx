@@ -2,6 +2,7 @@
 import { PrimaryButton, SecondaryButton } from '../../ui/Button';
 import { motion } from 'framer-motion';
 import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
+import { Link } from 'react-router-dom';
 
 const Welcome = () => {
   return (
@@ -26,12 +27,12 @@ const Welcome = () => {
               
               <div className="space-y-4 text-gray-700 flex-grow">
                 <p className="text-base md:text-lg leading-relaxed">
-                  At Stellaris, we believe in nurturing curious minds and fostering a love for learning from an early age. Our innovative Pre-K programs for children ages 3-5 combine the International Baccalaureate framework with language immersion to create a truly global educational experience.
+                At Stellaris, we believe in nurturing curious minds and fostering a love for learning from an early age. Our innovative Pre-K programs for children ages 3-5 combine the International Baccalaureate framework with language immersion to create a truly exceptional educational experience.
                 </p>
                 
                 <div className="border-l-4 border-amber-400 pl-4 py-2 bg-amber-50 rounded-r-lg">
                   <p className="text-base md:text-lg leading-relaxed">
-                    Our mission is to empower young learners to become globally-minded, multilingual citizens through an innovative educational approach in a nurturing environment where children can explore, discover, and grow into confident, compassionate global citizens.
+                  Our mission is to light the path of dreams by creating exceptional educational environments that champion humanity and inspire students to become skilled, curious, and compassionate risk takers that act with purpose to create a better world.
                   </p>
                 </div>
                 
@@ -58,7 +59,9 @@ const Welcome = () => {
               </div>
 
               <div className="space-y-4 pt-6 mt-auto">
-                <PrimaryButton className="w-full">Contact Us</PrimaryButton>
+                <Link to="/contact">
+                  <PrimaryButton className="w-full">Contact Us</PrimaryButton>
+                </Link>
               </div>
             </div>
           </div>

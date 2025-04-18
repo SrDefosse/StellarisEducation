@@ -15,16 +15,16 @@ const AcademicProgram = () => {
   const programs = [
     {
       id: 1,
-      title: "PreK Offering",
-      description: "Our PreK program for ages 3-5 provides a nurturing environment where children develop foundational skills through play-based learning and exploration.",
+      title: "Pre-K",
+      description: "Our Pre-K program for ages 3-5 provides a nurturing and loving environment where children develop the foundations that allow them to become skilled, curious, and compassionate risk takers that act with purpose to create a better world",
       size: "col-span-12 md:col-span-6 lg:col-span-3",
-      image: "/PreK_Offering.jpg",
+      image: "/prek_offering.jpg",
       path: "/academics/prek"
     },
     {
       id: 2,
       title: "IB Program",
-      description: "Our curriculum follows the inquiry-based IB framework, encouraging students to take ownership of their learning through exploration and discovery.",
+      description: <>Our curriculum follows the inquiry-based framework of the International Baccalaureate Primary Years Programme, encouraging students to take ownership of their learning through exploration and discovery. <br/><br/>It is a student-centered approach to education that reflects the best of educational research and has evolved to become a world leader in future-focused education</>,
       size: "col-span-12 md:col-span-6 lg:col-span-3",
       image: "/IB_Program.jpg",
       path: "/academics/ib"
@@ -32,7 +32,7 @@ const AcademicProgram = () => {
     {
       id: 3,
       title: "Spanish Immersion",
-      description: "Students are immersed in Spanish language environment, developing fluency naturally while learning academic content in both languages.",
+      description: "Students are immersed in a Spanish language environment, developing fluency naturally while learning academic content in Spanish and English.  The foundations of a bilingual education, a norm in most of the world, allows children to develop cognitive flexibility, mental agility, cultural awareness, and empathy towards others",
       size: "col-span-12 md:col-span-6 lg:col-span-3",
       image: "/Spanish_Immersion.jpg",
       path: "/academics/languageimmersion"
@@ -40,9 +40,9 @@ const AcademicProgram = () => {
     {
       id: 4,
       title: "International Teachers",
-      description: "Our diverse faculty brings authentic cultural experiences and global perspectives to the classroom, enriching the educational journey.",
+      description: "An educational program is only as good as its teachers and we hire the best from around the world.  This diverse faculty brings authentic cultural experiences and global perspectives to the classroom, enriching the educational journey",
       size: "col-span-12 md:col-span-6 lg:col-span-3",
-      image: "/International_Teacher.jpg",
+      image: "/international_teachers.jpg",
       path: "/academics/internationalteachers"
     }
   ];
@@ -59,7 +59,7 @@ const AcademicProgram = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           />
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">Discover the pillars of our curriculum designed to nurture global citizens with a love for learning.</p>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">Discover the pillars of our bilingual International Baccalaureate program designed to nurture students to develop a love of learning and set them on a path that will allow them to pursue their dreams while creating a better world.</p>
         </div>
         
         {/* Vertical Accordion Slider */}
@@ -124,16 +124,6 @@ const AcademicProgram = () => {
               </AnimatePresence>
             </motion.div>
           ))}
-        </div>
-        
-        {/* Call-to-action */}
-        <div className="text-center">
-          <PrimaryButton onClick={() => navigate('/academics/ib')}>
-            <span>Explore Our Full Curriculum</span>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </PrimaryButton>
         </div>
       </MaxWidthWrapper>
 

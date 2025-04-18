@@ -3,7 +3,7 @@ import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 const ExperienceStellaris = () => {
   return (
-    <div className="py-16 md:py-24 bg-slate-50">
+    <div className="py-16 md:py-24">
       <MaxWidthWrapper>
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#4081DE] mb-4">Experience Stellaris</h2>

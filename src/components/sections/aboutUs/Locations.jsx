@@ -7,15 +7,14 @@ import { Link } from "react-router-dom";
 
 // Future campus announcement data
 const announcementData = {
-  phone: "+1 (615) 555-1234",
+  phone: "+1 (629) 205-6525",
   email: "info@stellariseducation.com",
-  description: "We're thrilled to announce that Stellaris Education will soon be opening its first campus! Our state-of-the-art facility will embody our commitment to innovative education and multicultural learning.",
+  description: "We're thrilled to announce that Stellaris Education will soon be opening its first campus in Nashville, Tennessee during the Fall of 2025.",
   plannedFeatures: [
-    "Modern classrooms with cutting-edge educational technology",
-    "Dedicated language immersion spaces",
-    "Interactive learning environments",
-    "Multi-purpose activity center",
-    "Sustainable and eco-friendly facilities"
+    "Centrally located for easy access from a number of neighborhoods in and around Nashville",
+    "Classrooms designed to allow for movement and exploration",
+    "Plenty of outdoor space for play and guided physical activity",
+    "Healthy snacks for kids",
   ],
   images: [
     {

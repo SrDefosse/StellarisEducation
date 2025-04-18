@@ -1,10 +1,8 @@
 import { motion } from 'framer-motion';
-import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 const ProcessandFees = () => {
   return (
     <div id="admissions-process" className="py-16">
-      <MaxWidthWrapper>
         {/* Content Section */}
         <div className="max-w-3xl mx-auto">
           <motion.div
@@ -51,16 +49,19 @@ const ProcessandFees = () => {
                     </div>
                   </div>
                 </div>
-                <div className="p-6 pt-0 mt-4"> {/* Adjusted margin */}
-                  <button className="w-full px-6 py-4 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors font-semibold text-lg shadow-md hover:shadow-lg"> {/* Larger button, added shadow */}
+                <div className="p-6 pt-0 mt-4">
+                  <a 
+                    href="https://lu.ma/nnce6azs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full px-6 py-4 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors font-semibold text-lg shadow-md hover:shadow-lg text-center">
                     Register to Attend
-                  </button>
+                  </a>
                 </div>
               </motion.div>
             </div>
           </motion.div>
         </div>
-      </MaxWidthWrapper>
     </div>
   );
 };

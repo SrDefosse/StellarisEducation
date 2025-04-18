@@ -5,7 +5,7 @@ import ProcessandFees from './ProcessandFees'; // Import the ProcessandFees comp
 
 const AdmissionsHero = () => { // Removed scrollToContent prop
   return (
-    <div className="relative h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden grid place-items-center">
       <img /* Use img tag */
         src="/admissions-hero-bg.jpg"
         alt="Stellaris Education"
@@ -20,7 +20,7 @@ const AdmissionsHero = () => { // Removed scrollToContent prop
           opacity: '0.7',
         }}
       />
-      <div className="relative h-full flex items-center justify-center">
+      <div className="relative w-full">
         <MaxWidthWrapper>
           {/* Removed original hero text and button */}
           <ProcessandFees /> {/* Added the ProcessandFees component */}

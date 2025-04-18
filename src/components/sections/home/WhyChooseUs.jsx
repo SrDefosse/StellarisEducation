@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
-import { FaGlobeAmericas, FaLanguage, FaUsers, FaClock, FaApple, FaChild } from 'react-icons/fa';
+import { FaGlobeAmericas, FaUsers, FaClock, FaApple, FaChild } from 'react-icons/fa';
 import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 const WhyChooseUs = () => {
@@ -25,7 +25,7 @@ const Features = () => {
 const Copy = () => {
   return (
     <MaxWidthWrapper>
-    <div className="flex h-fit w-full flex-col justify-center py-16 md:py-24 md:sticky md:top-0 md:h-screen">
+    <div className="flex h-fit w-full flex-col pt-30 pb-6 md:sticky md:top-0 md:h-screen">
       <span className="w-fit rounded-full bg-amber-500 px-4 py-2 text-sm uppercase text-white font-semibold">
         Excellence in Early Education
       </span>
@@ -61,7 +61,7 @@ const Carousel = () => {
       description: "Our IB curriculum fosters international-mindedness and academic excellence through inquiry-based learning, developing globally aware and culturally competent students."
     },
     {
-      icon: <FaLanguage className="text-4xl text-[#4081DE]" />,
+      icon: <span className="text-4xl font-bold text-[#4081DE]">Ñ</span>,
       title: "Language Immersion",
       description: "Our Spanish immersion program helps children develop bilingual fluency naturally while building cognitive advantages that last a lifetime."
     },

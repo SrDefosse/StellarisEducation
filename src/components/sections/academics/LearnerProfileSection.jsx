@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { FaSearch, FaBook, FaBrain, FaComment, FaBalanceScale, 
          FaGlobeAmericas, FaHeart, FaRocket, FaYinYang, FaUserCog } from 'react-icons/fa';
 import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
+import { PrimaryButton } from '../../ui/Button';
 
 export function LearnerProfileSection() {
   const learnerProfiles = [
@@ -138,6 +139,21 @@ export function LearnerProfileSection() {
               className="absolute inset-0 w-full h-full"
             />
           </div>
+        </motion.div>
+
+        {/* Added button */}
+        <motion.div 
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <a href="/academics/languageimmersion">
+            <PrimaryButton variant="amber">
+              Learn about Spanish Immersion
+            </PrimaryButton>
+          </a>
         </motion.div>
       </MaxWidthWrapper>
     </section>
