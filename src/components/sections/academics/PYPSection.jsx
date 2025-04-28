@@ -54,7 +54,7 @@ export function PYPSection() {
             >
               <div className="relative w-64 h-64 flex items-center justify-center">
                 <img /* Use img tag */
-                  src="/ib-pyp-logo.png"
+                  src="https://cdn.stellariseducation.com/ib-pyp-logo.png"
                   alt="IB Primary Years Programme Logo"
                   width="256" /* Keep width/height for aspect ratio */
                   height="256"

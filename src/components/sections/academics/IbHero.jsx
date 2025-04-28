@@ -11,7 +11,7 @@ export default function IbHero() {
           loop 
           playsInline
         >
-          <source src="/hero-ib.mp4" type="video/mp4" />
+          <source src="https://cdn.stellariseducation.com/hero-ib.mp4" type="video/mp4" />
         </video>
         <div 
           className="absolute inset-0"

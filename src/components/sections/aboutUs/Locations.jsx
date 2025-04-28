@@ -18,7 +18,7 @@ const announcementData = {
   ],
   images: [
     {
-      src: "/campus-concept.jpg",
+      src: "https://cdn.stellariseducation.com/campus-concept.jpg",
       alt: "Architectural concept of future Stellaris Education campus"
     }
   ]

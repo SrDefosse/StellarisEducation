@@ -21,7 +21,7 @@ export const ProgramsSection = () => {
   const programs = {
     arts: {
       title: "Arts & Creativity",
-      image: "/after_school_art_and_creativity.jpg",
+      image: "https://cdn.stellariseducation.com/after_school_art_and_creativity.jpg",
       // span removed here, will be applied conditionally below
       aspect: {
         mobile: '3 / 2', // Aspect ratio for screens < 768px
@@ -30,7 +30,7 @@ export const ProgramsSection = () => {
     },
     stem: {
       title: "STEM Discovery",
-      image: "/after_school_stem.jpg",
+      image: "https://cdn.stellariseducation.com/after_school_stem.jpg",
       aspect: {
         mobile: '3 / 2',
         desktop: '1 / 1'
@@ -38,7 +38,7 @@ export const ProgramsSection = () => {
     },
     languages: {
       title: "Language & Culture",
-      image: "/after_school_language_and_culture.jpg",
+      image: "https://cdn.stellariseducation.com/after_school_language_and_culture.jpg",
       aspect: {
         mobile: '3 / 2',
         desktop: '1 / 1'
@@ -46,7 +46,7 @@ export const ProgramsSection = () => {
     },
     physical: {
       title: "Physical Activity",
-      image: "/after_school_physical_activity.jpg",
+      image: "https://cdn.stellariseducation.com/after_school_physical_activity.jpg",
       aspect: {
         mobile: '3 / 2',
         desktop: '1 / 1'
@@ -54,7 +54,7 @@ export const ProgramsSection = () => {
     },
     cooking: {
       title: "Cooking",
-      image: "/after_school_cooking.jpg",
+      image: "https://cdn.stellariseducation.com/after_school_cooking.jpg",
       aspect: {
         mobile: '3 / 2',
         desktop: '1 / 1'

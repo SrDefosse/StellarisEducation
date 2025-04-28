@@ -21,7 +21,7 @@ const ExperienceStellaris = () => {
           {/* Video Section */}
           <div className="rounded-2xl overflow-hidden shadow-xl aspect-video relative">
             <img 
-              src="/experience_stellaris.jpg" 
+              src="https://cdn.stellariseducation.com/experience_stellaris.jpg" 
               alt="Experience Stellaris"
               className="w-full h-full object-cover"
             />

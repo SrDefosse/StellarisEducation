@@ -18,7 +18,7 @@ const AcademicProgram = () => {
       title: "Pre-K",
       description: "Our Pre-K program for ages 3-5 provides a nurturing and loving environment where children develop the foundations that allow them to become skilled, curious, and compassionate risk takers that act with purpose to create a better world",
       size: "col-span-12 md:col-span-6 lg:col-span-3",
-      image: "/prek_offering.jpg",
+      image: "https://cdn.stellariseducation.com/prek_offering.jpg",
       path: "/academics/prek"
     },
     {
@@ -26,7 +26,7 @@ const AcademicProgram = () => {
       title: "IB Program",
       description: <>Our curriculum follows the inquiry-based framework of the International Baccalaureate Primary Years Programme, encouraging students to take ownership of their learning through exploration and discovery. <br/><br/>It is a student-centered approach to education that reflects the best of educational research and has evolved to become a world leader in future-focused education</>,
       size: "col-span-12 md:col-span-6 lg:col-span-3",
-      image: "/IB_Program.jpg",
+      image: "https://cdn.stellariseducation.com/IB_Program.jpg",
       path: "/academics/ib"
     },
     {
@@ -34,7 +34,7 @@ const AcademicProgram = () => {
       title: "Spanish Immersion",
       description: "Students are immersed in a Spanish language environment, developing fluency naturally while learning academic content in Spanish and English.  The foundations of a bilingual education, a norm in most of the world, allows children to develop cognitive flexibility, mental agility, cultural awareness, and empathy towards others",
       size: "col-span-12 md:col-span-6 lg:col-span-3",
-      image: "/Spanish_Immersion.jpg",
+      image: "https://cdn.stellariseducation.com/Spanish_Immersion.jpg",
       path: "/academics/languageimmersion"
     },
     {
@@ -42,7 +42,7 @@ const AcademicProgram = () => {
       title: "International Teachers",
       description: "An educational program is only as good as its teachers and we hire the best from around the world.  This diverse faculty brings authentic cultural experiences and global perspectives to the classroom, enriching the educational journey",
       size: "col-span-12 md:col-span-6 lg:col-span-3",
-      image: "/international_teachers.jpg",
+      image: "https://cdn.stellariseducation.com/international_teachers.jpg",
       path: "/academics/internationalteachers"
     }
   ];

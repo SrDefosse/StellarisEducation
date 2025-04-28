@@ -6,41 +6,12 @@ const OurStory = () => {
   return (
     <section className="py-20 relative overflow-hidden">
       <MaxWidthWrapper>
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#4081DE] mb-4">Our Story</h2>
-          <motion.div 
-            className="h-1 w-24 bg-amber-400 mx-auto rounded-full"
-            initial={{ width: 0 }}
-            whileInView={{ width: 96 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          />
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-4">
-            The journey that led to Stellaris Education
-          </p>
-        </div>
 
         {/* Story Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Image Side */}
-          <motion.div 
-            className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <img /* Use img tag */
-              src="/school_building.jpg"
-              alt="Stellaris Education Building"
-              className="absolute inset-0 w-full h-full object-cover" /* Updated className for img */
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent"></div>
-          </motion.div>
+        <div>
 
           {/* Text Content Side */}
-          <div className="space-y-8">
+          <div className="space-y-8 max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

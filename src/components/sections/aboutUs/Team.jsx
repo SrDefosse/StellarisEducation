@@ -12,7 +12,7 @@ const teamMembers = [
     role: "CEO",
     shortBio: "Visionary leader with 20+ years in educational innovation.",
     longBio: "Erin Defosse is the visionary leader behind Stellaris Education, bringing over two decades of experience in educational innovation. With a background in both technology and pedagogy, Erin is dedicated to reimagining how we prepare students for the rapidly changing world. Before founding Stellaris, Erin led transformative initiatives at leading educational institutions and tech companies, always with a focus on student-centered learning approaches. Her philosophy combines traditional educational wisdom with cutting-edge technological insights to create truly transformative learning experiences.",
-    image: "/ErinDefosse.jpg",
+    image: "https://cdn.stellariseducation.com/ErinDefosse.jpg",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const teamMembers = [
     role: "Head of PreK",
     shortBio: "Early childhood education specialist with innovative teaching methods.",
     longBio: "Alexandra Castro leads our PreK program with passion and expertise, bringing innovative approaches to early childhood education. With specialized training in developmental psychology and over 15 years of classroom experience, Alexandra has pioneered methods that make learning both fun and effective for our youngest students. Her curriculum design emphasizes play-based learning while building crucial foundational skills. Alexandra regularly presents her research at educational conferences and has published numerous articles on early childhood development strategies.",
-    image: "/AlexandraCastro.jpg",
+    image: "https://cdn.stellariseducation.com/AlexandraCastro.jpg",
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const teamMembers = [
     role: "CFO",
     shortBio: "Managerial Finance Consultant, Former Treasurer at the Magellan International School, Senior finance executive at Dell",
     longBio: "Matt Ford brings over 15 years of financial leadership experience to Stellaris Education, with specialized knowledge in sustainable funding models for educational institutions. His strategic vision ensures that Stellaris can deliver exceptional educational experiences while maintaining financial sustainability. Prior to joining Stellaris, Matt managed financial operations for several innovative educational organizations, implementing budget frameworks that maximized resources allocated to student learning. His background in both finance and education gives him a unique perspective on balancing educational excellence with fiscal responsibility.",
-    image: "/MattFord.jpg",
+    image: "https://cdn.stellariseducation.com/MattFord.jpg",
   }
 ];
 

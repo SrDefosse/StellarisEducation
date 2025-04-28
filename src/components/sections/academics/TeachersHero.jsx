@@ -4,7 +4,7 @@ const TeachersHero = () => {
   return (
     <div className="relative w-full min-h-screen">
       <div
-        className="absolute inset-0 bg-[url('/teachers-hero-bg.jpg')] bg-cover bg-center" // Added temporary background image path
+        className="absolute inset-0 bg-[url('https://cdn.stellariseducation.com/teachers-hero-bg.jpg')] bg-cover bg-center" // Added temporary background image path
       />
       <div
         className="absolute inset-0"

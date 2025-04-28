@@ -7,25 +7,25 @@ const timelineData = [
     year: "2009",
     title: "Magellan Foundation",
     description: "The Magellan International School was founded by Erin Defossé and his team with a vision to create a truly bilingual and multicultural learning environment. Starting with just a handful of students, the school established its foundation on the principles of inquiry-based learning and global citizenship.",
-    image: "/foundation.jpg"
+    image: "https://cdn.stellariseducation.com/foundation.jpg"
   },
   {
     year: "2014",
     title: "Middle Years Program",
-    description: "The Middle Years Program was inaugurated as a natural progression of our educational journey. This expansion allowed us to extend our innovative bilingual curriculum to older students, fostering critical thinking and international mindedness through the IB framework.",
-    image: "/middle_years.jpg"
+    description: "The Middle Years Program was inaugurated as a natural progression of our educational journey. This expansion allowed Magellan to extend our innovative bilingual curriculum to older students, fostering critical thinking and international mindedness through the IB framework.",
+    image: "https://cdn.stellariseducation.com/middle_years.jpg"
   },
   {
     year: "2024",
     title: "Campus Extension to High School",
-    description: "A significant milestone in our growth, the campus extension project represents our commitment to providing continuous quality education. This expansion includes state-of-the-art facilities designed to support advanced learning programs and accommodate our growing community.",
-    image: "/campus_expansion.jpg"
+    description: "A significant milestone in Magellan’s growth, the forever home project. This expansion includes state-of-the-art facilities designed to support advanced learning programs and accommodate Magellan’s growing community.",
+    image: "https://cdn.stellariseducation.com/campus_expansion.jpg"
   },
   {
     year: "2025",
     title: "Stellaris Foundation",
-    description: "Looking to expand the director's vision of accessible quality education, Stellaris Foundation emerges as a beacon of innovative early education. Building upon years of experience in bilingual education, we're creating new opportunities for young learners to thrive in a global context.",
-    image: "/stellaris_journey.jpg"
+    description: "Looking to expand the founder’s vision of accessible quality education, Stellaris emerges as a beacon of innovative early education. Building upon years of experience in bilingual education, we're creating new opportunities for young learners to thrive in a global context.",
+    image: "https://cdn.stellariseducation.com/stellaris_journey.jpg"
   }
 ];
 

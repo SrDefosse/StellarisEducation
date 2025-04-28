@@ -11,7 +11,7 @@ const AfterSchoolHero = () => {
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source
-          src="/after_school_enrichment_hero.mp4"
+          src="https://cdn.stellariseducation.com/after_school_enrichment_hero.mp4"
           type="video/mp4"
         />
       </video>

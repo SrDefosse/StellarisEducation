@@ -4,7 +4,7 @@ const PrekHero = () => {
   return (
     <div className="relative w-full min-h-screen">
       <div 
-        className="absolute inset-0 bg-[url('/prek-hero-bg.jpg')] bg-cover bg-center"
+        className="absolute inset-0 bg-[url('https://cdn.stellariseducation.com/prek-hero-bg.jpg')] bg-cover bg-center"
       />
       <div 
         className="absolute inset-0"

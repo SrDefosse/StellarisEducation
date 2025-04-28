@@ -113,7 +113,7 @@ export function ImmersionMethodologySection() {
           >
             <div className="absolute top-0 left-0 w-full h-full">
               <img
-                src={`/${
+                src={`https://cdn.stellariseducation.com/${
                   activeFeature === 0 ? 'immersion_approach' :
                   activeFeature === 1 ? 'learning_units' :
                   activeFeature === 2 ? 'activities' :

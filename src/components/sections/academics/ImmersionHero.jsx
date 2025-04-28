@@ -11,7 +11,7 @@ const ImmersionHero = () => {
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source
-          src="/immersion_hero_bg.mp4"
+          src="https://cdn.stellariseducation.com/immersion_hero_bg.mp4"
           type="video/mp4"
         />
       </video>

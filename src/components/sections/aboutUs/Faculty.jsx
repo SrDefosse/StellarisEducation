@@ -5,12 +5,12 @@ import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 // Faculty data
 const facultyImages = [
-  { id: 1, src: "/collage_1.jpg", alt: "Spanish language instructor" },
-  { id: 2, src: "/collage_2.jpg", alt: "Science faculty member" },
-  { id: 3, src: "/collage_3.jpg", alt: "Arts and music teacher" },
-  { id: 4, src: "/collage_4.jpg", alt: "Mathematics instructor" },
-  { id: 5, src: "/collage_5.jpg", alt: "Early childhood education specialist" },
-  { id: 6, src: "/collage_6.jpg", alt: "Physical education teacher" },
+  { id: 1, src: "https://cdn.stellariseducation.com/collage_1.jpg", alt: "Spanish language instructor" },
+  { id: 2, src: "https://cdn.stellariseducation.com/collage_2.jpg", alt: "Science faculty member" },
+  { id: 3, src: "https://cdn.stellariseducation.com/collage_3.jpg", alt: "Arts and music teacher" },
+  { id: 4, src: "https://cdn.stellariseducation.com/collage_4.jpg", alt: "Mathematics instructor" },
+  { id: 5, src: "https://cdn.stellariseducation.com/collage_5.jpg", alt: "Early childhood education specialist" },
+  { id: 6, src: "https://cdn.stellariseducation.com/collage_6.jpg", alt: "Physical education teacher" },
 ];
 
 // Faculty image component with hover effect

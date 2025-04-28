@@ -73,7 +73,7 @@ const Welcome = () => {
               {/* Main large image */}
               <div className="relative col-span-2 h-[450px] rounded-2xl overflow-hidden shadow-lg">
                 <img /* Use img tag */
-                  src="/StellarisWelcome.jpg"
+                  src="https://cdn.stellariseducation.com/StellarisWelcome.jpg"
                   alt="Stellaris Education Main"
                   className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" /* Updated className */
                   loading="lazy" /* Added loading lazy */
@@ -84,7 +84,7 @@ const Welcome = () => {
               {/* Two smaller images in a row */}
               <div className="relative h-[280px] rounded-2xl overflow-hidden shadow-lg">
                 <img /* Use img tag */
-                  src="/StellarisKids1.jpg"
+                  src="https://cdn.stellariseducation.com/StellarisKids1.jpg"
                   alt="Stellaris Education Activities"
                   className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" /* Updated className */
                   loading="lazy" /* Added loading lazy */
@@ -94,7 +94,7 @@ const Welcome = () => {
               
               <div className="relative h-[280px] rounded-2xl overflow-hidden shadow-lg">
                 <img /* Use img tag */
-                  src="/StellarisKids2.jpg"
+                  src="https://cdn.stellariseducation.com/StellarisKids2.jpg"
                   alt="Stellaris Education Learning"
                   className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" /* Updated className */
                   loading="lazy" /* Added loading lazy */
@@ -106,7 +106,7 @@ const Welcome = () => {
             {/* Mobile view (single image) */}
             <div className="lg:hidden relative h-[400px] rounded-2xl overflow-hidden shadow-lg">
               <img /* Use img tag */
-                src="/StellarisWelcome.jpg"
+                src="https://cdn.stellariseducation.com/StellarisWelcome.jpg"
                 alt="Stellaris Education Main"
                 className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" /* Updated className */
                 loading="lazy" /* Added loading lazy */

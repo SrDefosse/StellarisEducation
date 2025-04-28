@@ -7,7 +7,7 @@ const AdmissionsHero = () => { // Removed scrollToContent prop
   return (
     <div className="relative min-h-screen overflow-hidden grid place-items-center">
       <img /* Use img tag */
-        src="/admissions-hero-bg.jpg"
+        src="https://cdn.stellariseducation.com/admissions-hero-bg.jpg"
         alt="Stellaris Education"
         className="absolute inset-0 w-full h-full object-cover" /* Updated className */
         loading="lazy"

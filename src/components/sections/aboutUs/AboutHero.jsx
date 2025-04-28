@@ -4,7 +4,7 @@ const AboutHero = () => {
   return (
     <div className="relative w-full min-h-screen">
       <div 
-        className="absolute inset-0 bg-[url('/about-hero-bg.jpg')] bg-cover bg-center"
+        className="absolute inset-0 bg-[url('https://cdn.stellariseducation.com/about-hero-bg.jpg')] bg-cover bg-center"
       />
       <div 
         className="absolute inset-0"

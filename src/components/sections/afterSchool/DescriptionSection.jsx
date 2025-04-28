@@ -38,7 +38,7 @@ export const DescriptionSection = () => {
             className="lg:w-1/2 relative h-[400px] w-full rounded-2xl overflow-hidden shadow-xl"
           >
             <img /* Use img tag */
-              src="/after_school_description.jpg"
+              src="https://cdn.stellariseducation.com/after_school_description.jpg"
               alt="Stellaris After School Program"
               className="absolute inset-0 w-full h-full object-cover" /* Updated className */
               loading="lazy"
