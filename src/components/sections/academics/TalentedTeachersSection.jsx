@@ -1,10 +1,8 @@
 import { motion } from 'framer-motion';
-// import Image from 'next/image'; // Removed next/image import
 import { useState } from 'react';
-import MaxWidthWrapper from '../../ui/MaxWidthWrapper'; // Updated import path
+import MaxWidthWrapper from '../../ui/MaxWidthWrapper'; 
 
 export function TalentedTeachersSection() {
-  // Teachers data with fictional information for demo purposes
   const teachers = [
     {
       id: 1,
@@ -76,13 +74,12 @@ export function TalentedTeachersSection() {
                 transition={{ duration: 0.5, delay: 0.1 * index }}
               >
                 <div className="relative h-64 bg-blue-100">
-                  <img /* Use img tag */
-                    src={teacher.image} // Assumes image path is correct
+                  <img
+                    src={teacher.image}
                     alt={teacher.name}
-                    className="absolute inset-0 w-full h-full object-cover" /* Placeholder styling */
+                    className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
                   />
-                  {/* Placeholder if image doesn't load */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-20 h-20 rounded-full bg-blue-700 flex items-center justify-center text-white text-2xl font-bold">
                       {teacher.name.charAt(0)}

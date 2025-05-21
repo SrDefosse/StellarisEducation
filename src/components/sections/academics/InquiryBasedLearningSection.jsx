@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { useRef } from 'react';
 import useMeasure from 'react-use-measure';
 import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
@@ -86,7 +85,7 @@ export function InquiryBasedLearningSection() {
           </motion.div>
         </div>
 
-        {/* Steps section (non-interactive) */}
+        {/* Steps section */}
         <motion.div
           className="p-4 mb-8"
           initial={{ opacity: 0, y: 20 }}

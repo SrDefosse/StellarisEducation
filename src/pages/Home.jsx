@@ -9,8 +9,6 @@ import ExperienceStellaris from "../components/sections/home/ExperienceStellaris
 export default function Home() {
   return (
     <>
-      {/* Head component removed - will be handled by React Helmet later */}
-      {/* Navbar removed - will be handled in App.jsx layout */}
       <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
         <Hero />
         <Welcome />
@@ -19,7 +17,6 @@ export default function Home() {
         <WhyChooseUs />
         <CardCTA />
       </main>
-      {/* Footer removed - will be handled in App.jsx layout */}
     </>
   );
 } 

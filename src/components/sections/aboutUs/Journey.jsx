@@ -12,7 +12,7 @@ const timelineData = [
   {
     year: "2014",
     title: "Middle Years Program",
-    description: "The Middle Years Program was inaugurated as a natural progression of our educational journey. This expansion allowed Magellan to extend our innovative bilingual curriculum to older students, fostering critical thinking and international mindedness through the IB framework.",
+    description: "The Middle Years Program was inaugurated as a natural progression of our educational journey. This expansion allowed Magellan to extend its innovative bilingual curriculum to older students, fostering critical thinking and international mindedness through the IB framework.",
     image: "https://cdn.stellariseducation.com/middle_years.jpg"
   },
   {

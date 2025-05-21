@@ -31,7 +31,6 @@ export function ImmersionBenefitsSection() {
     }
   ];
 
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -54,7 +53,6 @@ export function ImmersionBenefitsSection() {
       <MaxWidthWrapper>
         {/* Main content */}
         <div className="relative z-10">
-          {/* Heading with staggered text animation */}
           <motion.div 
             className="mb-16 text-center"
             initial={{ opacity: 0 }}

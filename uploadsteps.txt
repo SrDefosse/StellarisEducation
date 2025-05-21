@@ -1,0 +1,30 @@
+1. Build Project
+npm run build
+
+2.Compress dist folder to ZIP
+
+3. Upload to server 
+scp -i "C:\Users\dario\Desktop\StellarisSSH.pem" dist.zip ubuntu@52.6.58.205:/home/ubuntu/stellaris/frontend
+
+4. Connect to server
+ssh -i "C:\Users\dario\Desktop\StellarisSSH.pem" ubuntu@52.6.58.205
+
+5. Delete previous build
+sudo rm -rf /home/ubuntu/stellaris/frontend/dist
+
+6. Uncompress ZIP
+cd /home/ubuntu/stellaris/frontend
+unzip -o dist.zip
+rm dist.zip
+
+7. Assign permits for Nginx
+sudo chown -R www-data:www-data dist
+sudo chmod -R 755 dist
+
+8. Verify that folders are accessible 
+sudo chmod +x /home/ubuntu
+sudo chmod +x /home/ubuntu/stellaris
+sudo chmod +x /home/ubuntu/stellaris/frontend
+
+9. Restart Nginx
+sudo systemctl restart nginx

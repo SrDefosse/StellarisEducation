@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-// import Image from 'next/image'; // Removed next/image import
 
 export const PreKDescriptionSection = () => {
   return (
@@ -35,10 +34,10 @@ export const PreKDescriptionSection = () => {
           viewport={{ once: true }}
           className="lg:w-1/2 relative h-[400px] w-full rounded-2xl overflow-hidden shadow-xl"
         >
-          <img /* Use img tag */
+          <img
             src="https://cdn.stellariseducation.com/prek_description.jpg"
             alt="Stellaris Pre-K Classroom"
-            className="absolute inset-0 w-full h-full object-cover" /* Updated className */
+            className="absolute inset-0 w-full h-full object-cover"
             loading="lazy"
           />
         </motion.div>

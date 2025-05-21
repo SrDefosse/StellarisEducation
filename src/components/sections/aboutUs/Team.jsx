@@ -1,10 +1,8 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-// import Image from "next/image"; // Removed next/image import
 import { FaArrowRight } from "react-icons/fa";
 import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
-// Team member data
 const teamMembers = [
   {
     id: 1,
@@ -32,7 +30,6 @@ const teamMembers = [
   }
 ];
 
-// Improved Card component with hover effects and smoother animations
 const ProfileCard = ({ member }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   
@@ -42,17 +39,15 @@ const ProfileCard = ({ member }) => {
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
     >
-      {/* Image section with gradient overlay on hover */}
       <div className="relative w-full aspect-[3/4] overflow-hidden">
-        <img /* Use img tag */
+        <img
           src={member.image} 
           alt={member.name} 
-          className="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:scale-105" /* Updated className for img */
+          className="absolute inset-0 w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
       
-      {/* Content section with improved styling */}
       <div className="p-6 flex flex-col flex-grow bg-gradient-to-b from-white to-blue-50/30 min-h-[300px]">
         <h3 className="text-2xl font-bold text-indigo-900 mb-1">{member.name}</h3>
         <p className="text-[#3967a9] font-medium mb-3">{member.role}</p>
@@ -116,7 +111,6 @@ export default function Team() {
           </p>
         </div>
         
-        {/* Improved grid with responsive layout and animations */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
           {teamMembers.map((member, index) => (
             <motion.div 

@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-// import Image from 'next/image'; // Removed next/image import
-import MaxWidthWrapper from '../../ui/MaxWidthWrapper'; // Updated import path
+import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 export const DescriptionSection = () => {
   return (
@@ -37,10 +36,10 @@ export const DescriptionSection = () => {
             viewport={{ once: true }}
             className="lg:w-1/2 relative h-[400px] w-full rounded-2xl overflow-hidden shadow-xl"
           >
-            <img /* Use img tag */
+            <img
               src="https://cdn.stellariseducation.com/after_school_description.jpg"
               alt="Stellaris After School Program"
-              className="absolute inset-0 w-full h-full object-cover" /* Updated className */
+              className="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
             />
           </motion.div>

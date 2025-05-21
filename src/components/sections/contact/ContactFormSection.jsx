@@ -12,7 +12,7 @@ export const ContactFormSection = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
+  const [submitStatus, setSubmitStatus] = useState(null); 
   const [submitMessage, setSubmitMessage] = useState('');
 
   const handleSubmit = async (e) => {
@@ -22,7 +22,7 @@ export const ContactFormSection = () => {
     setSubmitMessage('');
 
     try {
-      const response = await fetch('/api/contact', { // Usamos la ruta relativa gracias al proxy de Nginx
+      const response = await fetch('/api/contact', { // ruta relativa por el proxy de Nginx
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,7 +35,6 @@ export const ContactFormSection = () => {
       if (response.ok && result.success) {
         setSubmitStatus('success');
         setSubmitMessage(result.message);
-        // Reset form after successful submission
         setFormData({
           name: '',
           email: '',
@@ -47,7 +46,7 @@ export const ContactFormSection = () => {
         setSubmitStatus('error');
         setSubmitMessage(result.message || 'An error occurred while sending the message. Please try again.');
       }
-    } catch (error) { // Network error or other fetch issues
+    } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus('error');
       setSubmitMessage('Connection error. Please check your internet connection.');
@@ -189,7 +188,7 @@ export const ContactFormSection = () => {
                   rows={5}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3967a9] focus:border-transparent transition-all h-full min-h-[120px]"
                   placeholder="How can we help you?"
-                  disabled={isSubmitting} // Disable textarea during submission
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -208,7 +207,7 @@ export const ContactFormSection = () => {
               <button
                 type="submit"
                 className={`w-full px-8 py-4 bg-gradient-to-r from-[#3967a9] to-[#4081DE] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
-                disabled={isSubmitting} // Disable button during submission
+                disabled={isSubmitting}
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>

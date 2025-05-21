@@ -4,7 +4,7 @@ const TeachersHero = () => {
   return (
     <div className="relative w-full min-h-screen">
       <div
-        className="absolute inset-0 bg-[url('https://cdn.stellariseducation.com/teachers-hero-bg.jpg')] bg-cover bg-center" // Added temporary background image path
+        className="absolute inset-0 bg-[url('https://cdn.stellariseducation.com/teachers-hero-bg.jpg')] bg-cover bg-center"
       />
       <div
         className="absolute inset-0"
@@ -15,10 +15,10 @@ const TeachersHero = () => {
       />
       <div className="absolute inset-0 flex items-center">
         <div className="text-white max-w-3xl px-[5%]">
-          <h1 className="text-6xl md:text-7xl font-bold mb-6">International Teachers</h1> {/* Updated Title */} 
+          <h1 className="text-6xl md:text-7xl font-bold mb-6">International Teachers</h1> 
           <p className="text-xl md:text-2xl">
             Our diverse team of international educators create a multicultural learning environment
-            that broadens perspectives and enhances language acquisition {/* Updated Description */} 
+            that broadens perspectives and enhances language acquisition 
           </p>
         </div>
       </div>

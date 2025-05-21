@@ -2,7 +2,6 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { FaGraduationCap, FaChalkboardTeacher, FaUsers, FaGlobe, FaAward, FaHeart } from "react-icons/fa";
 
-// Faculty benefits data
 const benefits = [
   {
     id: 1,
@@ -42,7 +41,6 @@ const benefits = [
   }
 ];
 
-// Benefit card component
 const BenefitCard = ({ benefit, index }) => {
   return (
     <motion.div

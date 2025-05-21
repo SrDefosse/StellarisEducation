@@ -10,10 +10,8 @@ const Welcome = () => {
       <MaxWidthWrapper>
         {/* Content grid layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 relative z-10">
-          {/* Content Card - spans 6 columns on desktop */}
           <div className="lg:col-span-6 lg:pr-6 h-full">
             <div className="bg-white rounded-2xl p-8 shadow-lg h-full flex flex-col">
-              {/* Heading with amber underline */}
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-[#4081DE] mb-4">Welcome to Stellaris</h2>
                 <motion.div 
@@ -66,38 +64,38 @@ const Welcome = () => {
             </div>
           </div>
           
-          {/* Image section - spans 6 columns on desktop */}
+          {/* Image section */}
           <div className="lg:col-span-6">
             {/* Desktop view (collage) */}
             <div className="hidden lg:grid grid-cols-2 gap-4 h-full">
               {/* Main large image */}
               <div className="relative col-span-2 h-[450px] rounded-2xl overflow-hidden shadow-lg">
-                <img /* Use img tag */
+                <img
                   src="https://cdn.stellariseducation.com/StellarisWelcome.jpg"
                   alt="Stellaris Education Main"
-                  className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" /* Updated className */
-                  loading="lazy" /* Added loading lazy */
+                  className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent"></div>
               </div>
               
               {/* Two smaller images in a row */}
               <div className="relative h-[280px] rounded-2xl overflow-hidden shadow-lg">
-                <img /* Use img tag */
+                <img
                   src="https://cdn.stellariseducation.com/StellarisKids1.jpg"
                   alt="Stellaris Education Activities"
-                  className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" /* Updated className */
-                  loading="lazy" /* Added loading lazy */
+                  className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent"></div>
               </div>
               
               <div className="relative h-[280px] rounded-2xl overflow-hidden shadow-lg">
-                <img /* Use img tag */
+                <img
                   src="https://cdn.stellariseducation.com/StellarisKids2.jpg"
                   alt="Stellaris Education Learning"
-                  className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" /* Updated className */
-                  loading="lazy" /* Added loading lazy */
+                  className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent"></div>
               </div>
@@ -105,11 +103,11 @@ const Welcome = () => {
 
             {/* Mobile view (single image) */}
             <div className="lg:hidden relative h-[400px] rounded-2xl overflow-hidden shadow-lg">
-              <img /* Use img tag */
+              <img
                 src="https://cdn.stellariseducation.com/StellarisWelcome.jpg"
                 alt="Stellaris Education Main"
-                className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" /* Updated className */
-                loading="lazy" /* Added loading lazy */
+                className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent"></div>
             </div>

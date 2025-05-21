@@ -141,7 +141,6 @@ export function LearnerProfileSection() {
           </div>
         </motion.div>
 
-        {/* Added button */}
         <motion.div 
           className="text-center mt-16"
           initial={{ opacity: 0, y: 20 }}

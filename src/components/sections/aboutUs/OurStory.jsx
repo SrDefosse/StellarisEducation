@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
-// import Image from 'next/image'; // Removed next/image import
 
 const OurStory = () => {
   return (

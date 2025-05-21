@@ -1,31 +1,27 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-// import Image from 'next/image'; // Removed next/image import
 import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 export const ProgramsSection = () => {
-  // State to track if screen width is less than 768px (md breakpoint)
   const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
 
-  // Effect to detect screen size on client-side
   useEffect(() => {
     const checkScreenSize = () => {
       setIsMobileOrTablet(window.innerWidth < 768);
     };
     
-    checkScreenSize(); // Initial check
+    checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
-    return () => window.removeEventListener('resize', checkScreenSize); // Cleanup
+    return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
   
   const programs = {
     arts: {
       title: "Arts & Creativity",
       image: "https://cdn.stellariseducation.com/after_school_art_and_creativity.jpg",
-      // span removed here, will be applied conditionally below
       aspect: {
-        mobile: '3 / 2', // Aspect ratio for screens < 768px
-        desktop: '2 / 1'  // Aspect ratio for screens >= 768px
+        mobile: '3 / 2',
+        desktop: '2 / 1'
       }
     },
     stem: {
@@ -64,7 +60,6 @@ export const ProgramsSection = () => {
 
   const gridOrder = ['arts', 'stem', 'languages', 'physical', 'cooking'];
 
-  // Determine the correct aspect ratio based on screen size
   const getAspectRatio = (program) => {
     return isMobileOrTablet ? program.aspect.mobile : program.aspect.desktop;
   };
@@ -85,7 +80,6 @@ export const ProgramsSection = () => {
         </motion.div>
 
         <motion.div 
-          // Grid: 1 column below md (768px), 3 columns at md and above
           className="grid grid-cols-1 md:grid-cols-3 gap-4"
           initial="hidden"
           whileInView="visible"
@@ -97,7 +91,6 @@ export const ProgramsSection = () => {
         >
           {gridOrder.map((key) => {
             const program = programs[key];
-            // Determine column span: arts spans 2 cols on desktop, 1 otherwise. Others always span 1.
             const colSpanClass = key === 'arts' && !isMobileOrTablet ? 'md:col-span-2' : 'col-span-1';
             
             return (

@@ -21,7 +21,7 @@ export function PYPSection() {
       <div className="absolute -top-24" id="what-is-pyp"></div>
       
       <MaxWidthWrapper>
-        {/* Heading with neutral background */}
+        {/* Heading */}
         <motion.div 
           className="mb-16 relative overflow-hidden rounded-3xl bg-white p-8 shadow-lg border border-gray-100"
           initial={{ opacity: 0, y: 20 }}
@@ -53,12 +53,12 @@ export function PYPSection() {
               whileHover={{ scale: 1.05 }}
             >
               <div className="relative w-64 h-64 flex items-center justify-center">
-                <img /* Use img tag */
+                <img
                   src="https://cdn.stellariseducation.com/ib-pyp-logo.png"
                   alt="IB Primary Years Programme Logo"
-                  width="256" /* Keep width/height for aspect ratio */
+                  width="256"
                   height="256"
-                  className="object-contain" /* Class remains similar */
+                  className="object-contain"
                   loading="lazy"
                 />
               </div>
@@ -183,7 +183,7 @@ export function PYPSection() {
           </motion.div>
         </div>
         
-        {/* Video section moved to bottom */}
+        {/* Video section */}
         <motion.div 
           className="mt-12 relative overflow-hidden rounded-2xl shadow-lg"
           initial={{ opacity: 0, y: 20 }}

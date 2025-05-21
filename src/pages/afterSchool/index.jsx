@@ -1,9 +1,5 @@
-// import Head from 'next/head'; // Removed Head import
 import { motion } from 'framer-motion';
-// import Navbar from "@/components/layout/Navbar"; // Removed Navbar import
-// import Footer from "@/components/layout/Footer"; // Removed Footer import
-// Import components with relative paths
-import AfterSchoolHero from '../../components/sections/afterSchool/AfterSchoolHero'; // Import the new Hero
+import AfterSchoolHero from '../../components/sections/afterSchool/AfterSchoolHero';
 import { DescriptionSection } from '../../components/sections/afterSchool/DescriptionSection';
 import { CoverageSection } from '../../components/sections/afterSchool/CoverageSection';
 import { ProgramsSection } from '../../components/sections/afterSchool/ProgramsSection';
@@ -12,9 +8,7 @@ import { EnrollmentCTA } from '../../components/sections/afterSchool/EnrollmentC
 export default function AfterSchoolPage() {
   return (
     <>
-      {/* Head component removed */}
-      {/* Navbar removed */}
-      <AfterSchoolHero /> {/* Use the new AfterSchoolHero */}
+      <AfterSchoolHero /> 
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
         <motion.div
           initial={{ opacity: 0 }}
@@ -22,9 +16,7 @@ export default function AfterSchoolPage() {
           transition={{ duration: 0.5 }}
           className="py-16"
         >
-          {/* Assuming MaxWidthWrapper is used inside sections or needed here */} 
-          <div className="container mx-auto px-4"> {/* Added container here for centering */}
-            {/* Removed h1 and p as they are now in the Hero */}
+          <div className="container mx-auto px-4"> 
             <div className="space-y-12">
               <DescriptionSection />
               <CoverageSection />
@@ -34,7 +26,6 @@ export default function AfterSchoolPage() {
           </div>
         </motion.div>
       </div>
-      {/* Footer removed */}
     </>
   );
 }

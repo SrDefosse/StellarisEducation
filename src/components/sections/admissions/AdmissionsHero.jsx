@@ -1,17 +1,15 @@
 import { motion } from 'framer-motion';
-// import Image from 'next/image'; // Removed next/image import
-import MaxWidthWrapper from '../../ui/MaxWidthWrapper'; // Updated import path
-import ProcessandFees from './ProcessandFees'; // Import the ProcessandFees component
+import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
+import ProcessandFees from './ProcessandFees';
 
-const AdmissionsHero = () => { // Removed scrollToContent prop
+const AdmissionsHero = () => {
   return (
     <div className="relative min-h-screen overflow-hidden grid place-items-center">
-      <img /* Use img tag */
+      <img
         src="https://cdn.stellariseducation.com/admissions-hero-bg.jpg"
         alt="Stellaris Education"
-        className="absolute inset-0 w-full h-full object-cover" /* Updated className */
+        className="absolute inset-0 w-full h-full object-cover"
         loading="lazy"
-        // Removed priority prop
       />
       <div
         className="absolute inset-0"
@@ -22,8 +20,7 @@ const AdmissionsHero = () => { // Removed scrollToContent prop
       />
       <div className="relative w-full">
         <MaxWidthWrapper>
-          {/* Removed original hero text and button */}
-          <ProcessandFees /> {/* Added the ProcessandFees component */}
+          <ProcessandFees />
         </MaxWidthWrapper>
       </div>
     </div>

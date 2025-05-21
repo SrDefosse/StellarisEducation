@@ -1,5 +1,4 @@
 import React from 'react';
-// Removed: import './LegalPages.css'; // Shared CSS for legal pages
 
 const PrivacyPolicy = () => {
   return (

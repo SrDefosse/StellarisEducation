@@ -20,7 +20,7 @@ export function WhatIsLanguageImmersionSection() {
       <div className="absolute -top-24" id="what-is-language-immersion"></div>
       
       <MaxWidthWrapper>
-        {/* Heading with neutral background */}
+        {/* Heading  */}
         <motion.div 
           className="mb-16 relative overflow-hidden rounded-3xl bg-white p-8 shadow-lg border border-gray-100"
           initial={{ opacity: 0, y: 20 }}

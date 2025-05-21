@@ -5,7 +5,6 @@ import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaGlobe } from "react-icons/fa";
 import MaxWidthWrapper from "../../ui/MaxWidthWrapper";
 import { Link } from "react-router-dom";
 
-// Future campus announcement data
 const announcementData = {
   phone: "+1 (629) 205-6525",
   email: "info@stellariseducation.com",

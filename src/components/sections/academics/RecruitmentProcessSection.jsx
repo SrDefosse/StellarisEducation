@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { FaSearch, FaVideo, FaCheckCircle, FaPlane, FaGraduationCap } from 'react-icons/fa';
+import { FaSearch, FaVideo, FaGraduationCap } from 'react-icons/fa';
 import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 import { PrimaryButton } from '../../ui/Button';
 

@@ -1,16 +1,15 @@
-// 'use client'; // Remove use client directive if not needed
-// import Image from 'next/image'; // Removed next/image import
+
 import { PrimaryButton, SecondaryButton } from '../../ui/Button';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-// import { useRouter } from 'next/router'; // Removed next/router import
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+
+import { useNavigate } from 'react-router-dom'; 
 import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
 const AcademicProgram = () => {
   const [activeProgram, setActiveProgram] = useState(0);
-  // const router = useRouter(); // Removed useRouter
-  const navigate = useNavigate(); // Use useNavigate
+  
+  const navigate = useNavigate(); 
 
   const programs = [
     {
@@ -77,7 +76,7 @@ const AcademicProgram = () => {
               transition={{ duration: 0.3 }}
               onClick={() => setActiveProgram(index)}
             >
-              {/* Title Bar - Always Visible */}
+              {/* Title Bar */}
               <div className="flex items-center justify-between p-5">
                 <h3 className={`font-semibold text-xl ${activeProgram === index ? 'text-amber-500' : 'text-indigo-900'}`}>
                   {program.title}
@@ -103,12 +102,12 @@ const AcademicProgram = () => {
                     className="overflow-hidden"
                   >
                     <div className="flex flex-col md:flex-row p-4 md:p-6">
-                      {/* Image - More square and rounded */}
+                      {/* Image*/}
                       <div className="relative w-full md:w-2/5 h-[300px] md:h-[400px] rounded-xl overflow-hidden mx-auto md:mx-0">
-                        <img /* Use img tag */
+                        <img 
                           src={program.image}
                           alt={program.title}
-                          className="absolute inset-0 w-full h-full object-cover" /* Updated className */
+                          className="absolute inset-0 w-full h-full object-cover" 
                           loading="lazy"
                         />
                       </div>
@@ -116,7 +115,7 @@ const AcademicProgram = () => {
                       {/* Description */}
                       <div className="p-6 md:p-8 w-full md:w-3/5 flex flex-col justify-between">
                         <p className="text-gray-700 mb-6 text-lg">{program.description}</p>
-                        <SecondaryButton onClick={() => navigate(program.path)}>Learn More</SecondaryButton> {/* Use navigate */}
+                        <SecondaryButton onClick={() => navigate(program.path)}>Learn More</SecondaryButton>
                       </div>
                     </div>
                   </motion.div>

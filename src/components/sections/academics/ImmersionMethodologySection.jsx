@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { FaWater, FaPuzzlePiece, FaMusic, FaTheaterMasks, FaChalkboardTeacher, FaCheck } from 'react-icons/fa';
+import { FaWater, FaPuzzlePiece, FaMusic, FaTheaterMasks } from 'react-icons/fa';
 import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 import { PrimaryButton } from '../../ui/Button';
 
@@ -12,7 +12,7 @@ export function ImmersionMethodologySection() {
   const methodologies = [
     {
       title: "Total Immersion Approach",
-      description: "Our teachers conduct 90% of daily instruction and interaction in Spanish, creating a natural language environment where children are constantly exposed to Spanish in meaningful contexts.",
+      description: "Our teachers conduct 80% of daily instruction and interaction in Spanish, creating a natural language environment where children are constantly exposed to Spanish in meaningful contexts.",
       icon: <FaWater />
     },
     {
@@ -134,7 +134,6 @@ export function ImmersionMethodologySection() {
           </motion.div>
         </div>
         
-        {/* Added button */}
         <motion.div 
           className="text-center mt-16"
           initial={{ opacity: 0, y: 20 }}

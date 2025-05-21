@@ -1,9 +1,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
-// import Image from "next/image"; // Removed next/image import
 import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 
-// Faculty data
 const facultyImages = [
   { id: 1, src: "https://cdn.stellariseducation.com/collage_1.jpg", alt: "Spanish language instructor" },
   { id: 2, src: "https://cdn.stellariseducation.com/collage_2.jpg", alt: "Science faculty member" },
@@ -13,7 +11,6 @@ const facultyImages = [
   { id: 6, src: "https://cdn.stellariseducation.com/collage_6.jpg", alt: "Physical education teacher" },
 ];
 
-// Faculty image component with hover effect
 const FacultyImage = ({ image, index }) => {
   return (
     <motion.div
@@ -26,10 +23,10 @@ const FacultyImage = ({ image, index }) => {
     >
       <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 z-10"></div>
       <div className="relative w-full h-full">
-        <img /* Use img tag */
+        <img
           src={image.src}
           alt={image.alt}
-          className="absolute inset-0 w-full h-full object-cover transition-all duration-500 hover:scale-105" /* Updated className for img */
+          className="absolute inset-0 w-full h-full object-cover transition-all duration-500 hover:scale-105"
         />
       </div>
     </motion.div>
