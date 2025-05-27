@@ -17,7 +17,7 @@ const teamMembers = [
     name: "Alexandra Castro",
     role: "Head of PreK",
     shortBio: "Early childhood education specialist with innovative teaching methods.",
-    longBio: "Alexandra Castro leads our PreK program with passion and expertise, bringing innovative approaches to early childhood education. With specialized training in developmental psychology and over 15 years of classroom experience, Alexandra has pioneered methods that make learning both fun and effective for our youngest students. Her curriculum design emphasizes play-based learning while building crucial foundational skills. Alexandra regularly presents her research at educational conferences and has published numerous articles on early childhood development strategies.",
+    longBio: "Alexandra Castro leads our PreK program with passion and expertise, bringing innovative approaches to early childhood education. With specialized training in developmental psychology and over 15 years of classroom experience, Alexandra has pioneered methods that make learning both fun and effective for our youngest students. Her curriculum design emphasizes play-based learning while building crucial foundational skills. Alexandra regularly consults with schools and shares her expertise in early childhood bilingual education with several international institutions across the US and Spain.",
     image: "https://cdn.stellariseducation.com/AlexandraCastro.jpg",
   },
   {

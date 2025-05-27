@@ -1,27 +1,24 @@
-# Servidor para redirección HTTP a HTTPS
+# Redirección HTTP a HTTPS
 server {
     listen 80;
     listen [::]:80;
     server_name stellariseducation.com www.stellariseducation.com;
-
-    # Redirigir todo el tráfico HTTP a HTTPS
     return 301 https://$host$request_uri;
-
-    # Las siguientes líneas fueron añadidas por Certbot y son redundantes
-    # if ($host = www.stellariseducation.com) {
-    #     return 301 https://$host$request_uri;
-    # } # managed by Certbot
-
-    # if ($host = stellariseducation.com) {
-    #     return 301 https://$host$request_uri;
-    # } # managed by Certbot
 }
 
-# Servidor principal para HTTPS
+# Servidor principal HTTPS
 server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
     server_name stellariseducation.com www.stellariseducation.com;
 
-    # Configuración para servir el contenido del sitio
+    # Configuración SSL
+    ssl_certificate /etc/letsencrypt/live/stellariseducation.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/stellariseducation.com/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    # Configuración del sitio
     root /home/ubuntu/stellaris/frontend/dist;
     index index.html;
 
@@ -41,18 +38,7 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 
-    # --- Configuración SSL añadida por Certbot ---
-    # Enable HTTP/2
-    listen [::]:443 ssl http2 ipv6only=on; # managed by Certbot
-    listen 443 ssl http2; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/stellariseducation.com/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/stellariseducation.com/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-    # --- Fin de la configuración SSL ---
-
-    # --- Optimizations ---
-    # Gzip Compression
+    # Optimizaciones
     gzip on;
     gzip_vary on;
     gzip_proxied any;
@@ -61,11 +47,10 @@ server {
     gzip_min_length 1000;
     gzip_buffers 16 8k;
 
-    # Browser Caching for Static Assets
+    # Cache para archivos estáticos
     location ~* \.(?:jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc|css|js)$ {
-      expires 1M; # Cache for 1 Month
-      access_log off;
-      add_header Cache-Control "public";
+        expires 1M;
+        access_log off;
+        add_header Cache-Control "public";
     }
-    # --- End of Optimizations ---
 }

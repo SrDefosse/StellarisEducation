@@ -1,13 +1,16 @@
-1. Build Project
+1. Build Project in code editor console
 npm run build
 
 2.Compress dist folder to ZIP
 
-3. Upload to server 
+3. Upload to server (you must change the directory for the SSH key to where you have it or access directly from Amazon)
+(you should also use cd to where the dist.zip is located, probably /users/Erin/Desktop/StellarisEducation or something)
 scp -i "C:\Users\dario\Desktop\StellarisSSH.pem" dist.zip ubuntu@52.6.58.205:/home/ubuntu/stellaris/frontend
 
-4. Connect to server
+4. Connect to server (you can access directly from Amazon or use the SSH key and its address)
 ssh -i "C:\Users\dario\Desktop\StellarisSSH.pem" ubuntu@52.6.58.205
+
+**IN CONSOLE**
 
 5. Delete previous build
 sudo rm -rf /home/ubuntu/stellaris/frontend/dist

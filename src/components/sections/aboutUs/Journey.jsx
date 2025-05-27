@@ -5,7 +5,7 @@ import MaxWidthWrapper from '../../ui/MaxWidthWrapper';
 const timelineData = [
   {
     year: "2009",
-    title: "Magellan Foundation",
+    title: "Magellan Is Founded",
     description: "The Magellan International School was founded by Erin Defossé and his team with a vision to create a truly bilingual and multicultural learning environment. Starting with just a handful of students, the school established its foundation on the principles of inquiry-based learning and global citizenship.",
     image: "https://cdn.stellariseducation.com/foundation.jpg"
   },
@@ -23,8 +23,8 @@ const timelineData = [
   },
   {
     year: "2025",
-    title: "Stellaris Foundation",
-    description: "Looking to expand the founder’s vision of accessible quality education, Stellaris emerges as a beacon of innovative early education. Building upon years of experience in bilingual education, we're creating new opportunities for young learners to thrive in a global context.",
+    title: "Stellaris Is Founded",
+    description: "Looking to expand the founder’s vision of forward looking education, Stellaris emerges as a beacon of innovative early education. Building upon years of experience in bilingual education, we're creating new opportunities for young learners to thrive in a global context.",
     image: "https://cdn.stellariseducation.com/stellaris_journey.jpg"
   }
 ];
