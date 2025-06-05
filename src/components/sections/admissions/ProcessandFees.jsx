@@ -44,14 +44,14 @@ const ProcessandFees = () => {
                     <div>
                       <p className="font-semibold text-gray-800 mb-2 text-lg">Next Session:</p> {/* Larger text */}
                       <p className="text-gray-600 text-lg"> {/* Larger text */}
-                        <span className="font-medium">May 31, 2025</span> - Nashville, TN
+                        <span className="font-medium">June 5, 2025</span> - Online
                       </p>
                     </div>
                   </div>
                 </div>
                 <div className="p-6 pt-0 mt-4">
                   <a 
-                    href="https://lu.ma/k1agjgws"
+                    href="https://lu.ma/7epgmwin"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full px-6 py-4 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors font-semibold text-lg shadow-md hover:shadow-lg text-center">

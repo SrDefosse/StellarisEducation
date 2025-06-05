@@ -7,6 +7,10 @@ npm run build
 (you should also use cd to where the dist.zip is located, probably /users/Erin/Desktop/StellarisEducation or something)
 scp -i "C:\Users\dario\Desktop\StellarisSSH.pem" dist.zip ubuntu@52.6.58.205:/home/ubuntu/stellaris/frontend
 
+For Erin's iMac:
+
+scp -i "/Users/edefosse/Library/CloudStorage/GoogleDrive-erin@defosse.org/My Drive/Business/Stellaris Education/Website/AWS Lightsail/StellarisWWW-1-SSH.pem" dist.zip ubuntu@3.13.227.55:/home/ubuntu/stellaris/frontend
+
 4. Connect to server (you can access directly from Amazon or use the SSH key and its address)
 ssh -i "C:\Users\dario\Desktop\StellarisSSH.pem" ubuntu@52.6.58.205
 
