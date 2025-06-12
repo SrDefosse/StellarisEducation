@@ -75,7 +75,8 @@ export function InquiryBasedLearningSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <iframe 
-              src="https://player.vimeo.com/video/142390886" 
+              /* src="https://player.vimeo.com/video/142390886" */ // original video
+              src="https://youtu.be/TwGr9_y-tY8" // video with updated cover image
               title="Inquiry Based Learning"
               frameBorder="0" 
               allow="autoplay; fullscreen; picture-in-picture" 
