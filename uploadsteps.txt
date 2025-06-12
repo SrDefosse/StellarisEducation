@@ -3,6 +3,8 @@ npm run build
 
 2.Compress dist folder to ZIP
 
+zip -r dist.zip dist
+
 3. Upload to server (you must change the directory for the SSH key to where you have it or access directly from Amazon)
 (you should also use cd to where the dist.zip is located, probably /users/Erin/Desktop/StellarisEducation or something)
 scp -i "C:\Users\dario\Desktop\StellarisSSH.pem" dist.zip ubuntu@52.6.58.205:/home/ubuntu/stellaris/frontend

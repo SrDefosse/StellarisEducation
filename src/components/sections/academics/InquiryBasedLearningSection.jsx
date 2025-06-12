@@ -74,13 +74,23 @@ export function InquiryBasedLearningSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
+            {/* Original video
             <iframe 
-              /* src="https://player.vimeo.com/video/142390886" */ // original video
-              src="https://youtu.be/TwGr9_y-tY8" // video with updated cover image
+              src="https://player.vimeo.com/video/142390886"
               title="Inquiry Based Learning"
               frameBorder="0" 
               allow="autoplay; fullscreen; picture-in-picture" 
               allowFullScreen
+              className="w-full h-full"
+            />
+            */}
+
+            {/* Updated video with correct video cover image */}
+            <iframe
+              src="https://www.youtube.com/embed/TwGr9_y-tY8?si=wGF-Thu7DDXPh0Gc" 
+              title="PYP in Early Years" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
               className="w-full h-full"
             />
           </motion.div>
